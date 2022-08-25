@@ -1,5 +1,5 @@
-import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
-import React, { useState, useEffect } from "react";
+import { View, Text, Button, TextInput } from 'react-native';
+import React from "react";
 import { Audio } from 'expo-av';
 
 class AudioPlayback extends React.Component {
@@ -15,7 +15,6 @@ class AudioPlayback extends React.Component {
 
         this.state = {
             buttonName: "Play",
-            isPlaying: false,
             audioPlayer: new Audio.Sound(),
             playbackStatus: null,
             playbackTime: "0:00",
@@ -28,18 +27,14 @@ class AudioPlayback extends React.Component {
                 if (this.state.playbackStatus.isPlaying) {
                     const status = await this.state.audioPlayer.pauseAsync();
                     this.setState({buttonName: "Play"})
-                    this.setState({isPlaying: false})
                     this.setState({playbackStatus: status})
-                    return this.state.playbackStatus;
                 }
 
                 // It will resume our audio
-                if (!this.state.playbackStatus.isPlaying) {
+                else if (!this.state.playbackStatus.isPlaying) {
                     const status = await this.state.audioPlayer.playAsync();
                     this.setState({ buttonName: "Pause" })
-                    this.setState({ isPlaying: true })
                     this.setState({ playbackStatus: status })
-                    return this.state.playbackStatus;
                 }
             }
         };
@@ -59,8 +54,9 @@ class AudioPlayback extends React.Component {
             }
         }
 
-        this.setPlaybackRate = async (rat) => {
+        this.changePlaybackRate = async (rat) => {
             var rate = Number(rat)
+            this.setState({ playbackRate: rate })
 
             if (this.state.audioPlayer !== null && this.state.playbackStatus !== null && this.state.playbackStatus.isLoaded === true) {
                 try {
@@ -76,7 +72,7 @@ class AudioPlayback extends React.Component {
             if (this.isNumericc(input)) {
                 if (input < 0) { input = 0 }
                 if (input > 16) { input = 16 }
-                this.setPlaybackRate(input)
+                this.changePlaybackRate(input)
             }
         }
 
@@ -84,14 +80,19 @@ class AudioPlayback extends React.Component {
 
             this.audio.uri = uri
             if (this.state.playbackStatus !== null) {
-                this.state.audioPlayer.unloadAsync();
+                await this.state.audioPlayer.unloadAsync();
             }
             const status = await this.state.audioPlayer.loadAsync(
                 { uri: this.audio.uri },
-                { shouldPlay: this.isPlaying }
+                { shouldPlay: false }
             )
-            this.setState({playbackStatus: status})
-            this.setPlaybackRate()
+            this.setState({
+                playbackStatus: status,
+                buttonName: "Play",
+                playbackTime: "0:00"
+            })
+
+            this.changePlaybackRate(this.state.playbackRate)
         }
 
         this.state.audioPlayer.setOnPlaybackStatusUpdate(this.audioPlaybackUpdate)

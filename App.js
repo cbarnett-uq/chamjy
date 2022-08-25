@@ -1,26 +1,16 @@
-import { StyleSheet, View, Text, Button, TextInput, SafeAreaView } from 'react-native';
-import React, { useState, useEffect, useRef } from "react";
-import * as DocumentPicker from "expo-document-picker";
-import { Audio } from 'expo-av';
+import { StyleSheet, View } from 'react-native';
+import React, { useRef } from "react";
+
 import AudioPlayback from "./components/AudioPlayback.js"
+import FileSelection from "./components/FileSelection.js"
 
 export default function App() {
-    const [fileName, setFileName] = useState("")
-    const ap = useRef()
-    
-    const pickDocument = async () => {
-        let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio"});
-        if (result) {
-            ap.current.loadAudio(result.uri)
-            setFileName(result.name)
-        }
-    };
+    const audioPlayback = useRef()
 
     return (
         <View style={styles.container}>
-            <Text>{fileName}</Text>
-            <Button title="Choose File" onPress={pickDocument} />
-            <AudioPlayback ref={ ap } />
+            <FileSelection audioPlayback={audioPlayback}/>
+            <AudioPlayback ref={ audioPlayback } />
         </View>
         
     );
