@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import React from 'react';
 import StyleService from "../services/StyleService.js";
 
@@ -12,7 +12,7 @@ export default class MainLayout extends React.Component {
      */
     constructor(props) {
         super(props);
-        this.style = new StyleService();
+        this.style = (new StyleService()).getMainStyle();
     }
     
     /**
@@ -20,7 +20,7 @@ export default class MainLayout extends React.Component {
      */
     render() {
         return (
-            <SafeAreaView style={this.style.getMainStyle()}>
+            <SafeAreaView style={this.style.container}>
                 {this.props.children}
             </SafeAreaView>
         );
