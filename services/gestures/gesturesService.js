@@ -36,7 +36,7 @@ export default class GesturesService {
      * Delays the promise for an amount in milliseconds.
      * @param { int } ms Time in milliseconds to wait.
      */
-     static async _timeout(ms) {
+    static async _timeout(ms) {
         return new Promise((resolve) => { setTimeout(resolve, ms); });
     }
 

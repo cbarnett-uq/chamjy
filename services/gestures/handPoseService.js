@@ -42,6 +42,14 @@ export default class HandPoseService {
     }
 
     /**
+     * Delays the promise for an amount in milliseconds.
+     * @param { int } ms Time in milliseconds to wait.
+     */
+     static async _timeout(ms) {
+        return new Promise((resolve) => { setTimeout(resolve, ms); });
+    }
+
+    /**
      * Waits for the service to be ready. This method will hang if
      * init() errors.
      */
@@ -54,8 +62,7 @@ export default class HandPoseService {
     }
 
     /**
-     * Updates the input tensor for processing by the service. This method should
-     * not be called until after the revious getResult() has returned.
+     * Predicts the current handpose from an image tensor.
      * @param { any } tensor Image tensor from the camera.
      */
     static async predict(tensor) {
