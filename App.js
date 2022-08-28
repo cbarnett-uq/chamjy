@@ -1,11 +1,10 @@
-import { Text } from 'react-native';
-import GestureCamera from './components/gestures/GestureCamera.js';
 import MainLayout from "./components/MainLayout.js";
+import Session from './components/pages/session.js';
 
 export default function App() {
   return (
     <MainLayout>
-      <GestureCamera/>
+      <Session/>
     </MainLayout>
   );
 }
