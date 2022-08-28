@@ -1,5 +1,5 @@
 import * as handPoseDetection from '@tensorflow-models/hand-pose-detection';
-import { bundleResourceIO } from '@tensorflow/tfjs-react-native';
+import * as tfjs from '@tensorflow/tfjs';
 
 
 /**
@@ -9,6 +9,7 @@ import { bundleResourceIO } from '@tensorflow/tfjs-react-native';
 export default class HandPoseService {
     static _ready = false;
     static _detector;
+    static _frames = [];
 
     /**
      * Handles the onResults call from Hands.
@@ -35,6 +36,12 @@ export default class HandPoseService {
             };
 
             HandPoseService._detector = await handPoseDetection.createDetector(_model, _config);
+
+            let frame = HandPoseService._buildEmptyFrame();
+            for (let i = 0; i < 30; i++) {
+                HandPoseService._frames.push(frame);
+            }
+
             HandPoseService._ready = true;
         } catch (err) {
             console.error(err);
@@ -71,10 +78,77 @@ export default class HandPoseService {
         try {
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
-            return result;
+            HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
+            HandPoseService._frames.shift();
+
+            return tfjs.tensor([HandPoseService._frames]);
         } catch (err) {
             console.error(err);
             return null;
         }
+    }
+
+    /**
+     * Builds a tensor from the data returned by hands.
+     */
+    static _buildFrameFromResult(data) {
+        let result = [];
+        
+        for (let i = 0; i < data.length; i++) {
+            let hand = HandPoseService._buildHand(data[i]).flat();
+            for (let j = 0; j < hand.length; j++) {
+                result.push(hand[j]);
+            }
+        }
+
+        for (let i = data.length; i < 2; i++) {
+            let hand = HandPoseService._buildEmptyHand().flat();
+            for (let j = 0; j < hand.length; j++) {
+                result.push(hand[j]);
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Builds an empty frame.
+     */
+    static _buildEmptyFrame() {
+        let result = [];
+
+        for (let i = 0; i < 2; i++) {
+            let hand = HandPoseService._buildEmptyHand().flat();
+            for (let j = 0; j < hand.length; j++) {
+                result.push(hand[j]);
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Builds an array of 21 vertices from a hand object.
+     */
+    static _buildHand(hand) {
+        let arr = [];
+        for (let i = 0; i < 21; i++) {
+            let keypoint = hand.keypoints3D[i];
+            arr.push([keypoint.x, keypoint.y, keypoint.z]);
+        }
+        
+        return arr;
+    }
+
+    /**
+     * Builds an array of 21 vertices of (0, 0, 0).
+     */
+    static _buildEmptyHand() {
+        let arr = [];
+        for (let i = 0; i < 21; i++)
+        {
+            arr.push([0, 0, 0]);
+        }
+        return arr;
     }
 }

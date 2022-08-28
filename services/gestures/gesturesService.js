@@ -1,4 +1,3 @@
-import { Gestures } from "./types";
 import * as tfjs from '@tensorflow/tfjs';
 import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
 
@@ -20,8 +19,6 @@ export default class GesturesService {
      */
     static async init() {
         if (GesturesService._ready) return;
-
-        const bundledIO = bundleResourceIO(gesturesModel, gesturesWeights);
 
         try {
             GesturesService._model = await tfjs.loadLayersModel(
@@ -61,7 +58,27 @@ export default class GesturesService {
         if (!GesturesService._ready) throw "GestureService is not ready.";
 
         // TODO: Handle inputing pose data into gestures model.
+        var result = await GesturesService._model
+            .predict(pose)
+            .data();
+
         // TODO: Handle result to convert into Gestures object.
-        return Gestures["Nothing"];
+        return GesturesService._mapResultToGesture(result);
+    }
+
+    /**
+     * Maps the output prediction to the relevant gesture.
+     */
+    static _mapResultToGesture(data) {
+        let index = 0;
+        let max = 0;
+        for (let i = 0; i < data.length; i++) {
+            if (data[i] > max) {
+                index = i;
+                max = data[i];
+            }
+        }
+        
+        return index;
     }
 }

@@ -1,6 +1,6 @@
 // Gesture types
 export const Gestures = {
-    "Nothing": 0,
-    "Play": 1,
-    "Pause": 2
+    "Play": 0,
+    "Pause": 1,
+    "Nothing": 2,
 };
