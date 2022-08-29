@@ -21,23 +21,34 @@ class AudioPlayback extends React.Component {
             playbackRate: 1
         }
 
-        this.handleAudioPlayPause = async () => {
-            if (this.state.audioPlayer !== null && this.state.playbackStatus !== null && this.state.playbackStatus.isLoaded === true) {
-                // It will pause our audio
-                if (this.state.playbackStatus.isPlaying) {
-                    const status = await this.state.audioPlayer.pauseAsync();
-                    this.setState({buttonName: "Play"})
-                    this.setState({playbackStatus: status})
-                }
+        this.toggleAudio = async () => {
+            if (this.state.playbackStatus.isPlaying) {
+                this.pauseAudio()
+                this.setState({ buttonName: "Play" })
+            }
 
+            else if (!this.state.playbackStatus.isPlaying) {
+                this.playAudio()
+                this.setState({ buttonName: "Pause" })
+            }
+        };
+
+        this.pauseAudio = async () => {
+            if (this.state.audioPlayer !== null && this.state.playbackStatus !== null && this.state.playbackStatus.isLoaded === true) {
+                const status = await this.state.audioPlayer.pauseAsync();
+                this.setState({ playbackStatus: status })
+            }
+        }
+
+        this.playAudio = async () => {
+            if (this.state.audioPlayer !== null && this.state.playbackStatus !== null && this.state.playbackStatus.isLoaded === true) {
                 // It will resume our audio
-                else if (!this.state.playbackStatus.isPlaying) {
-                    const status = await this.state.audioPlayer.playAsync();
-                    this.setState({ buttonName: "Pause" })
+                if (!this.state.playbackStatus.isPlaying) {
+                    const status = await this.state.audioPlayer.playAsync()
                     this.setState({ playbackStatus: status })
                 }
             }
-        };
+        }
 
         this.isNumericc = async (str) => {
             if (typeof str != "string") return false // we only process strings!  
@@ -45,6 +56,7 @@ class AudioPlayback extends React.Component {
                 !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
         }
 
+        // This function runs every 100 milliseconds when the audio is playing.
         this.audioPlaybackUpdate = (status) => {
             if (status.isLoaded) {
                 var totalSeconds = status.positionMillis / 1000
@@ -101,7 +113,7 @@ class AudioPlayback extends React.Component {
     render() {
         return (
             <View>
-                <Button title={this.state.buttonName} onPress={this.handleAudioPlayPause} />
+                <Button title={this.state.buttonName} onPress={this.toggleAudio} />
                 <Text>Playback Rate:</Text>
                 <TextInput maxLength={3} placeholder="Playback Rate" onChangeText={this.playbackRateInputChange}></TextInput>
                 <Text>{this.state.playbackTime}</Text>
