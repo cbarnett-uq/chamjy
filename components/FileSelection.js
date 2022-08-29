@@ -2,21 +2,22 @@ import { View, Text, Button } from 'react-native';
 import React from "react";
 import * as DocumentPicker from "expo-document-picker";
 
-class AudioPlayback extends React.Component {
+import AudioPlayback from "../services/AudioPlayback"
+
+export default class FileSelection extends React.Component {
     constructor(props) {
         super(props)
 
-        this.audioPlayback = props.audioPlayback
         this.state = {
-            fileName: "",
+            fileName: "No File Selected",
             fileURI: ""
         }
         
         this.pickDocument = async () => {
             let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio" });
             if (result) {
-                this.audioPlayback.current.loadAudio(result.uri)
-                this.setState({fileName: result.name})
+                await AudioPlayback.loadAudio(result.uri)
+                this.setState({ fileName: result.name })
             }
         };
     }
@@ -30,5 +31,3 @@ class AudioPlayback extends React.Component {
         );
     }
 }
-
-export default AudioPlayback
