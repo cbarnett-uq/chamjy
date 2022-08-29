@@ -4,6 +4,9 @@ import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
 import StyleService from '../../services/StyleService';
 import * as tf from '@tensorflow/tfjs';
+import HandPoseService from '../../services/gestures/handPoseService';
+import GesturesService from '../../services/gestures/gesturesService';
+import { Gestures } from '../../services/gestures/types';
 
 // Decorator for cameraWithTensors class
 const TensorCamera = cameraWithTensors(Camera);
@@ -12,6 +15,8 @@ const TensorCamera = cameraWithTensors(Camera);
  * Component for detecting gestures using the front mounted camera.
  */
 export default class GestureCamera extends React.Component {
+    static _lastGesture = Gestures["Nothing"];
+
     /**
      * Constructor for GestureCamera that passes props and injects
      * necessary services.
@@ -23,13 +28,35 @@ export default class GestureCamera extends React.Component {
 
         // Services
         this.style = (new StyleService()).getMainStyle();
-        // TODO: Inject service for gesture recognition here
 
         // Initial state
         this.state = {
-            tfIsReady: false,
+            ready: false,
+            serviceLoading: '',
             hasPermissions: false
         };
+    }
+
+    /**
+     * Handles the current gesture input as predicted by the trained models.
+     * @param { Gestures } gesture 
+     */
+    handleGesture(gesture) {
+        if (gesture === GestureCamera._lastGesture) return;
+        GestureCamera._lastGesture = gesture;
+
+        switch (gesture) {
+            case Gestures["Nothing"]:
+                break;
+
+            case Gestures["Play"]:
+                this.onPlay();
+                break;
+            
+            case Gestures["Pause"]:
+                this.onPause();
+                break;
+        }
     }
 
     /**
@@ -39,10 +66,18 @@ export default class GestureCamera extends React.Component {
     handleCameraStream(images, _1, _2) {
         // TODO: Handle onChange to change state so that
         // this method can break the loop when necessary.
+
         const loop = async () => {
             const nextImageTensor = images.next().value
 
             // Call gesture recognition service here
+            try {
+                var pose = await HandPoseService.predict(nextImageTensor);
+                var gesture = await GesturesService.getGesture(pose);
+                if (gesture !== null) this.onGesture(gesture);
+            } catch (err) {
+                console.error(err);
+            }
             
             requestAnimationFrame(loop);
         }
@@ -68,11 +103,21 @@ export default class GestureCamera extends React.Component {
             hasPermissions: true
         });
 
-        // Wait for tensorflow to be ready
-        await tf.ready();
-
+        // Wait for services to be ready
         this.setState({
-            tfIsReady: true
+            serviceLoading: '@Tensorflow/tfjs'
+        });
+        await tf.ready();
+        this.setState({
+            serviceLoading: '@Mediapipe/hands'
+        });
+        await HandPoseService.ready();
+        this.setState({
+            serviceLoading: '@Tensorflow/gestures'
+        });
+        await GesturesService.ready();
+        this.setState({
+            ready: true
         });
     }
 
@@ -96,7 +141,7 @@ export default class GestureCamera extends React.Component {
             };
         }
 
-        if (this.state.tfIsReady) {
+        if (this.state.ready) {
             return (
                 <View style={this.style.cameraContainer}>
                     <TensorCamera
@@ -108,6 +153,9 @@ export default class GestureCamera extends React.Component {
                         resizeWidth={152}
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
+                        onGesture={this.handleGesture}
+                        onPlay={this.props.onPlay}
+                        onPause={this.props.onPause}
                         autorender={true}/>
                 </View>
             );
@@ -115,7 +163,7 @@ export default class GestureCamera extends React.Component {
             return (
                 <View>
                     <Text style={this.style.contrastText}>
-                        Preparing...
+                        Loading {this.state.serviceLoading}
                     </Text>
                 </View>
             );
