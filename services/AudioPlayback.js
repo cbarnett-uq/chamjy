@@ -6,6 +6,7 @@ export default class AudioPlayback {
         filename: '',
         uri: '',
     };
+
     static audioPlayer = new Audio.Sound();
     static playbackStatus = null;
     static playbackRate = 1;
@@ -22,14 +23,15 @@ export default class AudioPlayback {
     };
 
     static async pause() {
-        if (AudioPlayback.audioPlayer !== null && AudioPlayback.playbackStatus !== null && AudioPlayback.playbackStatus.isLoaded === true) {
-            AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
+        if (AudioPlayback.audioPlayer._loaded) {
+            if (!AudioPlayback.playbackStatus.isPlaying) {
+                AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
+            }
         }
     }
 
     static async play() {
-        if (AudioPlayback.audioPlayer !== null && AudioPlayback.playbackStatus !== null && AudioPlayback.playbackStatus.isLoaded === true) {
-            // It will resume our audio
+        if (AudioPlayback.audioPlayer._loaded) {
             if (!AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.playAsync()
             }
@@ -48,7 +50,7 @@ export default class AudioPlayback {
 
     static async loadAudio(uri) {
         AudioPlayback.audioFile.uri = uri
-        if (AudioPlayback.playbackStatus !== null) {
+        if (AudioPlayback.audioPlayer._loaded) {
             await AudioPlayback.unloadAudio()
         }
 
@@ -76,7 +78,8 @@ export default class AudioPlayback {
         var rate = Number(tempRate)
         AudioPlayback.playbackRate = rate
 
-        if (AudioPlayback.audioPlayer !== null && AudioPlayback.playbackStatus !== null && AudioPlayback.playbackStatus.isLoaded === true) {
+
+        if (AudioPlayback.audioPlayer._loaded) {
             try {
                 AudioPlayback.playbackStatus = await AudioPlayback.audioPlayer.setStatusAsync({ rate: rate, shouldCorrectPitch: true })
             } catch (error) {

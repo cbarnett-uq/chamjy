@@ -15,7 +15,7 @@ export default class FileSelection extends React.Component {
         
         this.pickDocument = async () => {
             let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio" });
-            if (result) {
+            if (result.type !== "cancel") {
                 await AudioPlayback.loadAudio(result.uri)
                 this.setState({ fileName: result.name })
             }
