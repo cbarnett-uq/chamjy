@@ -1,10 +1,7 @@
+import { GestureEstimator } from 'fingerpose';
+import { Gestures, GestureDefinition } from './types';
 import * as tfjs from '@tensorflow/tfjs';
 import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
-
-// Model data, must use require statement not import or will not
-// load as assets.
-const gesturesModel = require('../../model/model.json');
-const gesturesWeights = require('../../model/weights.bin');
 
 /**
  * Singleton service for predicting current gesture based on
@@ -21,8 +18,10 @@ export default class GesturesService {
         if (GesturesService._ready) return;
 
         try {
-            GesturesService._model = await tfjs.loadLayersModel(
-                bundleResourceIO(gesturesModel, gesturesWeights));
+            GesturesService._model = new GestureEstimator([
+                GestureDefinition.play,
+                GestureDefinition.pause
+            ]);
             GesturesService._ready = true;
         } catch (err) {
             console.error(err);
@@ -58,29 +57,32 @@ export default class GesturesService {
         if (!GesturesService._ready) throw "GestureService is not ready.";
 
         // TODO: Handle inputing pose data into gestures model.
-        var result = await GesturesService._model
-            .predict(pose)
-            .data();
+        if (pose.length == 0) return 2;
 
-        console.log(result);
+        var landmarks = pose[0].keypoints3D
+            .map((x) => { return [x.x, x.y, x.z]; });
+        
+        var result = GesturesService._model
+            .estimate(landmarks, 8.5);
 
         // TODO: Handle result to convert into Gestures object.
         return GesturesService._mapResultToGesture(result);
     }
 
     /**
-     * Maps the output prediction to the relevant gesture.
+     * Maps the highest scoring prediction to the gestures map.
+     * @param { any } result    Result from fingerpose prediction
      */
-    static _mapResultToGesture(data) {
-        let index = 0;
-        let max = 0;
-        for (let i = 0; i < data.length; i++) {
-            if (data[i] > max) {
-                index = i;
-                max = data[i];
+    static _mapResultToGesture(result) {
+        var name = "nothing";
+        var max = 0;
+
+        for (var i = 0; i < result.gestures.length; i++) {
+            if (result.gestures[i].score > max) {
+                name = result.gestures[i].name;
+                max = result.gestures[i].score;
             }
         }
-        
-        return index;
+        return Gestures[name];
     }
 }

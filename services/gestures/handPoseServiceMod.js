@@ -31,7 +31,7 @@ export default class HandPoseService {
             const _model = handPoseDetection.SupportedModels.MediaPipeHands;
             const _config = {
                 runtime: 'tfjs',
-                modelType: 'full',
+                modelType: 'lite',
                 solutionPath: 'node_modules/@mediapipe/hands'
             };
 
@@ -78,11 +78,10 @@ export default class HandPoseService {
         try {
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
-            
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
             HandPoseService._frames.shift();
 
-            return tfjs.tensor([HandPoseService._frames]);
+            return result;
         } catch (err) {
             console.error(err);
             return null;

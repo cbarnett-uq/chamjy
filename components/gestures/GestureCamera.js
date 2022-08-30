@@ -4,8 +4,8 @@ import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
 import StyleService from '../../services/StyleService';
 import * as tf from '@tensorflow/tfjs';
-import HandPoseService from '../../services/gestures/handPoseService';
-import GesturesService from '../../services/gestures/gesturesService';
+import HandPoseService from '../../services/gestures/handPoseServiceMod';
+import GesturesService from '../../services/gestures/gesturesServiceMod';
 import { Gestures } from '../../services/gestures/types';
 
 // Decorator for cameraWithTensors class
@@ -46,14 +46,14 @@ export default class GestureCamera extends React.Component {
         GestureCamera._lastGesture = gesture;
 
         switch (gesture) {
-            case Gestures["Nothing"]:
+            case Gestures["nothing"]:
                 break;
 
-            case Gestures["Play"]:
+            case Gestures["play"]:
                 this.onPlay();
                 break;
             
-            case Gestures["Pause"]:
+            case Gestures["pause"]:
                 this.onPause();
                 break;
         }
@@ -149,8 +149,8 @@ export default class GestureCamera extends React.Component {
                         style={this.style.camera}
                         cameraTextureHeight={textureDims.height}
                         cameraTextureWidth={textureDims.width}
-                        resizeHeight={200}
-                        resizeWidth={152}
+                        resizeHeight={400}
+                        resizeWidth={300}
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}
