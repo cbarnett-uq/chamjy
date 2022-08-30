@@ -21,7 +21,9 @@ export default class StyleService {
         cameraContainer: {
             flex: 1,
             alignItems: 'stretch',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            width: "100%",
+            height: "100%",
         },
         camera: {
             flex: 1,

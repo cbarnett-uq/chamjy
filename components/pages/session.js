@@ -1,5 +1,8 @@
 import React from 'react';
+import { View } from 'react-native';
 import GestureCamera from '../gestures/GestureCamera.js';
+import FileSelection from '../FileSelection.js';
+import AudioPlayback from '../../services/AudioPlayback.js';
 import StyleService from '../../services/StyleService.js';
 
 /**
@@ -19,16 +22,16 @@ export default class Session extends React.Component {
      * Handles when the play gesture is detected.
      */
     handleOnPlay() {
-        // TODO: Implement playing music
         console.log("Play");
+        AudioPlayback.play()
     }
 
     /**
      * Handles when the pause gesture is detected.
      */
     handleOnPause() {
-        // TODO: Implement pausing music
         console.log("Pause");
+        AudioPlayback.pause()
     }
 
     /**
@@ -36,9 +39,12 @@ export default class Session extends React.Component {
      */
     render() {
         return (
-            <GestureCamera
-                onPlay={this.handleOnPlay}
-                onPause={this.handleOnPause}/>
+            <View style={this.style}>
+                <FileSelection/>
+                <GestureCamera
+                    onPlay={this.handleOnPlay}
+                    onPause={this.handleOnPause}/>
+            </View>
         );
     }
 }
