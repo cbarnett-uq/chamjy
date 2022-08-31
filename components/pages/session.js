@@ -4,6 +4,8 @@ import GestureCamera from '../gestures/GestureCamera.js';
 import FileSelection from '../FileSelection.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import StyleService from '../../services/StyleService.js';
+import FileSelection from '../FileSelection.js'
+import AudioPlayback from '../../services/AudioPlayback.js'
 
 /**
  * Component that renders the session page.
@@ -23,7 +25,7 @@ export default class Session extends React.Component {
      */
     handleOnPlay() {
         console.log("Play");
-        AudioPlayback.play()
+        AudioPlayback.play();
     }
 
     /**
@@ -31,7 +33,7 @@ export default class Session extends React.Component {
      */
     handleOnPause() {
         console.log("Pause");
-        AudioPlayback.pause()
+        AudioPlayback.pause();
     }
 
     /**
