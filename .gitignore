@@ -1,5 +1,8 @@
 node_modules/
 .expo/
+.vs/
+/android/.idea
+.ipynb_checkpoints/
 dist/
 npm-debug.*
 *.jks
