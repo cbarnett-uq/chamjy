@@ -1,10 +1,10 @@
-import { Text } from 'react-native';
 import MainLayout from "./components/MainLayout.js";
+import Session from './components/pages/session.js';
 
 export default function App() {
   return (
     <MainLayout>
-      <Text>Conductor</Text>
+      <Session/>
     </MainLayout>
   );
 }
