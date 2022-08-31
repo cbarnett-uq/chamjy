@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "expo-av": "~12.0.4",
+    "expo-document-picker": "~10.3.0",
     "@mediapipe/hands": "^0.4.1646424915",
     "@react-native-async-storage/async-storage": "^1.17.10",
     "@tensorflow-models/hand-pose-detection": "^2.0.0",
