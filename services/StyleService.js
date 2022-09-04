@@ -95,6 +95,31 @@ export class Colors {
     })
 
     /**
+     * Style sheet for playback components.
+     */
+    static playback = StyleSheet.create({
+        fillContainer: {
+            width: '100%',
+            height: '100%'
+        },
+
+        albumCover: {
+            backgroundColor: Colors.dark.mid,
+            width: '33%',
+            aspectRatio: 1,
+            flex: 1,
+            flexDirection: 'column',
+            borderRadius: 22,
+            alignContent: 'center',
+            justifyContent: 'center'
+        },
+
+        centerInFlexContainer: {
+            alignSelf: 'center'
+        }
+    });
+
+    /**
      * Style sheet for the session UI.
      */
     static session = StyleSheet.create({
@@ -145,9 +170,19 @@ export class Colors {
             borderRadius: 22
         },
 
+        verticalContainer: {
+            zIndex: 0,
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignContent: 'center'
+        },
+
         controlsContainer: {
             zIndex: 0,
             flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'center',
             alignContent: 'space-between'
         },
 

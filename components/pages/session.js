@@ -4,6 +4,7 @@ import GestureCamera from '../gestures/GestureCamera.js';
 import FileSelection from '../FileSelection.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import { StyleService } from '../../services/StyleService.js';
+import { AlbumCover } from '../playback/albumCover.js';
 
 /**
  * Component that renders the session page.
@@ -47,6 +48,14 @@ export default class Session extends React.Component {
 
                 <View style={StyleService.session.cameraBorder}/>
                 <View style={StyleService.session.cameraBackground}/>
+
+                <View style={StyleService.session.verticalContainer}>
+                    <View style={StyleService.session.controlsContainer}/>
+                    <View style={StyleService.session.controlsContainer}>
+                        <AlbumCover/>
+                    </View>
+                    <View style={StyleService.session.controlsContainer}/>
+                </View>
             </View>
         );
     }
