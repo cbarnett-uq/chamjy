@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
 import GestureCamera from '../gestures/GestureCamera.js';
-import FileSelection from '../FileSelection.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import { StyleService } from '../../services/StyleService.js';
 import { AlbumCover } from '../playback/albumCover.js';
+import { TrackSelectNext, TrackSelectPrevious } from '../playback/trackSelect.js';
 
 /**
  * Component that renders the session page.
@@ -35,6 +35,20 @@ export default class Session extends React.Component {
     }
 
     /**
+     * Handles when the previous track button is pressed.
+     */
+    handleOnPrevious() {
+        console.log("Play previous track");
+    }
+
+    /**
+     * Handles when the next track button is pressed.
+     */
+    handleOnNext() {
+        console.log("Play next track");
+    }
+
+    /**
      * Renders the session component.
      */
     render() {
@@ -52,7 +66,9 @@ export default class Session extends React.Component {
                 <View style={StyleService.session.verticalContainer}>
                     <View style={StyleService.session.controlsContainer}/>
                     <View style={StyleService.session.controlsContainer}>
+                        <TrackSelectPrevious onPress={this.handleOnPrevious}/>
                         <AlbumCover/>
+                        <TrackSelectNext onPress={this.handleOnNext}/>
                     </View>
                     <View style={StyleService.session.controlsContainer}/>
                 </View>

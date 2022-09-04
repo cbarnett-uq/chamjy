@@ -105,11 +105,18 @@ export class Colors {
 
         albumCover: {
             backgroundColor: Colors.dark.mid,
-            width: '33%',
             aspectRatio: 1,
             flex: 1,
             flexDirection: 'column',
             borderRadius: 22,
+            alignContent: 'center',
+            justifyContent: 'center'
+        },
+
+        selectTrackContainer: {
+            aspectRatio: 1,
+            flex: 1,
+            flexDirection: 'column',
             alignContent: 'center',
             justifyContent: 'center'
         },

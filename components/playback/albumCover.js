@@ -7,6 +7,10 @@ import { Fontisto } from '@expo/vector-icons';
  * Component for rendering the album cover of the current track.
  */
 export class AlbumCover extends React.Component {
+    /**
+     * Renders the album cover (or empty icon) of the current track.
+     * @param { Object } props Component properties. 
+     */
     constructor(props) {
         super(props);
 
@@ -22,6 +26,10 @@ export class AlbumCover extends React.Component {
         }
     }
 
+    /**
+     * Updates the album image to display.
+     * @param { Object } props Component properties 
+     */
     onChange(props) {
         if ('imageUri' in props) {
             this.state = {
@@ -35,6 +43,9 @@ export class AlbumCover extends React.Component {
         }
     }
 
+    /**
+     * Renders the album cover component.
+     */
     render() {
         if (this.state.hasCover) {
             return (
