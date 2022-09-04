@@ -1,6 +1,6 @@
 import { SafeAreaView } from 'react-native';
 import React from 'react';
-import StyleService from "../services/StyleService.js";
+import { StyleService } from "../services/StyleService.js";
 
 /**
  * Component that renders the main layout of the app.

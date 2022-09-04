@@ -3,9 +3,7 @@ import { View } from 'react-native';
 import GestureCamera from '../gestures/GestureCamera.js';
 import FileSelection from '../FileSelection.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
-import StyleService from '../../services/StyleService.js';
-import FileSelection from '../FileSelection.js'
-import AudioPlayback from '../../services/AudioPlayback.js'
+import { StyleService } from '../../services/StyleService.js';
 
 /**
  * Component that renders the session page.
@@ -17,7 +15,6 @@ export default class Session extends React.Component {
      */
     constructor(props) {
         super(props);
-        this.style = (new StyleService()).getMainStyle();
     }
 
     /**
@@ -41,11 +38,14 @@ export default class Session extends React.Component {
      */
     render() {
         return (
-            <View style={this.style}>
-                <FileSelection/>
-                <GestureCamera
-                    onPlay={this.handleOnPlay}
-                    onPause={this.handleOnPause}/>
+            <View style={StyleService.session.container}>
+                <View style={StyleService.session.camera}>
+                    <GestureCamera
+                        onPlay={this.handleOnPlay}
+                        onPause={this.handleOnPause}/>
+                </View>
+
+                <View style={StyleService.session.cameraBorder}/>
             </View>
         );
     }
