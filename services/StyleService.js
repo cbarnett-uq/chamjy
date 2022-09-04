@@ -65,7 +65,7 @@ export class Colors {
         container: {
             flex: 1,
             backgroundColor: Colors.light.mid,
-            alignItems: 'center',
+            alignContent: 'center',
             justifyContent: 'center',
         },
 
@@ -83,7 +83,9 @@ export class Colors {
             flex: 1,
             flexDirection: 'row',
             width: '100%',
-            height: '100%'
+            height: '100%',
+            alignContent: 'center',
+            justifyContent: 'center'
         },
 
         camera: {
@@ -113,6 +115,19 @@ export class Colors {
             top: '7.5%',
             width: "20%",
             height: "20%",
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22
+        },
+
+        cameraBackground: {
+            position: 'absolute',
+            zIndex: 5,
+            left: '2.5%',
+            top: '7.5%',
+            width: "20%",
+            height: "20%",
+            backgroundColor: Colors.dark.dark,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
             borderRadius: 22

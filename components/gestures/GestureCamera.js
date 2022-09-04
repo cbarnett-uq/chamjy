@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
-import { StyleService } from '../../services/StyleService';
+import { Colors, StyleService } from '../../services/StyleService';
 import * as tf from '@tensorflow/tfjs';
 import HandPoseService from '../../services/gestures/handPoseService';
 import GesturesService from '../../services/gestures/gesturesService';
@@ -156,22 +156,14 @@ export default class GestureCamera extends React.Component {
                         autorender={true}/>
                 </View>
             );
-        } else if (this.state.hasPermissions) {
-            return (
-                <View>
-                    <Text style={StyleService.style.contrastText}>
-                        Loading {this.state.serviceLoading}
-                    </Text>
-                </View>
-            );
         } else {
             return (
-                <View>
-                    <Text style={StyleService.style.contrastText}>
-                        Needs camera permissions.
-                    </Text>
+                <View style={StyleService.camera.container}>
+                    <ActivityIndicator
+                        size='large'
+                        color={Colors.primary.mid}/> 
                 </View>
-            );
+            )
         }
     }
 }

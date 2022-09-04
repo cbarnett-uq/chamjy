@@ -46,6 +46,7 @@ export default class Session extends React.Component {
                 </View>
 
                 <View style={StyleService.session.cameraBorder}/>
+                <View style={StyleService.session.cameraBackground}/>
             </View>
         );
     }
