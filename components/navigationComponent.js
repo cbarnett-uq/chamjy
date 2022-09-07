@@ -14,10 +14,6 @@ export class NavigationComponent extends React.Component {
     constructor(props) {
         super(props);
 
-        if ("defineScreens" in props) {
-            props.defineScreens();
-        }
-
         NavigationService.registerListener(() => {
             this.forceUpdate();
         });
@@ -27,16 +23,13 @@ export class NavigationComponent extends React.Component {
      * Renders the component with the current component.
      */
     render() {
-        const screen = NavigationService.getComponent();
-
-        if (screen === undefined) {
-            return (
-                <View>
-                    <Text>No screen.</Text>
-                </View>
-            );
-        } else { 
-            return React.createElement(View, null, screen);
+        let screen;
+        try {
+            screen = NavigationService.getComponent();
+        } catch (err) {
+            screen = React.createElement(Text, null, err);
         }
+        
+        return React.createElement(View, this.props, screen);
     }
 }
