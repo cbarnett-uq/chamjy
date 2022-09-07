@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableHighlight } from "react-native";
+import { TouchableHighlight, Dimensions } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { Colors, StyleService } from "../../services/StyleService";
 import { View } from "react-native";
@@ -33,6 +33,10 @@ export class TrackSelect extends React.Component {
      * Renders this component.
      */
     render() {
+        const windowWidth = Dimensions.get("window")
+            .width;
+        const iconScale = windowWidth / 15;
+
         return (
             <View style={StyleService.playback.selectTrackContainer}>
                 <TouchableHighlight
@@ -40,7 +44,7 @@ export class TrackSelect extends React.Component {
                     onPress={this.state.onPress}>
                     <AntDesign
                         name={this.state.icon}
-                        size={48}
+                        size={iconScale}
                         color={Colors.dark.mid}/>
                 </TouchableHighlight>
             </View>

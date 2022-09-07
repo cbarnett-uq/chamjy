@@ -1,5 +1,5 @@
 import { Colors, StyleService } from "../../services/StyleService";
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, Dimensions } from 'react-native';
 import React from "react";
 import { Fontisto } from '@expo/vector-icons';
 
@@ -47,6 +47,10 @@ export class AlbumCover extends React.Component {
      * Renders the album cover component.
      */
     render() {
+        const windowWidth = Dimensions.get("window")
+            .width;
+        const iconScale = windowWidth / 8;
+
         if (this.state.hasCover) {
             return (
                 <View style={StyleService.playback.albumCover}>
@@ -61,7 +65,7 @@ export class AlbumCover extends React.Component {
                     <Fontisto
                         style={StyleService.playback.centerInFlexContainer}
                         name="music-note"
-                        size={48}
+                        size={iconScale}
                         color={Colors.dark.contrast}/>
                 </View>
             );
