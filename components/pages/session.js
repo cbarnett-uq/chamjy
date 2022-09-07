@@ -4,8 +4,6 @@ import GestureCamera from '../gestures/GestureCamera.js';
 import FileSelection from '../FileSelection.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import StyleService from '../../services/StyleService.js';
-import FileSelection from '../FileSelection.js'
-import AudioPlayback from '../../services/AudioPlayback.js'
 
 /**
  * Component that renders the session page.

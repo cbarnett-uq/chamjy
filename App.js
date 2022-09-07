@@ -1,10 +1,15 @@
-import MainLayout from "./components/MainLayout.js";
-import Session from './components/pages/session.js';
+import React from 'react';
+import Session from './components/pages/session';
+import { NavigationComponent } from './components/navigationComponent';
+import NavigationService from './services/navigationService';
+import { SafeAreaView } from 'react-native';
 
 export default function App() {
+  NavigationService.register("session", React.createElement(Session));
+
   return (
-    <MainLayout>
-      <Session/>
-    </MainLayout>
+    <SafeAreaView>
+      <NavigationComponent/>
+    </SafeAreaView>
   );
 }
