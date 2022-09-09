@@ -1,7 +1,6 @@
 import * as handPoseDetection from '@tensorflow-models/hand-pose-detection';
 import * as tfjs from '@tensorflow/tfjs';
 
-
 /**
  * Singleton service class to turn image data into hand positions
  * in 3d space using mediapipe.
@@ -10,6 +9,7 @@ export default class HandPoseService {
     static _ready = false;
     static _detector;
     static _frames = [];
+    static _lastFrame = {};
 
     /**
      * Handles the onResults call from Hands.
@@ -72,7 +72,7 @@ export default class HandPoseService {
      * Predicts the current handpose from an image tensor.
      * @param { any } tensor Image tensor from the camera.
      */
-    static async predict(tensor) {
+    static async update(tensor) {
         if (!HandPoseService._ready) throw "Hand pose service is not ready.";
 
         try {
@@ -80,12 +80,28 @@ export default class HandPoseService {
                 .estimateHands(tensor);
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
             HandPoseService._frames.shift();
+            HandPoseService._lastFrame = result;
 
-            return tfjs.tensor([HandPoseService._frames]);
+            return true;
         } catch (err) {
             console.error(err);
-            return null;
+            return false;
         }
+    }
+
+    /**
+     * Returns the last thirty predictions as a tensor.
+     */
+    static getTensor() {
+        return tfjs.tensor([HandPoseService._frames]);
+    }
+
+    /**
+     * Returns the last prediction frame with raw data
+     * exported by Hands.
+     */
+    static getLastFrame() {
+        return HandPoseService._lastFrame;
     }
 
     /**

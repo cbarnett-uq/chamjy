@@ -1,5 +1,6 @@
 import * as tfjs from '@tensorflow/tfjs';
 import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
+import HandPoseService from './handPoseService';
 
 // Model data, must use require statement not import or will not
 // load as assets.
@@ -54,15 +55,15 @@ export default class GesturesService {
      * @param { any } pose Hand pose data returned from mediapipe. 
      * @returns Gesture { Nothing, Play, Pause }
      */
-    static async getGesture(pose) {
+    static async predict() {
         if (!GesturesService._ready) throw "GestureService is not ready.";
 
-        // TODO: Handle inputing pose data into gestures model.
+        let pose = HandPoseService.getTensor();
+
         var result = await GesturesService._model
             .predict(pose)
             .data();
 
-        // TODO: Handle result to convert into Gestures object.
         return GesturesService._mapResultToGesture(result);
     }
 

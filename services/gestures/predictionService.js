@@ -1,13 +1,19 @@
 import { GestureEstimator } from 'fingerpose';
+import GesturesService from './gesturesService';
+import HandPoseService from './handPoseService';
 import { Gestures, GestureDefinition } from './types';
-import * as tfjs from '@tensorflow/tfjs';
-import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
+
+/**
+ * Defines the minimum prediction confidence used by fingerpose
+ * to detect a static gesture. Range [0, 10].
+ */
+const StaticPredictionConfidenceThreshold = 8.5;
 
 /**
  * Singleton service for predicting current gesture based on
  * the hand pose input.
  */
-export default class GesturesService {
+export default class PredictionService {
     static _model;
     static _ready = false;
 
@@ -15,14 +21,13 @@ export default class GesturesService {
      * Initialises the gesture service by loading the model.
      */
     static async init() {
-        if (GesturesService._ready) return;
+        if (PredictionService._ready) return;
 
         try {
-            GesturesService._model = new GestureEstimator([
-                GestureDefinition.play,
+            PredictionService._model = new GestureEstimator([
                 GestureDefinition.pause
             ]);
-            GesturesService._ready = true;
+            PredictionService._ready = true;
         } catch (err) {
             console.error(err);
         }
@@ -41,10 +46,10 @@ export default class GesturesService {
      * if init errors out.
      */
     static async ready() {
-        await GesturesService.init();
+        await PredictionService.init();
 
-        while (!GesturesService._ready) {
-            await GesturesService._timeout(1);
+        while (!PredictionService._ready) {
+            await PredictionService._timeout(1);
         }
     }
 
@@ -53,20 +58,30 @@ export default class GesturesService {
      * @param { any } pose Hand pose data returned from mediapipe. 
      * @returns Gesture { Nothing, Play, Pause }
      */
-    static async getGesture(pose) {
-        if (!GesturesService._ready) throw "GestureService is not ready.";
+    static async predict() {
+        if (!PredictionService._ready) throw "PredictionService is not ready.";
 
-        // TODO: Handle inputing pose data into gestures model.
-        if (pose.length == 0) return 2;
+        var result = PredictionService._predictStatic();
+        if (result !== Gestures["nothing"]) return result;
+
+        return GesturesService.predict();
+    }
+
+    /**
+     * Returns the predicted gesture using fingerpose for static
+     * gestures. Must meet minimum confidence threshold.
+     */
+    static async _predictStatic() {
+        let pose = HandPoseService.getLastFrame();
+        if (pose.length == 0) return Gestures["nothing"];
 
         var landmarks = pose[0].keypoints3D
             .map((x) => { return [x.x, x.y, x.z]; });
         
-        var result = GesturesService._model
-            .estimate(landmarks, 8.5);
+        var result = PredictionService._model
+            .estimate(landmarks, StaticPredictionConfidenceThreshold);
 
-        // TODO: Handle result to convert into Gestures object.
-        return GesturesService._mapResultToGesture(result);
+        return PredictionService._mapResultToGesture(result);
     }
 
     /**

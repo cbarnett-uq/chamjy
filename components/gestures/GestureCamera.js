@@ -7,6 +7,7 @@ import * as tf from '@tensorflow/tfjs';
 import HandPoseService from '../../services/gestures/handPoseService';
 import GesturesService from '../../services/gestures/gesturesService';
 import { Gestures } from '../../services/gestures/types';
+import PredictionService from '../../services/gestures/predictionService';
 
 // Decorator for cameraWithTensors class
 const TensorCamera = cameraWithTensors(Camera);
@@ -29,7 +30,6 @@ export default class GestureCamera extends React.Component {
         // Initial state
         this.state = {
             ready: false,
-            serviceLoading: '',
             hasPermissions: false
         };
     }
@@ -43,14 +43,14 @@ export default class GestureCamera extends React.Component {
         GestureCamera._lastGesture = gesture;
 
         switch (gesture) {
-            case Gestures["Nothing"]:
+            case Gestures["nothing"]:
                 break;
 
-            case Gestures["Play"]:
+            case Gestures["play"]:
                 this.onPlay();
                 break;
             
-            case Gestures["Pause"]:
+            case Gestures["pause"]:
                 this.onPause();
                 break;
         }
@@ -61,17 +61,15 @@ export default class GestureCamera extends React.Component {
      * @param {any} images Collection of image tensors
      */
     handleCameraStream(images, _1, _2) {
-        // TODO: Handle onChange to change state so that
-        // this method can break the loop when necessary.
-
         const loop = async () => {
             const nextImageTensor = images.next().value
 
             // Call gesture recognition service here
             try {
-                var pose = await HandPoseService.predict(nextImageTensor);
-                var gesture = await GesturesService.getGesture(pose);
-                if (gesture !== null) this.onGesture(gesture);
+                if (await HandPoseService.update(nextImageTensor)) {
+                    var gesture = await PredictionService.predict();
+                    if (gesture !== null) this.onGesture(gesture);
+                }
             } catch (err) {
                 console.error(err);
             }
@@ -101,18 +99,11 @@ export default class GestureCamera extends React.Component {
         });
 
         // Wait for services to be ready
-        this.setState({
-            serviceLoading: '@Tensorflow/tfjs'
-        });
         await tf.ready();
-        this.setState({
-            serviceLoading: '@Mediapipe/hands'
-        });
         await HandPoseService.ready();
-        this.setState({
-            serviceLoading: '@Tensorflow/gestures'
-        });
         await GesturesService.ready();
+        await PredictionService.ready();
+
         this.setState({
             ready: true
         });
