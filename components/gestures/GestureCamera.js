@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, Dimensions } from 'react-native';
 import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
 import { Colors, StyleService } from '../../services/StyleService';
@@ -125,18 +125,7 @@ export default class GestureCamera extends React.Component {
      */
     render() {
         // Get texture dimensions
-        let textureDims;
-        if (Platform.OS === 'ios') {
-            textureDims = {
-            height: 1920,
-            width: 1080,
-            };
-        } else {
-            textureDims = {
-            height: 1200,
-            width: 1600,
-            };
-        }
+        let dim = Dimensions.get("window");
 
         if (this.state.ready) {
             return (
@@ -144,10 +133,10 @@ export default class GestureCamera extends React.Component {
                     <TensorCamera
                         type={Camera.Constants.Type.front}
                         style={StyleService.camera.camera}
-                        cameraTextureHeight={textureDims.height}
-                        cameraTextureWidth={textureDims.width}
-                        resizeHeight={200}
-                        resizeWidth={152}
+                        cameraTextureHeight={dim.height}
+                        cameraTextureWidth={dim.width}
+                        resizeHeight={dim.height / 5}
+                        resizeWidth={dim.width / 5}
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}

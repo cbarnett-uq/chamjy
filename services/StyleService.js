@@ -35,6 +35,16 @@ export class Colors {
     };
 
     /**
+     * Quarternary colour tones
+     */
+    static quarternary = {
+        'light': '#FFFFFF',
+        'mid': '#C0C0C0',
+        'dark': '#000000',
+        'constrast': '#FF0000'
+    };
+
+    /**
      * Light shades
      */
     static light = {
@@ -59,23 +69,25 @@ export class Colors {
  * Service for accessing the stylesheet.
  */
  export class StyleService {
-    // Static style to reduce rebuilding in memory everytime
-    // this is referenced.
-    static style = StyleSheet.create({
-        container: {
+    /**
+     * Layout style sheet.
+     */
+    static layout = StyleSheet.create({
+        outerContainer: {
             flex: 1,
-            backgroundColor: Colors.light.mid,
-            alignContent: 'center',
-            justifyContent: 'center',
+            alignContext: 'center',
+            justifyContent: 'center'
         },
 
-        contrastText: {
-            color: '#fff'
+        flexContainer: {
+            flex: 1,
+            alignContext: 'center',
+            justifyContent: 'center'
         }
     });
 
     /**
-     * Style sheet for the camera stylesheet.
+     * Style sheet for the camera.
      */
     static camera = StyleSheet.create({
         container: {
@@ -133,7 +145,7 @@ export class Colors {
         container: {
             position: 'absolute',
             zIndex: 0,
-            backgroundColor: Colors.light.dark,
+            backgroundColor: Colors.light.light,
             left: '0%',
             top: '0%',
             width: '100%',
@@ -144,7 +156,7 @@ export class Colors {
             position: 'absolute',
             zIndex: 10,
             left: '2.5%',
-            top: '7.5%',
+            top: '5%',
             width: "20%",
             height: "20%",
             borderColor: Colors.dark.mid,
@@ -156,7 +168,7 @@ export class Colors {
             position: 'absolute',
             zIndex: 5,
             left: '2.5%',
-            top: '7.5%',
+            top: '5%',
             width: "20%",
             height: "20%",
             backgroundColor: Colors.dark.dark,
@@ -169,7 +181,7 @@ export class Colors {
             position: 'absolute',
             zIndex: 20,
             left: '2.5%',
-            top: '7.5%',
+            top: '5%',
             width: "20%",
             height: "20%",
             borderColor: Colors.dark.mid,
@@ -199,11 +211,4 @@ export class Colors {
             aspectRatio: 1.33
         }
     });
-    
-    /**
-     * Returns the main layout style sheet for the app.
-     */
-    getMainStyle() {
-        return StyleService.style;
-    }
 }

@@ -17,7 +17,7 @@ export default class MainLayout extends React.Component {
      */
     render() {
         return (
-            <NavigationComponent style={StyleService.style.container}/>
+            <NavigationComponent style={StyleService.layout.flexContainer}/>
         )
     }
 }
