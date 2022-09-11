@@ -9,22 +9,39 @@ import MusicButton from "./MusicButton.js"
 export default class FileSelection extends React.Component {
     constructor(props) {
         super(props)
-        FileSelection.getPermissions();
-        
+        this.rightLayouts = {
+            "Library": () => {
+                return this.LibraryLayout()
+            },
+
+            "Favourites": () => {
+                return this.FavouritesLayout()
+            },
+            "Played": () => {
+                return this.PlayedLayout()
+            },
+            "Added": () => {
+                return (
+                    <View></View>
+                )
+            },
+        }
         this.style = (new StyleService()).getMainStyle();
         this.sideWidth = 250
 
         this.state = {
             fileURI: "",
             sideWidth: this.sideWidth,
+            rightView: "Library",
             libraryAssets: [],
             recentlyPlayedAssets: [],
             recentlyAddedAssets: [],
             favouriteAssets: [],
         }
         
-
         this.getLibrary = async () => {
+            await FileSelection.getPermissions();
+
             let media = await MediaLibrary.getAssetsAsync({ mediaType: 'audio' });
             this.setState({ libraryAssets: media.assets });
             this.state.recentlyAddedAssets.push(this.state.libraryAssets[0]);
@@ -48,9 +65,12 @@ export default class FileSelection extends React.Component {
         }
 
         this.onMusicSelect = async (uri) => {
-            console.log(uri);
             await AudioPlayback.loadAudio(uri)
             await AudioPlayback.play()
+        }
+
+        this.changeRightView = (newView) => {
+            this.setState({ rightView: newView });
         }
 
         this.getLibrary();
@@ -61,6 +81,79 @@ export default class FileSelection extends React.Component {
         if (!permission.granted && permission.canAskAgain) {
             const { status, canAskAgain } = await MediaLibrary.requestPermissionsAsync();
         }
+    }
+
+    LibraryLayout() {
+        return (
+            <ScrollView>
+                <View style={{ marginLeft: "5%", marginTop: "7%" }}>
+                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>LIBRARY</Text>
+                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
+                        <TouchableHighlight onPress={this.manualSelection} style={this.style.musicButtonTouchable}>
+                            <View style={{ alignItems: "center" }}>
+                                <Image source={require("../assets/upload.png")} style={this.style.musicButtonImage} />
+                                <Text style={this.style.musicButtonText}>Browse</Text>
+                            </View>
+                        </TouchableHighlight>
+
+                        {this.state.libraryAssets.map((item, index) => {
+                            return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
+                        })}
+
+                    </ScrollView>
+                </View>
+
+                <View style={{ marginLeft: "5%", marginTop: "5%" }}>
+                    <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY ADDED</Text>
+                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
+                        {this.state.recentlyAddedAssets.map((item, index) => {
+                            return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
+                        })}
+
+                    </ScrollView>
+                </View>
+
+                <View style={{ marginLeft: "5%", marginTop: "5%" }}>
+                    <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
+                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
+                        {this.state.recentlyPlayedAssets.map((item, index) => {
+                            return <MusicButton key={index} musicAsset={item} onPress={this.onMusicSelect} />
+                        })}
+
+                    </ScrollView>
+                </View>
+            </ScrollView>
+        )
+    }
+
+    FavouritesLayout() {
+        return (
+            <ScrollView>
+                <View style={{ marginLeft: "5%", marginTop: "7%" }}>
+                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>FAVOURITES</Text>
+                    <View style={{ flexDirection: 'row', flexWrap:'wrap'}}>
+                        {this.state.libraryAssets.map((item, index) => {
+                            return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
+                        })}
+                    </View>
+                </View>
+            </ScrollView>
+        )
+    }
+
+    PlayedLayout() {
+        return (
+            <ScrollView>
+                <View style={{ marginLeft: "5%", marginTop: "7%" }}>
+                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
+                    <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                        {this.state.libraryAssets.map((item, index) => {
+                            return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
+                        })}
+                    </View>
+                </View>
+            </ScrollView>
+        )
     }
 
     render() {
@@ -97,32 +190,33 @@ export default class FileSelection extends React.Component {
                                 style={{
                                     borderBottomColor: '#777',
                                     borderBottomWidth: 1,
-                                    marginTop: "20%",
+                                    marginTop: "15%",
+                                    marginBottom: "7%",
                                 }}
                             />
 
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchable}>
                                 <View style={this.style.fileSelctionLeftMenuItemView}>
                                     <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
                                     <Text style={this.style.fileSelctionLeftMenuText}>Library</Text>
                                 </View>
                             </TouchableHighlight>
 
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchable}>
                                 <View style={this.style.fileSelctionLeftMenuItemView}>
                                     <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
                                     <Text style={this.style.fileSelctionLeftMenuText}>Favourites</Text>
                                 </View>
                             </TouchableHighlight>
 
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchable}>
                                 <View style={this.style.fileSelctionLeftMenuItemView}>
                                     <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
                                     <Text style={this.style.fileSelctionLeftMenuText}>Recently Played</Text>
                                 </View>
                             </TouchableHighlight>
 
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchable}>
                                 <View style={this.style.fileSelctionLeftMenuItemView}>
                                     <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
                                     <Text style={this.style.fileSelctionLeftMenuText}>Recently Added</Text>
@@ -141,44 +235,7 @@ export default class FileSelection extends React.Component {
                     elevation: 1,
                     backgroundColor: "#fff"
                 }}>
-                    <ScrollView>
-                        <View style={{ marginLeft: "5%", marginTop: "7%"}}>
-                            <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>LIBRARY</Text>
-                            <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
-                                <TouchableHighlight onPress={this.manualSelection} style={this.style.musicButtonTouchable}>
-                                    <View style={{ alignItems: "center" }}>
-                                        <Image source={require("../assets/upload.png")} style={this.style.musicButtonImage} />
-                                        <Text style={this.style.musicButtonText}>Browse</Text>
-                                    </View>
-                                </TouchableHighlight>
-
-                                {this.state.libraryAssets.map((item, index) => {
-                                    return <MusicButton musicAsset={item} onPress={this.onMusicSelect}/>
-                                })}
-
-                            </ScrollView>
-                        </View>
-
-                        <View style={{ marginLeft: "5%", marginTop: "5%"}}>
-                            <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY ADDED</Text>
-                            <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
-                                {this.state.recentlyAddedAssets.map((item, index) => {
-                                    return <MusicButton musicAsset={item} onPress={this.onMusicSelect}/>
-                                })}
-
-                            </ScrollView>
-                        </View>
-
-                        <View style={{ marginLeft: "5%", marginTop: "5%" }}>
-                            <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
-                            <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
-                                {this.state.recentlyPlayedAssets.map((item, index) => {
-                                    return <MusicButton key={index} musicAsset={item} onPress={ this.onMusicSelect }/>
-                                })}
-
-                            </ScrollView>
-                        </View>
-                    </ScrollView>
+                    {this.rightLayouts[this.state.rightView]()}
                 </View>
             </View>
         );
