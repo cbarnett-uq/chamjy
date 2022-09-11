@@ -5,6 +5,7 @@ import * as MediaLibrary from 'expo-media-library';
 import StyleService from '../services/StyleService';
 import AudioPlayback from "../services/AudioPlayback"
 import MusicButton from "./MusicButton.js"
+import { Imag } from '@tensorflow/tfjs-core';
 
 export default class FileSelection extends React.Component {
     constructor(props) {
@@ -26,13 +27,25 @@ export default class FileSelection extends React.Component {
                 )
             },
         }
+
+        this.leftLayouts = {
+            "Expand": () => {
+                return this.ExpandedLeftNav()
+            },
+
+            "Shrink": () => {
+                return this.ShrunkLeftView()
+            }
+        }
         this.style = (new StyleService()).getMainStyle();
         this.sideWidth = 250
+        console.log()
 
         this.state = {
             fileURI: "",
             sideWidth: this.sideWidth,
             rightView: "Library",
+            leftNavExpand: "Expand",
             libraryAssets: [],
             recentlyPlayedAssets: [],
             recentlyAddedAssets: [],
@@ -71,6 +84,18 @@ export default class FileSelection extends React.Component {
 
         this.changeRightView = (newView) => {
             this.setState({ rightView: newView });
+        }
+
+        this.changeLeftNav = (newView) => {
+            if (newView === "toggle") {
+                if (this.state.leftNavExpand === "Expand") {
+                    this.setState({ leftNavExpand: "Shrink" })
+                } else {
+                    this.setState({ leftNavExpand: "Expand" })
+                }
+            } else {
+                this.setState({ leftNavExpand: newView })
+            }
         }
 
         this.getLibrary();
@@ -156,85 +181,147 @@ export default class FileSelection extends React.Component {
         )
     }
 
-    render() {
+    ExpandedLeftNav() {
         return (
             <View style={{
-                flex: 1,
-                flexDirection: 'row',
+                flexDirecton: 'row',
+                backgroundColor: '#ccc',
+                flexBasis: this.state.sideWidth
             }}>
-
-                <View style={{
-                    flexDirecton: 'row',
-                    backgroundColor: '#ccc',
-                    flexBasis: this.state.sideWidth
-                }}>
-                    <ScrollView>
-                        <View style={{
-                            marginTop: "15%",
-                            marginLeft: "5%",
-                            marginRight: "5%",
-                        }}>
-                            <TouchableHighlight underlayColor={ this.style.fileSelctionLeftMenuTouchable.underlayColor } onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
-                                <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                                    <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                    <Text style={this.style.fileSelctionLeftMenuText}>Home</Text>
-                                </View>
-                            </TouchableHighlight>
-                            
-                            <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: "3%" }}>
-                                <Image source={require("../assets/search.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <TextInput placeholder="" style={this.style.searchBar} />
+                <ScrollView>
+                    <View style={{
+                        marginTop: 30,
+                        marginLeft: 10,
+                        marginRight: 15,
+                    }}>
+                        
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={ 1 } style={this.style.fileSelctionLeftMenuText}>Home</Text>
                             </View>
+                        </TouchableHighlight>
 
-                            <View
-                                style={{
-                                    borderBottomColor: '#777',
-                                    borderBottomWidth: 1,
-                                    marginTop: "15%",
-                                    marginBottom: "7%",
-                                }}
-                            />
-
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                                <View style={this.style.fileSelctionLeftMenuItemView}>
-                                    <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                    <Text style={this.style.fileSelctionLeftMenuText}>Library</Text>
-                                </View>
-                            </TouchableHighlight>
-
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                                <View style={this.style.fileSelctionLeftMenuItemView}>
-                                    <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                    <Text style={this.style.fileSelctionLeftMenuText}>Favourites</Text>
-                                </View>
-                            </TouchableHighlight>
-
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                                <View style={this.style.fileSelctionLeftMenuItemView}>
-                                    <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                    <Text style={this.style.fileSelctionLeftMenuText}>Recently Played</Text>
-                                </View>
-                            </TouchableHighlight>
-
-                            <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                                <View style={this.style.fileSelctionLeftMenuItemView}>
-                                    <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                    <Text style={this.style.fileSelctionLeftMenuText}>Recently Added</Text>
-                                </View>
-                            </TouchableHighlight>
-
+                        <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 10 }}>
+                            <Image source={require("../assets/search.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                            <TextInput placeholder="" style={this.style.searchBar} />
                         </View>
-                    </ScrollView>
-                </View>
 
+                        <View
+                            style={{
+                                borderBottomColor: '#777',
+                                borderBottomWidth: 1,
+                                marginTop: 30,
+                                marginBottom: 20,
+                            }}
+                        />
 
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={this.style.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../assets/library.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Library</Text>
+                            </View>
+                        </TouchableHighlight>
 
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={this.style.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../assets/heart.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Favourites</Text>
+                            </View>
+                        </TouchableHighlight>
 
-                <View style={{
-                    flex: 2,
-                    elevation: 1,
-                    backgroundColor: "#fff"
-                }}>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={this.style.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../assets/recently-played.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Recently Played</Text>
+                            </View>
+                        </TouchableHighlight>
+
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={this.style.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../assets/recently-added.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Recently Added</Text>
+                            </View>
+                        </TouchableHighlight>
+
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={this.style.fileSelctionLeftMenuTouchable}>
+                            <View style={this.style.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../assets/expand-nav.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Hide</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </View>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    ShrunkLeftView() {
+        return (
+            <View style={{
+                flexDirecton: 'row',
+                backgroundColor: '#ccc',
+            }}>
+                <ScrollView>
+                    <View style={{
+                        marginTop: 30,
+                        marginLeft: 15,
+                        marginRight: 15,
+                    }}>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { }} style={{ padding:5, marginTop:10 }}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("Expand") }} style={{ padding: 5, marginTop: 10 }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 3}}>
+                                <Image source={require("../assets/search.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                            </View>
+                        </TouchableHighlight>
+                        <View
+                            style={{
+                                borderBottomColor: '#777',
+                                borderBottomWidth: 1,
+                                marginTop: 30,
+                                marginBottom: 20,
+                            }}
+                        />
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/library.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/heart.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/recently-played.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/recently-added.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                            </View>
+                        </TouchableHighlight>
+                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                            <View style={{ alignItems: 'center' }}>
+                                <Image source={require("../assets/expand-nav.png")} style={ this.style.fileSelctionLeftMenuImageShrunk }/>
+                            </View>
+                        </TouchableHighlight>
+                     </View>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    render() {
+        return (
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+                { this.leftLayouts[this.state.leftNavExpand]() }
+                <View style={{flex: 2, elevation: 1, backgroundColor: "#fff"}}>
                     {this.rightLayouts[this.state.rightView]()}
                 </View>
             </View>

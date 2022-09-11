@@ -64,9 +64,9 @@ export default class StyleService {
             borderRadius: 5,
             backgroundColor: "#ccc",
             underlayColor: "#eee",
-            paddingLeft: "3%",
-            paddingTop: "7%",
-            paddingBottom: "7%"
+            paddingLeft: 10,
+            paddingTop: 15,
+            paddingBottom: 20
         },
         fileSelctionLeftMenuImage: {
             tintColor: "grey",
@@ -88,7 +88,19 @@ export default class StyleService {
         fileSelectionRightScrollView: {
             width: "100%",
             flexDirection: 'row',
-        }
+        },
+        fileSelctionLeftMenuTouchableShrunk: {
+            borderRadius: 5,
+            backgroundColor: "#ccc",
+            underlayColor: "#eee",
+            paddingTop: 15,
+            paddingBottom: 20,
+        },
+        fileSelctionLeftMenuImageShrunk: {
+            tintColor: "grey",
+            width: 24,
+            height: 24,
+        },
     });
     
     /**
