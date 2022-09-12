@@ -1,7 +1,7 @@
-import { GestureEstimator } from 'fingerpose';
-import GesturesService from './gesturesService';
+import { GestureEstimator} from 'fingerpose';
 import HandPoseService from './handPoseService';
 import { Gestures, GestureDefinition } from './types';
+import GesturesService from './gesturesService';
 
 /**
  * Defines the minimum prediction confidence used by fingerpose
@@ -13,14 +13,16 @@ const StaticPredictionConfidenceThreshold = 8.5;
  * Singleton service for predicting current gesture based on
  * the hand pose input.
  */
-export default class PredictionService {
+export default class PredictionService{
     static _model;
     static _ready = false;
+
 
     /**
      * Initialises the gesture service by loading the model.
      */
     static async init() {
+        
         if (PredictionService._ready) return;
 
         try {
@@ -28,6 +30,7 @@ export default class PredictionService {
                 GestureDefinition.pause
             ]);
             PredictionService._ready = true;
+
         } catch (err) {
             console.error(err);
         }
@@ -53,25 +56,20 @@ export default class PredictionService {
         }
     }
 
-    /**
-     * Gets the current gesture input based on a given handpose.
-     * @param { any } pose Hand pose data returned from mediapipe. 
-     * @returns Gesture { Nothing, Play, Pause }
-     */
     static async predict() {
         if (!PredictionService._ready) throw "PredictionService is not ready.";
-
         var result = PredictionService._predictStatic();
-        if (result !== Gestures["nothing"]) return result;
-
-        return GesturesService.predict();
+        //if (result !== Gestures["nothing"]) return result;
+        return GesturesService.predictDynamic();
     }
-
+    
     /**
      * Returns the predicted gesture using fingerpose for static
      * gestures. Must meet minimum confidence threshold.
      */
     static async _predictStatic() {
+        if (!PredictionService._ready) throw "PredictionService is not ready.";
+
         let pose = HandPoseService.getLastFrame();
         if (pose.length == 0) return Gestures["nothing"];
 
@@ -80,7 +78,7 @@ export default class PredictionService {
         
         var result = PredictionService._model
             .estimate(landmarks, StaticPredictionConfidenceThreshold);
-
+        GesturesService._update(result.poseData);
         return PredictionService._mapResultToGesture(result);
     }
 
@@ -100,4 +98,5 @@ export default class PredictionService {
         }
         return Gestures[name];
     }
+  
 }
