@@ -70,7 +70,7 @@ export default class StyleService {
         },
         fileSelctionLeftMenuImage: {
             tintColor: "grey",
-            marginRight: "5%",
+            marginRight: 10,
             width: 24,
             height: 24,
         },

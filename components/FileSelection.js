@@ -191,7 +191,7 @@ export default class FileSelection extends React.Component {
                 <ScrollView>
                     <View style={{
                         marginTop: 30,
-                        marginLeft: 10,
+                        marginLeft: 15,
                         marginRight: 15,
                     }}>
                         
@@ -265,7 +265,7 @@ export default class FileSelection extends React.Component {
                 <ScrollView>
                     <View style={{
                         marginTop: 30,
-                        marginLeft: 15,
+                        marginLeft: 19,
                         marginRight: 15,
                     }}>
                         <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { }} style={{ padding:5, marginTop:10 }}>
