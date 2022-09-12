@@ -1,11 +1,17 @@
-import MainLayout from "./components/MainLayout.js";
-import Session from './components/pages/session.js';
-import FileSelection from "./components/FileSelection.js"
+import React from 'react';
+import FileSelect from './components/pages/FileSelection';
+import NavigationService from './services/navigationService';
+import { SafeAreaView, View, StatusBar  } from 'react-native';
+import MainLayout from './components/mainLayout';
+import { StyleService } from './services/StyleService';
 
 export default function App() {
-  return (
-    <MainLayout>
-          <FileSelection/>
-    </MainLayout>
-  );
+
+    // Register all page components here
+    
+    NavigationService.register("fileSelect", React.createElement(FileSelect));
+
+    return (
+        <MainLayout />
+    );
 }

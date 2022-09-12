@@ -2,14 +2,14 @@ import { View, Text, Button, TextInput, Image, ScrollView, Dimensions, Touchable
 import React from "react";
 import * as DocumentPicker from "expo-document-picker";
 import * as MediaLibrary from 'expo-media-library';
-import StyleService from '../services/StyleService';
-import AudioPlayback from "../services/AudioPlayback"
+import { StyleService } from '../../services/StyleService';
+import AudioPlayback from "../../services/AudioPlayback"
 import MusicButton from "./MusicButton.js"
-import { Imag } from '@tensorflow/tfjs-core';
-
+1
 export default class FileSelection extends React.Component {
     constructor(props) {
         super(props)
+
         this.rightLayouts = {
             "Library": () => {
                 return this.LibraryLayout()
@@ -37,9 +37,8 @@ export default class FileSelection extends React.Component {
                 return this.ShrunkLeftView()
             }
         }
-        this.style = (new StyleService()).getMainStyle();
+
         this.sideWidth = 250
-        console.log()
 
         this.state = {
             fileURI: "",
@@ -65,7 +64,7 @@ export default class FileSelection extends React.Component {
             let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio" });
             console.log(result)
             if (result.type !== "cancel") {
-                await AudioPlayback.loadAudio(result.uri)
+                this.onMusicSelect(result.uri)
             }
         }
 
@@ -112,12 +111,12 @@ export default class FileSelection extends React.Component {
         return (
             <ScrollView>
                 <View style={{ marginLeft: "5%", marginTop: "7%" }}>
-                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>LIBRARY</Text>
-                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
-                        <TouchableHighlight onPress={this.manualSelection} style={this.style.musicButtonTouchable}>
+                    <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>LIBRARY</Text>
+                    <ScrollView style={StyleService.fileSelect.fileSelectionRightScrollView} horizontal={true}>
+                        <TouchableHighlight onPress={this.manualSelection} style={StyleService.fileSelect.musicButtonTouchable}>
                             <View style={{ alignItems: "center" }}>
-                                <Image source={require("../assets/upload.png")} style={this.style.musicButtonImage} />
-                                <Text style={this.style.musicButtonText}>Browse</Text>
+                                <Image source={require("../../assets/upload.png")} style={StyleService.fileSelect.musicButtonImage} />
+                                <Text style={StyleService.fileSelect.musicButtonText}>Browse</Text>
                             </View>
                         </TouchableHighlight>
 
@@ -129,8 +128,8 @@ export default class FileSelection extends React.Component {
                 </View>
 
                 <View style={{ marginLeft: "5%", marginTop: "5%" }}>
-                    <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY ADDED</Text>
-                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
+                    <Text numberOfLines={1} overflow="scroll" style={StyleService.fileSelect.fileSelectionRightHeader}>RECENTLY ADDED</Text>
+                    <ScrollView style={StyleService.fileSelect.fileSelectionRightScrollView} horizontal={true}>
                         {this.state.recentlyAddedAssets.map((item, index) => {
                             return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
                         })}
@@ -139,8 +138,8 @@ export default class FileSelection extends React.Component {
                 </View>
 
                 <View style={{ marginLeft: "5%", marginTop: "5%" }}>
-                    <Text numberOfLines={1} overflow="scroll" style={this.style.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
-                    <ScrollView style={this.style.fileSelectionRightScrollView} horizontal={true}>
+                    <Text numberOfLines={1} overflow="scroll" style={StyleService.fileSelect.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
+                    <ScrollView style={StyleService.fileSelect.fileSelectionRightScrollView} horizontal={true}>
                         {this.state.recentlyPlayedAssets.map((item, index) => {
                             return <MusicButton key={index} musicAsset={item} onPress={this.onMusicSelect} />
                         })}
@@ -155,7 +154,7 @@ export default class FileSelection extends React.Component {
         return (
             <ScrollView>
                 <View style={{ marginLeft: "5%", marginTop: "7%" }}>
-                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>FAVOURITES</Text>
+                    <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>FAVOURITES</Text>
                     <View style={{ flexDirection: 'row', flexWrap:'wrap'}}>
                         {this.state.libraryAssets.map((item, index) => {
                             return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
@@ -170,7 +169,7 @@ export default class FileSelection extends React.Component {
         return (
             <ScrollView>
                 <View style={{ marginLeft: "5%", marginTop: "7%" }}>
-                    <Text numberOfLines={1} style={this.style.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
+                    <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                         {this.state.libraryAssets.map((item, index) => {
                             return <MusicButton musicAsset={item} onPress={this.onMusicSelect} />
@@ -195,16 +194,16 @@ export default class FileSelection extends React.Component {
                         marginRight: 15,
                     }}>
                         
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={this.style.fileSelctionLeftMenuTouchable}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={ 1 } style={this.style.fileSelctionLeftMenuText}>Home</Text>
+                                <Image source={require("../../assets/home.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={ 1 } style={StyleService.fileSelect.fileSelctionLeftMenuText}>Home</Text>
                             </View>
                         </TouchableHighlight>
 
                         <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 10 }}>
-                            <Image source={require("../assets/search.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                            <TextInput placeholder="" style={this.style.searchBar} />
+                            <Image source={require("../../assets/search.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                            <TextInput placeholder="" style={StyleService.fileSelect.searchBar} />
                         </View>
 
                         <View
@@ -216,38 +215,38 @@ export default class FileSelection extends React.Component {
                             }}
                         />
 
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                            <View style={this.style.fileSelctionLeftMenuItemView}>
-                                <Image source={require("../assets/library.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Library</Text>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Library") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                            <View style={StyleService.fileSelect.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../../assets/library.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Library</Text>
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                            <View style={this.style.fileSelctionLeftMenuItemView}>
-                                <Image source={require("../assets/heart.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Favourites</Text>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                            <View style={StyleService.fileSelect.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../../assets/heart.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Favourites</Text>
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                            <View style={this.style.fileSelctionLeftMenuItemView}>
-                                <Image source={require("../assets/recently-played.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Recently Played</Text>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Played") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                            <View style={StyleService.fileSelect.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../../assets/recently-played.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Recently Played</Text>
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                            <View style={this.style.fileSelctionLeftMenuItemView}>
-                                <Image source={require("../assets/recently-added.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Recently Added</Text>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeRightView("Added") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                            <View style={StyleService.fileSelect.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../../assets/recently-added.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Recently Added</Text>
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={this.style.fileSelctionLeftMenuTouchable}>
-                            <View style={this.style.fileSelctionLeftMenuItemView}>
-                                <Image source={require("../assets/expand-nav.png")} style={this.style.fileSelctionLeftMenuImage}></Image>
-                                <Text numberOfLines={1} style={this.style.fileSelctionLeftMenuText}>Hide</Text>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                            <View style={StyleService.fileSelect.fileSelctionLeftMenuItemView}>
+                                <Image source={require("../../assets/expand-nav.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
+                                <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Hide</Text>
                             </View>
                         </TouchableHighlight>
                     </View>
@@ -268,14 +267,14 @@ export default class FileSelection extends React.Component {
                         marginLeft: 19,
                         marginRight: 15,
                     }}>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { }} style={{ padding:5, marginTop:10 }}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { }} style={{ padding:5, marginTop:10 }}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/home.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                                <Image source={require("../../assets/home.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk}/>
                             </View>
                         </TouchableHighlight>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("Expand") }} style={{ padding: 5, marginTop: 10 }}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("Expand") }} style={{ padding: 5, marginTop: 10 }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 3}}>
-                                <Image source={require("../assets/search.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                                <Image source={require("../../assets/search.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk}/>
                             </View>
                         </TouchableHighlight>
                         <View
@@ -286,29 +285,29 @@ export default class FileSelection extends React.Component {
                                 marginBottom: 20,
                             }}
                         />
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Library") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Library") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/library.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                                <Image source={require("../../assets/library.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk} />
                             </View>
                         </TouchableHighlight>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Favourites") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/heart.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                                <Image source={require("../../assets/heart.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk} />
                             </View>
                         </TouchableHighlight>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Played") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Played") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/recently-played.png")} style={this.style.fileSelctionLeftMenuImageShrunk} />
+                                <Image source={require("../../assets/recently-played.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk} />
                             </View>
                         </TouchableHighlight>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Added") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeRightView("Added") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/recently-added.png")} style={this.style.fileSelctionLeftMenuImageShrunk}/>
+                                <Image source={require("../../assets/recently-added.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImageShrunk}/>
                             </View>
                         </TouchableHighlight>
-                        <TouchableHighlight underlayColor={this.style.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={this.style.fileSelctionLeftMenuTouchableShrunk}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk.underlayColor} onPress={() => { this.changeLeftNav("toggle") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchableShrunk}>
                             <View style={{ alignItems: 'center' }}>
-                                <Image source={require("../assets/expand-nav.png")} style={ this.style.fileSelctionLeftMenuImageShrunk }/>
+                                <Image source={require("../../assets/expand-nav.png")} style={ StyleService.fileSelect.fileSelctionLeftMenuImageShrunk }/>
                             </View>
                         </TouchableHighlight>
                      </View>
@@ -319,12 +318,16 @@ export default class FileSelection extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1, flexDirection: 'row' }}>
-                { this.leftLayouts[this.state.leftNavExpand]() }
-                <View style={{flex: 2, elevation: 1, backgroundColor: "#fff"}}>
-                    {this.rightLayouts[this.state.rightView]()}
+            <View style={StyleService.style.container }>
+                <View style={{ flex: 1, flexDirection: 'row' }}>
+                    {this.leftLayouts[this.state.leftNavExpand]()}
+
+                    <View style={{ flex: 2, elevation: 1, backgroundColor: "#fff" }}>
+                        {this.rightLayouts[this.state.rightView]()}
+                    </View>
                 </View>
             </View>
+
         );
     }
 }

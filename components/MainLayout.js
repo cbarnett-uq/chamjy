@@ -1,28 +1,23 @@
-import { SafeAreaView } from 'react-native';
 import React from 'react';
-import StyleService from "../services/StyleService.js";
+import { View } from 'react-native';
+import { NavigationComponent } from './navigationComponent';
+import { StyleService } from '../services/StyleService.js';
 
 /**
- * Component that renders the main layout of the app.
+ * Component that defines the shared layout between all screens. Implement
+ * navigation menus here.
  */
 export default class MainLayout extends React.Component {
-    /**
-     * Component that renders the main layout of the app.
-     * @param {Object} props    Props for component, should contain children 
-     */
     constructor(props) {
         super(props);
-        this.style = (new StyleService()).getMainStyle();
     }
-    
+
     /**
      * Renders the layout.
      */
     render() {
         return (
-            <SafeAreaView style={this.style.container}>
-                {this.props.children}
-            </SafeAreaView>
-        );
+            <NavigationComponent style={StyleService.style.container} />
+        )
     }
 }

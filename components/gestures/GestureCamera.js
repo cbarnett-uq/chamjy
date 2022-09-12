@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
-import StyleService from '../../services/StyleService';
+import { Colors, StyleService } from '../../services/StyleService';
 import * as tf from '@tensorflow/tfjs';
 import HandPoseService from '../../services/gestures/handPoseService';
 import GesturesService from '../../services/gestures/gesturesService';
@@ -25,9 +25,6 @@ export default class GestureCamera extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
-
-        // Services
-        this.style = (new StyleService()).getMainStyle();
 
         // Initial state
         this.state = {
@@ -143,10 +140,10 @@ export default class GestureCamera extends React.Component {
 
         if (this.state.ready) {
             return (
-                <View style={this.style.cameraContainer}>
+                <View style={StyleService.camera.container}>
                     <TensorCamera
                         type={Camera.Constants.Type.front}
-                        style={this.style.camera}
+                        style={StyleService.camera.camera}
                         cameraTextureHeight={textureDims.height}
                         cameraTextureWidth={textureDims.width}
                         resizeHeight={200}
@@ -159,22 +156,14 @@ export default class GestureCamera extends React.Component {
                         autorender={true}/>
                 </View>
             );
-        } else if (this.state.hasPermissions) {
-            return (
-                <View>
-                    <Text style={this.style.contrastText}>
-                        Loading {this.state.serviceLoading}
-                    </Text>
-                </View>
-            );
         } else {
             return (
-                <View>
-                    <Text style={this.style.contrastText}>
-                        Needs camera permissions.
-                    </Text>
+                <View style={StyleService.camera.container}>
+                    <ActivityIndicator
+                        size='large'
+                        color={Colors.primary.mid}/> 
                 </View>
-            );
+            )
         }
     }
 }
