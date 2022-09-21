@@ -186,7 +186,7 @@ export default class FileSelection extends React.Component {
 
     render() {
         return (
-            <View style={StyleService.style.container }>
+            <View style={StyleService.layout.outerContainer }>
                 <View style={{ flex: 1, flexDirection: 'row' }}>
                     <LeftNavBar changeRightView={this.changeRightView} searchUpdate={ this.onSearchUpdate }></LeftNavBar>
 

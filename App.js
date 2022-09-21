@@ -8,12 +8,11 @@ import { StyleService } from './services/StyleService';
 
 export default function App() {
   // Register all page components here
-    NavigationService.register("session", React.createElement(Session));
     NavigationService.register("fileSelect", React.createElement(FileSelect));
 
-  return (
-    <SafeAreaView style={StyleService.layout.outerContainer}>
-      <MainLayout/>
-    </SafeAreaView>
+    return (
+        <SafeAreaView style={StyleService.layout.outerContainer}>
+            <MainLayout />
+        </SafeAreaView>
   );
 }
