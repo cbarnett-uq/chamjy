@@ -29,7 +29,7 @@ export class NavigationComponent extends React.Component {
         } catch (err) {
             screen = React.createElement(Text, null, err);
         }
-        
+
         return React.createElement(View, this.props, screen);
     }
 }
