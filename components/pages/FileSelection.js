@@ -80,14 +80,11 @@ export default class FileSelection extends React.Component {
             const newList = []
 
             if (letText !== "" && letText !== undefined) {
-                console.log("Input: " + letText)
                 for (var i = 0; i < this.state.libraryAssets.length; i++) {
                     if (this.state.libraryAssets[i].filename.toLowerCase().includes(letText)) {
-                        console.log("Asset: " + this.state.libraryAssets[i].filename)
                         newList.push(this.state.libraryAssets[i])
                     }
                 }
-                console.log(newList)
             }
             this.setState({ searchAssets: newList })
         }
@@ -118,7 +115,7 @@ export default class FileSelection extends React.Component {
                     <Text numberOfLines={1} overflow="scroll" style={StyleService.fileSelect.fileSelectionRightHeader}>Library</Text>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                         {this.state.libraryAssets.map((item, index) => {
-                            return <MusicButton key={index + item.filename} musicAsset={item} onPress={this.onMusicSelect} />
+                            return <MusicButton key={item.filename + index} musicAsset={item} onPress={this.onMusicSelect} />
                         })}
 
                     </View>
@@ -134,7 +131,7 @@ export default class FileSelection extends React.Component {
                     <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>FAVOURITES</Text>
                     <View style={{ flexDirection: 'row', flexWrap:'wrap'}}>
                         {this.state.libraryAssets.map((item, index) => {
-                            return <MusicButton key={index + item.filename} musicAsset={item} onPress={this.onMusicSelect} />
+                            return <MusicButton key={item.filename + index} musicAsset={item} onPress={this.onMusicSelect} />
                         })}
                     </View>
                 </View>
@@ -149,7 +146,7 @@ export default class FileSelection extends React.Component {
                     <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>RECENTLY PLAYED</Text>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                         {this.state.recentlyPlayedAssets.map((item, index) => {
-                            return <MusicButton key={index + item.filename} musicAsset={item} onPress={this.onMusicSelect} />
+                            return <MusicButton key={item.filename + index} musicAsset={item} onPress={this.onMusicSelect} />
                         })}
                     </View>
                 </View>
@@ -164,7 +161,7 @@ export default class FileSelection extends React.Component {
                     <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>RECENTLY ADDED</Text>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                         {this.state.recentlyAddedAssets.map((item, index) => {
-                            return <MusicButton key={index + item.filename} musicAsset={item} onPress={this.onMusicSelect} />
+                            return <MusicButton key={item.filename + index} musicAsset={item} onPress={this.onMusicSelect} />
                         })}
                     </View>
                 </View>
@@ -179,7 +176,7 @@ export default class FileSelection extends React.Component {
                     <Text numberOfLines={1} style={StyleService.fileSelect.fileSelectionRightHeader}>SEARCH</Text>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                         {this.state.searchAssets.map((item, index) => {
-                            return <MusicButton key={ index + item.filename } musicAsset={item} onPress={this.onMusicSelect} />
+                            return <MusicButton key={ item.filename + index } musicAsset={item} onPress={this.onMusicSelect} />
                         })}
                     </View>
                 </View>
