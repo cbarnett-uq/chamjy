@@ -54,4 +54,33 @@ for (var finger in [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
     GestureDefinition.pause.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
 }
 GestureDefinition.pause.addCurl(Finger.Thumb,FingerCurl.NoCurl)
-//
+// DEFINE MARKER-A 
+GestureDefinition.markerA = new GestureDescription("markerA")
+for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.FullCurl,1.0);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.HorizontalLeft,1.0);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalDownLeft,0.9);
+}
+for (var finger in [Finger.Thumb, Finger.Index]){
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.NoCurl,1.0);
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.HalfCurl,0.9);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.HorizontalLeft,1.0);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalDownLeft,0.9);
+}
+//DEFINE MARKER-B
+GestureDefinition.markerA = new GestureDescription("markerB")
+for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.FullCurl,1.0);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.VerticalUp,1.0);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);
+}
+for (var finger in [Finger.Thumb, Finger.Index]){
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.NoCurl,1.0);
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.HalfCurl,0.9);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.VerticalUp,1.0);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);
+}
