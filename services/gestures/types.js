@@ -45,8 +45,13 @@ export class GestureDefinition {
     static pause;
 };
 
-/// DEFINE PAUSE
+/// DEFINE PLAY-PAUSE
 GestureDefinition.pause = new GestureDescription("pause");
-for (var finger in [Finger.Thumb, Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    GestureDefinition.pause.addCurl(finger, FingerCurl.NoCurl, 1.0);    
+for (var finger in [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
+    GestureDefinition.pause.addCurl(finger, FingerCurl.FullCurl, 1.0);
+    GestureDefinition.pause.addDirection(finger,FingerDirection.VerticalUp,1.0);     
+    GestureDefinition.pause.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);    
+    GestureDefinition.pause.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
 }
+GestureDefinition.pause.addCurl(Finger.Thumb,FingerCurl.NoCurl)
+//

@@ -16,6 +16,8 @@ const StaticPredictionConfidenceThreshold = 8.5;
 export default class PredictionService{
     static _model;
     static _ready = false;
+    static _lastGesture;
+    static _sameCount;
 
 
     /**
@@ -30,6 +32,8 @@ export default class PredictionService{
                 GestureDefinition.pause
             ]);
             PredictionService._ready = true;
+            PredictionService._lastGesture = Gestures['nothing'];
+            PredictionService._sameCount = 0;
 
         } catch (err) {
             console.error(err);
@@ -58,9 +62,10 @@ export default class PredictionService{
 
     static async predict() {
         if (!PredictionService._ready) throw "PredictionService is not ready.";
-        var result = PredictionService._predictStatic();
-        //if (result !== Gestures["nothing"]) return result;
-        return GesturesService.predictDynamic();
+        var result = await PredictionService._predictStatic();
+        if (result !== Gestures["nothing"]) return result;
+        result = await GesturesService.predictDynamic();
+        return result;
     }
     
     /**
@@ -83,7 +88,7 @@ export default class PredictionService{
     }
 
     /**
-     * Maps the highest scoring prediction to the gestures map.
+     * Maps the highest scoring prediction tso the gestures map.
      * @param { any } result    Result from fingerpose prediction
      */
     static _mapResultToGesture(result) {
