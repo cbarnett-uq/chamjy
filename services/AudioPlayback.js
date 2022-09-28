@@ -1,7 +1,13 @@
-import { Audio } from 'expo-av';
+import {
+    Audio,
+    InterruptionModeAndroid,
+    InterruptionModeIOS
+} from 'expo-av';
 
+/**
+ * Service that controls audio playback.
+ */
 export default class AudioPlayback {
-   
     static audioFile = {
         filename: '',
         uri: '',
@@ -27,14 +33,16 @@ export default class AudioPlayback {
         if (!permissions.granted) return;
         await Audio.setAudioModeAsync({
             staysActiveInBackground: true,
-            interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+            interruptionModeAndroid: InterruptionModeAndroid.DoNotMix,
             shouldDuckAndroid: false,
             playThroughEarpieceAndroid: false,
             allowsRecordingIOS: false,
-            interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+            interruptionModeIOS: InterruptionModeIOS.DoNotMix,
             playsInSilentModeIOS: true,
         });
+
         AudioPlayback.audioPlayer = new Audio.Sound();
+        AudioPlayback._isReady = true;
     }
 
     /**
@@ -112,7 +120,7 @@ export default class AudioPlayback {
             const source = { uri: AudioPlayback.audioFile.uri };
             const state = {
                 shouldPlay: false,
-                rate: 1.0,
+                rate: AudioPlayback.playbackRate,
                 isMuted: false
             };
 
@@ -131,17 +139,27 @@ export default class AudioPlayback {
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
     }
 
+    /**
+     * Unloads the current audio file.
+     */
     static async unloadAudio() {
         await AudioPlayback.audioPlayer
             .unloadAsync();
     }
 
+    /**
+     * Returns whether the input is a numeric string.
+     */
     static async isNumericc(str) {
         if (typeof str != "string") return false // we only process strings!  
         return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
             !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
     }
 
+    /**
+     * Sets the playback rate of the current audio file.
+     * @param {decimal} tempRate Playback rate
+     */
     static async setPlaybackRate(tempRate) {
         var rate = Number(tempRate)
         AudioPlayback.playbackRate = rate
