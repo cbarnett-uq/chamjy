@@ -7,22 +7,64 @@ export default class AudioPlayback {
         uri: '',
     };
 
-    static audioPlayer = new Audio.Sound();
+    static _isReady = false;
+    static audioPlayer = null;
     static playbackStatus = null;
     static playbackRate = 1;
-    static playbackTime = "0:00"
+    static playbackTime = "0:00";
 
-    static async toggleAudio() {
-        if (AudioPlayback.playbackStatus.isPlaying) {
-            AudioPlayback.pause()
+    /**
+     * Initialises the service.
+     */
+    static async init() {
+        if (AudioPlayback._isReady) return;
+
+        let permissions = await Audio.getPermissionsAsync();
+        while (!permissions.granted && permissions.canAskAgain) {
+            permissions = await Audio.requestPermissionsAsync();
         }
 
-        else if (!AudioPlayback.playbackStatus.isPlaying) {
+        if (!permissions.granted) return;
+        await Audio.setAudioModeAsync({
+            staysActiveInBackground: true,
+            interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+            shouldDuckAndroid: false,
+            playThroughEarpieceAndroid: false,
+            allowsRecordingIOS: false,
+            interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+            playsInSilentModeIOS: true,
+        });
+        AudioPlayback.audioPlayer = new Audio.Sound();
+    }
+
+    /**
+     * Returns whether the service is ready to be used.
+     */
+    static async ready() {
+        if (!AudioPlayback._isReady) await AudioPlayback.init();
+
+        return AudioPlayback._isReady;
+    }
+
+    /**
+     * Toggles the audio between paused and playing.
+     */
+    static async toggleAudio() {
+        if (!AudioPlayback._isReady) return;
+
+        if (AudioPlayback.playbackStatus.isPlaying) {
+            AudioPlayback.pause()
+        } else {
             AudioPlayback.play()
         }
     };
 
+    /**
+     * Pauses the current audio file.
+     */
     static async pause() {
+        if (!AudioPlayback._isReady) return;
+
         if (AudioPlayback.audioPlayer._loaded) {
             if (!AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
@@ -30,7 +72,12 @@ export default class AudioPlayback {
         }
     }
 
+    /**
+     * Plays the current audio file.
+     */
     static async play() {
+        if (!AudioPlayback._isReady) return;
+
         if (AudioPlayback.audioPlayer._loaded) {
             if (!AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.playAsync()
@@ -48,24 +95,45 @@ export default class AudioPlayback {
         }
     }
 
+    /**
+     * Loads an audio file.
+     */
     static async loadAudio(uri) {
-        AudioPlayback.audioFile.uri = uri
+        if (!AudioPlayback._isReady) return;
+        let status;
+        
         if (AudioPlayback.audioPlayer._loaded) {
             await AudioPlayback.unloadAudio()
         }
 
-        const status = await AudioPlayback.audioPlayer.loadAsync(
-            { uri: AudioPlayback.audioFile.uri },
-            { shouldPlay: false }
-        )
+        AudioPlayback.audioFile.uri = uri;
+
+        try {
+            const source = { uri: AudioPlayback.audioFile.uri };
+            const state = {
+                shouldPlay: false,
+                rate: 1.0,
+                isMuted: false
+            };
+
+            status = await AudioPlayback.audioPlayer
+                .loadAsync(
+                source,
+                state,
+                AudioPlayback.audioPlaybackUpdate
+            );
+        } catch (e) {
+            console.error(e);
+        }
+
         AudioPlayback.playbackStatus = status
         AudioPlayback.playbackTime = "0:00"
-
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
     }
 
     static async unloadAudio() {
-        await AudioPlayback.audioPlayer.unloadAsync();
+        await AudioPlayback.audioPlayer
+            .unloadAsync();
     }
 
     static async isNumericc(str) {
