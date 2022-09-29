@@ -19,6 +19,7 @@
     "ios": {
       "requireFullScreen": true,
       "supportsTablet": true,
+      "usesIcloudStorage": true,
       "infoPlist": {
         "NSCameraUsageDescription": "This app uses the camera to detect hand gestures as input.",
         "UIBackgroundModes": [

@@ -6,12 +6,11 @@ import {
     TouchableHighlight
 } from 'react-native';
 import React from "react";
-import * as DocumentPicker from "expo-document-picker";
-import * as MediaLibrary from 'expo-media-library';
 import { StyleService } from '../../services/StyleService';
 import AudioPlayback from "../../services/AudioPlayback";
 import MusicButton from "../FileSelection/MusicButton";
 import LeftNavBar from "../FileSelection/LeftNavBar.js";
+import FileSystemService from "../../services/fileSystemService.js";
 
 /**
  * Library component for selecting songs from the device.
@@ -59,17 +58,16 @@ export default class FileSelection extends React.Component {
      * Loads the library.
      */
     async getLibrary() {
-        let media = await MediaLibrary.getAssetsAsync({ mediaType: 'audio' });
-        this.setState({ libraryAssets: media.assets });
+        let media = await FileSystemService.getAssets();
+        this.setState({ libraryAssets: media });
     }
 
     /**
      * Displays the document picker to select an audio file.
      */
     async manualSelection() {
-        let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio" });
-        if (result.type !== "cancel") {
-            this.onMusicSelect(result.uri);
+        if (await FileSystemService.addAssetViaDocumentPicker()) {
+            await this.getLibrary();
         }
     }
 
@@ -89,7 +87,6 @@ export default class FileSelection extends React.Component {
      * @param {string} uri Music resource uri
      */
     async onMusicSelect(uri) {
-        console.log(uri);
         await AudioPlayback.loadAudio(uri);
         await AudioPlayback.play();
     }
@@ -130,30 +127,11 @@ export default class FileSelection extends React.Component {
     }
 
     /**
-     * Requests the necessary permissions to access media.
-     */
-    async getPermissions() {
-        let permission = await MediaLibrary.getPermissionsAsync();
-        while (!permission.granted && permission.canAskAgain) {
-            permission = await MediaLibrary.requestPermissionsAsync();
-        }
-
-        if (permission.granted) {
-            this.setState({ hasPermission: true });
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
      * When component is mounted, check for permissions and request
      * them if necessary. Perform initiation.
      */
     async componentDidMount() {
-        if (!await this.getPermissions()) return;
-
-        this.getLibrary();
+        await this.getLibrary();
     }
 
     /**
@@ -196,7 +174,7 @@ export default class FileSelection extends React.Component {
                             this.state.libraryAssets.map((item, index) => {
                                 return (
                                     <MusicButton
-                                        key={item.filename + index}
+                                        key={item.name + index}
                                         musicAsset={item}
                                         onPress={this.onMusicSelect} />
                                 );
@@ -225,7 +203,7 @@ export default class FileSelection extends React.Component {
                             this.state.libraryAssets.map((item, index) => {
                                 return (
                                     <MusicButton
-                                        key={item.filename + index}
+                                        key={item.name + index}
                                         musicAsset={item}
                                         onPress={this.onMusicSelect} />
                                 );
@@ -254,7 +232,7 @@ export default class FileSelection extends React.Component {
                             this.state.recentlyPlayedAssets.map((item, index) => {
                                 return (
                                     <MusicButton
-                                        key={item.filename + index}
+                                        key={item.name + index}
                                         musicAsset={item}
                                         onPress={this.onMusicSelect} />
                                 );
@@ -283,7 +261,7 @@ export default class FileSelection extends React.Component {
                             this.state.recentlyAddedAssets.map((item, index) => {
                                 return (
                                     <MusicButton
-                                        key={item.filename + index}
+                                        key={item.name + index}
                                         musicAsset={item}
                                         onPress={this.onMusicSelect} />
                                 );
@@ -312,7 +290,7 @@ export default class FileSelection extends React.Component {
                             this.state.searchAssets.map((item, index) => {
                                 return (
                                     <MusicButton
-                                        key={ item.filename + index }
+                                        key={ item.name + index }
                                         musicAsset={item}
                                         onPress={this.onMusicSelect} />
                                 );
@@ -328,27 +306,18 @@ export default class FileSelection extends React.Component {
      * Renders the component.
      */
     render() {
-        if (this.state.hasPermission) {
-            return (
-                <View style={StyleService.layout.outerContainer}>
-                    <View style={{ flex: 1, flexDirection: 'row' }}>
-                        <LeftNavBar
-                            changeRightView={this.changeRightView}
-                            searchUpdate={ this.onSearchUpdate }/>
+        return (
+            <View style={StyleService.layout.outerContainer}>
+                <View style={{ flex: 1, flexDirection: 'row' }}>
+                    <LeftNavBar
+                        changeRightView={(view) => this.changeRightView(view) }
+                        searchUpdate={(text) => this.onSearchUpdate(text) }/>
 
-                        <View style={{ flex: 2, elevation: 1, backgroundColor: "#fff" }}>
-                            {this.rightLayouts[this.state.rightView]()}
-                        </View>
+                    <View style={{ flex: 2, elevation: 1, backgroundColor: "#fff" }}>
+                        {this.rightLayouts[this.state.rightView]()}
                     </View>
                 </View>
-
-            );
-        } else {
-            return (
-                <View>
-                    <Text>Cannot view library.</Text>
-                </View>
-            );
-        }
+            </View>
+        );
     }
 }
