@@ -29,7 +29,11 @@ export default class PredictionService{
 
         try {
             PredictionService._model = new GestureEstimator([
-                GestureDefinition.pause
+                GestureDefinition.pausePlay,
+                GestureDefinition.markerA,
+                GestureDefinition.markerB,
+                GestureDefinition.skipTB,
+                GestureDefinition.loop
             ]);
             PredictionService._ready = true;
             PredictionService._lastGesture = Gestures['nothing'];
@@ -63,8 +67,11 @@ export default class PredictionService{
     static async predict() {
         if (!PredictionService._ready) throw "PredictionService is not ready.";
         var result = await PredictionService._predictStatic();
+        
         if (result !== Gestures["nothing"]) return result;
-        result = await GesturesService.predictDynamic();
+        //result = await GesturesService.predictDynamic();
+        if (result !== 2){
+            console.log(result);}
         return result;
     }
     
@@ -101,7 +108,19 @@ export default class PredictionService{
                 max = result.gestures[i].score;
             }
         }
-        return Gestures[name];
+        if (Gestures[name] != PredictionService._lastGesture){
+            PredictionService._lastGesture = Gestures[name];
+            PredictionService._sameCount = 0;
+        }else{
+            PredictionService._sameCount++;
+        }
+        
+        if (PredictionService._sameCount >=3){
+            console.log(name);
+            return Gestures[name];
+        }
+        
+        return Gestures['nothing'];
     }
   
 }

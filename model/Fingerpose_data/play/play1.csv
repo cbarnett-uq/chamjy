@@ -1,165 +1,5 @@
 Finger,Curl,Direction
 Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
@@ -170,320 +10,55 @@ Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,Half Curl,Diagonal Up Right
-Middle,Half Curl,Diagonal Up Left
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Diagonal Down Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
+Middle,Half Curl,Diagonal Down Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
+Middle,Half Curl,Diagonal Down Left
+Ring,Half Curl,Diagonal Down Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Diagonal Down Left
+Pinky,Half Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
+Middle,Half Curl,Diagonal Down Left
+Ring,Half Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Diagonal Down Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
 Middle,Half Curl,Horizontal Left
@@ -494,1719 +69,39 @@ Index,Half Curl,Horizontal Left
 Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,Half Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,Half Curl,Vertical Up
-Middle,Half Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Horizontal Left
-Middle,Half Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Diagonal Up Left
-Ring,Half Curl,Diagonal Up Left
-Pinky,Half Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Horizontal Left
-Middle,Half Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Diagonal Up Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Horizontal Left
-Middle,Half Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,Half Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Diagonal Up Left
-Ring,Half Curl,Diagonal Up Left
-Pinky,Half Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Vertical Up
-Ring,Half Curl,Diagonal Up Left
-Pinky,Half Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
 Index,Half Curl,Horizontal Left
 Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,Half Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,Half Curl,Horizontal Left
-Ring,Half Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Diagonal Up Right
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,Half Curl,Vertical Up
-Middle,Half Curl,Diagonal Up Left
-Ring,Half Curl,Diagonal Up Left
-Pinky,Half Curl,Diagonal Up Left
 Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
-Middle,Half Curl,Horizontal Left
-Ring,Half Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
 Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,Half Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Diagonal Up Left
-Ring,Half Curl,Diagonal Up Left
-Pinky,Half Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
 Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Diagonal Down Left
 Ring,Half Curl,Horizontal Left
 Pinky,Half Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
@@ -2244,104 +139,39 @@ Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Horizontal Left
-Index,Half Curl,Horizontal Left
-Middle,Half Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,Full Curl,Horizontal Left
+Pinky,Full Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
@@ -2359,111 +189,66 @@ Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
 Middle,No Curl,Vertical Up
@@ -2495,192 +280,1267 @@ Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
 Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
-Middle,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
 Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,Half Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
 Index,Half Curl,Diagonal Up Left
 Middle,Half Curl,Diagonal Up Left
 Ring,Half Curl,Diagonal Up Left
 Pinky,Half Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
 Index,Half Curl,Diagonal Up Left
 Middle,Half Curl,Diagonal Up Left
-Ring,Half Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
 Middle,No Curl,Vertical Up
-Ring,Half Curl,Vertical Up
-Pinky,Half Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,Half Curl,Diagonal Up Left
-Middle,Half Curl,Vertical Up
-Ring,Half Curl,Vertical Up
-Pinky,Half Curl,Diagonal Up Right
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Right
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
-Pinky,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
+Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
+Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
+Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
 Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Right
+Middle,No Curl,Vertical Up
 Ring,No Curl,Vertical Up
 Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
 Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,Half Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
 Middle,Half Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
@@ -2704,52 +1564,12 @@ Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
@@ -2760,7 +1580,517 @@ Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
 Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
 Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,Half Curl,Horizontal Left
@@ -2769,39 +2099,54 @@ Index,No Curl,Diagonal Up Left
 Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
 Thumb,No Curl,Vertical Up
 Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
 Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
 Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
 Thumb,No Curl,Vertical Up
@@ -2820,11 +2165,616 @@ Middle,Half Curl,Diagonal Up Left
 Ring,Half Curl,Diagonal Up Left
 Pinky,Half Curl,Diagonal Up Left
 Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,Half Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
 Index,Half Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,Half Curl,Horizontal Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,Half Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,Half Curl,Diagonal Up Left
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
 Middle,Half Curl,Horizontal Left
 Ring,Half Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Horizontal Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
@@ -2884,68 +2834,113 @@ Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
 Index,No Curl,Horizontal Left
 Middle,No Curl,Horizontal Left
 Ring,No Curl,Horizontal Left
 Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Diagonal Up Left
 Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Diagonal Up Left
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Diagonal Up Left
-Middle,No Curl,Vertical Up
-Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
 Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
+Index,Half Curl,Vertical Up
+Middle,Full Curl,Vertical Up
+Ring,Full Curl,Diagonal Up Right
+Pinky,Full Curl,Vertical Up
 Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Diagonal Up Right
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
-Ring,No Curl,Vertical Up
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
-Middle,No Curl,Vertical Up
+Index,Half Curl,Vertical Up
+Middle,Full Curl,Diagonal Up Left
+Ring,Full Curl,Diagonal Up Left
+Pinky,Full Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Diagonal Up Left
+Ring,Half Curl,Diagonal Up Left
+Pinky,Half Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
-Pinky,No Curl,Vertical Up
-Thumb,No Curl,Vertical Up
-Index,No Curl,Vertical Up
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,Half Curl,Diagonal Up Left
+Middle,Half Curl,Horizontal Left
+Ring,Half Curl,Horizontal Left
+Pinky,Half Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Horizontal Left
+Index,No Curl,Horizontal Left
+Middle,No Curl,Horizontal Left
+Ring,No Curl,Horizontal Left
+Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Diagonal Up Left
+Index,No Curl,Diagonal Up Left
 Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
@@ -2954,48 +2949,53 @@ Index,No Curl,Diagonal Up Left
 Middle,No Curl,Diagonal Up Left
 Ring,No Curl,Diagonal Up Left
 Pinky,No Curl,Diagonal Up Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
-Thumb,No Curl,Diagonal Up Left
-Index,No Curl,Horizontal Left
-Middle,No Curl,Horizontal Left
-Ring,No Curl,Horizontal Left
-Pinky,No Curl,Horizontal Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Diagonal Up Left
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Vertical Up
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Vertical Up
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left
+Thumb,No Curl,Vertical Up
+Index,No Curl,Vertical Up
+Middle,No Curl,Vertical Up
+Ring,No Curl,Diagonal Up Left
+Pinky,No Curl,Diagonal Up Left

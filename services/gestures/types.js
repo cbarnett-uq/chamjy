@@ -9,9 +9,12 @@ import {
  * Gesture predictions.
  */
 export const Gestures = {
-    "play": 0,
-    "pause": 1,
+    "pausePlay": 0,
+    "markerA": 1,
     "nothing": 2,
+    "markerB": 3,
+    "skipTB":4,
+    "loop":5
 };
 /**
  * Finger Curls mapping.
@@ -42,45 +45,72 @@ export class GestureDefinition {
     /**
      * Pause gesture definition.
      */
-    static pause;
+    static pausePlay;
+    static markerA;
+    static markerB;
+    static skipTB;
+    static loop;
+
 };
 
 /// DEFINE PLAY-PAUSE
-GestureDefinition.pause = new GestureDescription("pause");
-for (var finger in [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    GestureDefinition.pause.addCurl(finger, FingerCurl.FullCurl, 1.0);
-    GestureDefinition.pause.addDirection(finger,FingerDirection.VerticalUp,1.0);     
-    GestureDefinition.pause.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);    
-    GestureDefinition.pause.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
+GestureDefinition.pausePlay = new GestureDescription("pausePlay");
+for (var finger in [Finger.Index,Finger.Middle, Finger.Ring, Finger.Pinky]) {
+    GestureDefinition.pausePlay.addCurl(finger, FingerCurl.FullCurl, 1);
+    GestureDefinition.pausePlay.addDirection(finger,FingerDirection.VerticalUp,1);        
+    GestureDefinition.pausePlay.addDirection(finger,FingerDirection.DiagonalUpLeft,1);
 }
-GestureDefinition.pause.addCurl(Finger.Thumb,FingerCurl.NoCurl)
-// DEFINE MARKER-A 
-GestureDefinition.markerA = new GestureDescription("markerA")
+GestureDefinition.pausePlay.addCurl(Finger.Thumb,FingerCurl.NoCurl,0.9);
+GestureDefinition.pausePlay.addCurl(Finger.Thumb,FingerCurl.HalfCurl,1);
+//DEFINE MARKER-A
+GestureDefinition.markerA = new GestureDescription('markerA');
 for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    GestureDefinition.markerA.addCurl(finger, FingerCurl.FullCurl,1.0);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.HorizontalLeft,1.0);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalDownLeft,0.9);
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.FullCurl,1);
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.HalfCurl,1);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.VerticalUp,1);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.7);
 }
 for (var finger in [Finger.Thumb, Finger.Index]){
-    GestureDefinition.markerA.addCurl(finger, FingerCurl.NoCurl,1.0);
-    GestureDefinition.markerA.addCurl(finger, FingerCurl.HalfCurl,0.9);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.HorizontalLeft,1.0);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
-    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalDownLeft,0.9);
+    GestureDefinition.markerA.addCurl(finger, FingerCurl.NoCurl,1);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.VerticalUp,1);
+    GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.7);
 }
-//DEFINE MARKER-B
-GestureDefinition.markerA = new GestureDescription("markerB")
+GestureDefinition.markerA.addCurl(Finger.Index,FingerCurl.HalfCurl,1);
+
+// DEFINE MARKER-B
+GestureDefinition.markerB = new GestureDescription("markerB");
 for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
-    GestureDefinition.markerB.addCurl(finger, FingerCurl.FullCurl,1.0);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.VerticalUp,1.0);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.FullCurl,1);
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.HalfCurl,1);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.HorizontalLeft,1);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.8);
 }
 for (var finger in [Finger.Thumb, Finger.Index]){
-    GestureDefinition.markerB.addCurl(finger, FingerCurl.NoCurl,1.0);
-    GestureDefinition.markerB.addCurl(finger, FingerCurl.HalfCurl,0.9);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.VerticalUp,1.0);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.9);
-    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpRight,0.9);
+    GestureDefinition.markerB.addCurl(finger, FingerCurl.NoCurl,1);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.HorizontalLeft,1);
+    GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.8);
 }
+GestureDefinition.markerB.addCurl(Finger.Index,FingerCurl.HalfCurl,1);
+
+//Define Skip to beginning 
+GestureDefinition.skipTB = new GestureDescription("skipTB");
+for (var finger in [Finger.Index,Finger.Middle, Finger.Ring, Finger.Pinky]) {
+    GestureDefinition.skipTB.addCurl(finger, FingerCurl.HalfCurl,1);
+    GestureDefinition.skipTB.addDirection(finger,FingerDirection.HorizontalLeft,1);
+    GestureDefinition.skipTB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.8);
+}
+GestureDefinition.skipTB.addCurl(Finger.Index,FingerCurl.FullCurl,1);
+GestureDefinition.skipTB.addCurl(Finger.Thumb,FingerCurl.NoCurl,1);
+GestureDefinition.skipTB.addDirection(Finger.Thumb,FingerCurl.NoCurl,1);
+GestureDefinition.skipTB.addDirection(Finger.pinky,FingerDirection.DiagonalDownLeft,0.8);
+//Define loop 
+GestureDefinition.loop = new GestureDescription("loop");
+for (var finger in [Finger.Thumb,Finger.Middle,Finger.Ring,Finger.Pinky]) {
+    GestureDefinition.loop.addCurl(finger,FingerCurl.NoCurl,1);
+    GestureDefinition.loop.addDirection(finger,FingerDirection.DiagonalUpLeft,1);
+}
+GestureDefinition.loop.addCurl(Finger.Index.NoCurl,0.9);
+GestureDefinition.loop.addCurl(Finger.Index.HalfCurl,1);
+GestureDefinition.loop.addDirection(Finger.Index,FingerDirection.DiagonalUpLeft,1);
+GestureDefinition.loop.addDirection(Finger.Ring,FingerDirection.VerticalUp,1);
+GestureDefinition.loop.addDirection(Finger.Pinky,FingerDirection.VerticalUp,1);

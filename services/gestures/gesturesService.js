@@ -1,5 +1,6 @@
 import * as tfjs from '@tensorflow/tfjs';
 import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
+import HandPoseService from './handPoseService';
 import { FingerCurls,FingerDirections} from './types';
 
 // Model data, must use require statement not import or will not
@@ -15,6 +16,7 @@ export default class GesturesService {
     static _model;
     static _ready = false;
     static _frames = [];
+
     /**
      * Initialises the gesture service by loading the model.
      */
@@ -82,7 +84,6 @@ export default class GesturesService {
                 max = data[i];
             }
         }
-        console.log(data);
         return gesture;
     }
     /**
@@ -98,6 +99,8 @@ export default class GesturesService {
 
         GesturesService._frames.push(frame);
         GesturesService._frames.shift();
+        GesturesService._framecount++;
+
     }
     /**
      * Returns the last thirty predictions as a tensor.

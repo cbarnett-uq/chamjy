@@ -46,12 +46,16 @@ export default class GestureCamera extends React.Component {
             case Gestures["nothing"]:
                 break;
 
-            case Gestures["play"]:
+            case Gestures["pausePlay"]:
                 this.onPlay();
                 break;
             
-            case Gestures["pause"]:
+            case Gestures["makerA"]:
                 this.onPause();
+                break;
+            case Gestures["markerB"]:
+                break;
+            case Gestures["loop"]:
                 break;
         }
     }
