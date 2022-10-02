@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import DimensionService from './DimensionService.js';
 
 /**
  * Defines the colour palette used by the app.
@@ -63,6 +64,10 @@ export class Colors {
         'dark': '#202020',
         'contrast': '#FFFFFF'
     };
+
+    static session = {
+        greyText: "#3E3E3E"
+    }
 }
 
 /**
@@ -239,20 +244,139 @@ export class StyleService {
             padding: "1%"
         },
 
-        rowContainer: {
+        rowContainerCenter: {
             flexDirection: 'row',
             alignItems: 'center'
+        },
+
+        rowContainerMargin: {
+            flexDirection: 'row',
+            marginHorizontal: "2%"
+        },
+
+        endContainer: {
+            flex: 1,
+            alignItems: 'flex-end'
         },
 
         cameraContainer: {
             position: 'absolute',
             zIndex: 10,
-            width: this.getMaxDimension() * 0.2,
+            width: DimensionService.getMaxDimension() * 0.2,
             top: 30,
             aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
             borderRadius: 22
-        }
+        },
+
+        cameraOutline: {
+            position: 'absolute',
+            zIndex: 20,
+            width: DimensionService.getMaxDimension() * 0.2,
+            top: 30,
+            aspectRatio: 1.33,
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22
+        },
+
+        currentSongContainer: {
+            flex: 1,
+            justifyContent: 'center'
+        },
+
+        currentSongImage: {
+            height: DimensionService.getMinDimension() * 0.40,
+            resizeMode: "contain",
+            aspectRatio: 1,
+            alignSelf: 'center'
+        },
+
+        currentSongNameText: {
+            alignSelf: 'center',
+            marginTop: "1%",
+            fontSize: 17
+        },
+
+        currentSongSliderContainer: {
+            marginTop: "2%"
+        },
+
+        footerContainer: {
+            flex: 0.25,
+            alignItems: 'center',
+            maxHeight: DimensionService.getMinDimension() * 0.25
+        },
+
+        footerPlayButtonContainer: {
+            flex: 1,
+            position: "absolute",
+            zIndex: 10,
+            height: "100%"
+        },
+
+        footerPlayButton: {
+            backgroundColor: Colors.tertiary.light,
+            justifyContent: "center",
+            alignItems: "center",
+            height: DimensionService.getMinDimension() * 0.18,
+            borderRadius: 100,
+            bottom: DimensionService.getMinDimension() * 0.09,
+            alignSelf: 'center',
+            alignContent: "center",
+            aspectRatio: 1
+        },
+
+        footerPlayButtonImageContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center'
+        },
+
+        footerPlayButtonImage: {
+            width: "30%",
+            aspectRatio: 1, alignSelf: 'center'
+        },
+
+        footerBar: {
+            width: "100%",
+            flex: 1,
+            backgroundColor: Colors.secondary.light,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            flexDirection: 'row'
+        },
+
+        footerBarButtonContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignContent: 'space-around',
+            alignItems: 'center',
+            justifyContent: 'space-evenly'
+        },
+
+        footerBarButtonInsideContainer: {
+            flexDirection: 'row',
+            alignItems: 'center'
+        },
+
+        footerBarButton: {
+            margin: 10,
+            borderRadius: 10,
+            height: "100%",
+            justifyContent: 'center'
+        },
+
+        footerBarButtonImage: {
+            width: 15,
+            height: 15,
+            marginRight: 3
+        },
+
+        footerBarButtonText: {
+            fontWeight: "bold",
+            color: Colors.session.greyText
+        },
     });
 }

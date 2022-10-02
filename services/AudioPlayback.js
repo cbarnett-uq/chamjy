@@ -3,7 +3,6 @@ import {
     InterruptionModeAndroid,
     InterruptionModeIOS
 } from 'expo-av';
-import { useState } from 'react';
 
 /**
  * Service that controls audio playback.
@@ -19,8 +18,6 @@ export default class AudioPlayback {
     static playbackStatus = null;
     static playbackRate = 1;
     static playbackTime = "0:00";
-
-    
 
     /**
      * Initialises the service.
