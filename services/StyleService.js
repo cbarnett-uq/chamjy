@@ -207,7 +207,7 @@ export class StyleService {
             aspectRatio: 1,
             flex: 1,
             flexDirection: 'column',
-            alignContent: 'center',
+            alignContent: 'cendter',
             justifyContent: 'center'
         },
 
@@ -230,63 +230,29 @@ export class StyleService {
             height: '100%'
         },
 
-        camera: {
+        topHalfContainer: {
+            flex: 1,
+            margin: "2%"
+        },
+
+        homeButton: {
+            padding: "1%"
+        },
+
+        rowContainer: {
+            flexDirection: 'row',
+            alignItems: 'center'
+        },
+
+        cameraContainer: {
             position: 'absolute',
             zIndex: 10,
-            left: '2.5%',
-            top: '5%',
-            width: "20%",
-            height: "20%",
+            width: this.getMaxDimension() * 0.2,
+            top: 30,
+            aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
             borderRadius: 22
-        },
-
-        cameraBackground: {
-            position: 'absolute',
-            zIndex: 5,
-            left: '2.5%',
-            top: '5%',
-            width: "20%",
-            height: "20%",
-            backgroundColor: Colors.dark.dark,
-            borderColor: Colors.dark.mid,
-            borderWidth: 8,
-            borderRadius: 22
-        },
-
-        cameraBorder: {
-            position: 'absolute',
-            zIndex: 20,
-            left: '2.5%',
-            top: '5%',
-            width: "20%",
-            height: "20%",
-            borderColor: Colors.dark.mid,
-            borderWidth: 8,
-            borderRadius: 22
-        },
-
-        verticalContainer: {
-            zIndex: 0,
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignContent: 'center'
-        },
-
-        controlsContainer: {
-            zIndex: 0,
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignContent: 'space-between'
-        },
-
-        'primaryControl': {
-            flex: 1,
-            width: '33.33%',
-            aspectRatio: 1.33
         }
     });
 }

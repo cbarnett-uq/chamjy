@@ -5,6 +5,7 @@ import * as MediaLibrary from 'expo-media-library';
 import { StyleService } from '../../services/StyleService';
 import AudioPlayback from "../../services/AudioPlayback"
 import MusicButton from "../FileSelection/MusicButton"
+import NavigationService from "../../services/navigationService.js"
 
 export default class FileSelection extends React.Component {
     constructor(props) {
@@ -54,7 +55,7 @@ export default class FileSelection extends React.Component {
                         marginRight: 15,
                     }}>
 
-                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
+                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor} onPress={() => { NavigationService.navigate("session") }} style={StyleService.fileSelect.fileSelctionLeftMenuTouchable}>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image source={require("../../assets/home.png")} style={StyleService.fileSelect.fileSelctionLeftMenuImage}></Image>
                                 <Text numberOfLines={1} style={StyleService.fileSelect.fileSelctionLeftMenuText}>Home</Text>

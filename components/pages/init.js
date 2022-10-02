@@ -33,7 +33,7 @@ export default class InitPage extends React.Component {
             return;
         }
 
-        NavigationService.navigate("library");
+        NavigationService.navigate("session");
     }
 
     /**

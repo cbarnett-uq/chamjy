@@ -10,6 +10,7 @@ import InitPage from './components/pages/init';
 export default function App() {
     // Register all page components here
     NavigationService.register("init", React.createElement(InitPage));
+    NavigationService.register("session", React.createElement(Session));
     NavigationService.register("library", React.createElement(FileSelect));
 
     return (

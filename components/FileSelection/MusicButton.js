@@ -7,7 +7,7 @@ export default class FileSelection extends React.Component {
         super(props)
 
         this.onTouch = () => {
-            this.props.onPress?.(props.musicAsset.uri)
+            this.props.onPress?.(props.musicAsset)
         }
 
         this.state = {

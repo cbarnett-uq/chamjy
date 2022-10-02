@@ -12,6 +12,7 @@ import { StyleService } from '../../services/StyleService';
 import AudioPlayback from "../../services/AudioPlayback";
 import MusicButton from "../FileSelection/MusicButton";
 import LeftNavBar from "../FileSelection/LeftNavBar.js";
+import NavigationService from "../../services/navigationService.js"
 
 /**
  * Library component for selecting songs from the device.
@@ -69,7 +70,7 @@ export default class FileSelection extends React.Component {
     async manualSelection() {
         let result = await DocumentPicker.getDocumentAsync({ mediaType: "audio" });
         if (result.type !== "cancel") {
-            this.onMusicSelect(result.uri);
+            this.onMusicSelect(result);
         }
     }
 
@@ -88,10 +89,9 @@ export default class FileSelection extends React.Component {
      * Selects a song for play back from the provided URI.
      * @param {string} uri Music resource uri
      */
-    async onMusicSelect(uri) {
-        console.log(uri);
-        await AudioPlayback.loadAudio(uri);
-        await AudioPlayback.play();
+    async onMusicSelect(musicFile) {
+        await AudioPlayback.loadAudio(musicFile);
+        NavigationService.navigate("session");
     }
 
     /**

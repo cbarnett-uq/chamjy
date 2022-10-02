@@ -3,6 +3,7 @@ import {
     InterruptionModeAndroid,
     InterruptionModeIOS
 } from 'expo-av';
+import { useState } from 'react';
 
 /**
  * Service that controls audio playback.
@@ -18,6 +19,8 @@ export default class AudioPlayback {
     static playbackStatus = null;
     static playbackRate = 1;
     static playbackTime = "0:00";
+
+    
 
     /**
      * Initialises the service.
@@ -43,6 +46,7 @@ export default class AudioPlayback {
 
         AudioPlayback.audioPlayer = new Audio.Sound();
         AudioPlayback._isReady = true;
+        AudioPlayback.audioPlayer.setOnPlaybackStatusUpdate(AudioPlayback.audioPlaybackUpdate)
     }
 
     /**
@@ -95,18 +99,29 @@ export default class AudioPlayback {
 
     // This function runs every 100 milliseconds when the audio is playing.
     static audioPlaybackUpdate(status) {
+        console.log("test")
         if (status.isLoaded) {
             var totalSeconds = status.positionMillis / 1000
             var currentSeconds = ("0" + Math.floor(totalSeconds) % 60).slice(-2)
             var currentMinutes = Math.floor(Math.floor(totalSeconds) / 60)
             AudioPlayback.playbackTime = currentMinutes + ":" + currentSeconds
         }
+
+    }
+
+    static getFileName(musicFile) {
+        var fileName = musicFile.name;
+        if (fileName == null) {
+            fileName = musicFile.filename;
+        }
+        return fileName;
     }
 
     /**
      * Loads an audio file.
      */
-    static async loadAudio(uri) {
+    static async loadAudio(musicFile) {
+
         if (!AudioPlayback._isReady) return;
         let status;
         
@@ -114,7 +129,7 @@ export default class AudioPlayback {
             await AudioPlayback.unloadAudio()
         }
 
-        AudioPlayback.audioFile.uri = uri;
+        AudioPlayback.audioFile.uri = musicFile.uri;
 
         try {
             const source = { uri: AudioPlayback.audioFile.uri };
@@ -133,7 +148,8 @@ export default class AudioPlayback {
         } catch (e) {
             console.error(e);
         }
-
+        AudioPlayback.audioPlayer.set
+        AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
         AudioPlayback.playbackStatus = status
         AudioPlayback.playbackTime = "0:00"
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
