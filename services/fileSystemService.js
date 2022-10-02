@@ -82,7 +82,7 @@ export default class FileSystemService {
         };
 
         let results = await MediaLibrary.getAssetsAsync(options);
-        return await Promise.all(results.map((asset) => {
+        return await Promise.all(results.assets.map((asset) => {
             return new AudioAsset(asset.uri, asset);
         }));
     }
@@ -206,6 +206,6 @@ export class AudioAsset {
      */
     _buildFromAssetInfoAndroid(uri, fileInfo) {
         this.uri = uri;
-        this.name = fileInfo.fillename;
+        this.name = fileInfo.filename;
     }
 }
