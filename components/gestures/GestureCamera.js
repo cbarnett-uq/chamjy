@@ -130,8 +130,8 @@ export default class GestureCamera extends React.Component {
                         style={StyleService.camera.camera}
                         cameraTextureHeight={dim.height}
                         cameraTextureWidth={dim.width}
-                        resizeHeight={dim.height / 5}
-                        resizeWidth={dim.width / 5}
+                        resizeHeight={200}
+                        resizeWidth={152}
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}

@@ -68,11 +68,11 @@ export class Colors {
 /**
  * Service for accessing the stylesheet.
  */
- export class StyleService {
-    /**
-     * Layout style sheet.
-     */
-    static layout = StyleSheet.create({
+export class StyleService {
+     /**
+      * Layout style sheet.
+      */
+     static layout = StyleSheet.create({
         outerContainer: {
             flex: 1,
             alignContext: 'center',
@@ -84,6 +84,84 @@ export class Colors {
             alignContext: 'center',
             justifyContent: 'center'
         }
+    });
+
+    /**
+     * Style sheet for the file selection UI.
+     */
+    static fileSelect = StyleSheet.create({
+        musicButtonTouchable: {
+            backgroundColor: "grey",
+            marginRight: 10,
+            marginTop: 10,
+            padding: 8,
+            borderRadius: 10,
+            width: 115,
+            height: 115,
+            justifyContent: 'center',
+            underlayColor: "#555",
+        },
+        musicButtonImage: {
+            tintColor: "white",
+            width: 40,
+            height: 40,
+        },
+        musicButtonText: {
+            width: "100%",
+            color: "white",
+            marginTop: 5,
+            textAlign: 'center',
+            numberOfLines: 2
+        },
+        fileSelctionLeftMenuText: {
+            color: "#666",
+        },
+        fileSelctionLeftMenuItemView: {
+            flexDirection: 'row',
+            alignItems: 'center',
+
+        },
+        fileSelctionLeftMenuTouchable: {
+            borderRadius: 5,
+            backgroundColor: "#ccc",
+            underlayColor: "#eee",
+            paddingLeft: 10,
+            paddingTop: 15,
+            paddingBottom: 20
+        },
+        fileSelctionLeftMenuImage: {
+            tintColor: "grey",
+            marginRight: 10,
+            width: 24,
+            height: 24,
+        },
+        searchBar: {
+            borderBottomWidth: 1,
+            borderBottomColor: "#777",
+            padding: 1,
+            flex: 1,
+        },
+        fileSelectionRightHeader: {
+            fontSize: 20,
+            color: "grey",
+            fontWeight: "bold"
+        },
+        fileSelectionRightScrollView: {
+            width: "100%",
+            flexDirection: 'row',
+        },
+        fileSelctionLeftMenuTouchableShrunk: {
+            borderRadius: 5,
+            backgroundColor: "#ccc",
+            underlayColor: "#eee",
+            paddingTop: 15,
+            paddingBottom: 20,
+        },
+        fileSelctionLeftMenuImageShrunk: {
+            tintColor: "grey",
+            width: 24,
+            height: 24,
+        },
     });
 
     /**

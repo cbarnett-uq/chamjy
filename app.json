@@ -3,7 +3,6 @@
     "name": "chamjy",
     "slug": "chamjy",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,6 +20,7 @@
       "requireFullScreen": true,
       "supportsTablet": true,
       "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to detect hand gestures as input.",
         "UIBackgroundModes": [
           "audio"
         ]
@@ -34,9 +34,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "infoPlist": {
-      "NSCameraUsageDescription": "This app uses the camera to detect hand gestures as input."
     }
   }
 }
