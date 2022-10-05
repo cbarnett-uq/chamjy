@@ -37,34 +37,29 @@ export default class Session extends React.Component {
     /**
      * Handles when the play gesture is detected.
      */
-    handleOnPlay() {
+    handleOnTogglePlay() {
         console.log("Play");
-        AudioPlayback.play();
-    }
-
-    /**
-     * Handles when the pause gesture is detected.
-     */
-    handleOnPause() {
-        console.log("Pause");
-        AudioPlayback.pause();
+        AudioPlayback.toggleAudio();
     }
 
     /**
      * Handles when the previous track button is pressed.
      */
-    handleOnPrevious() {
-        console.log("Play previous track");
+    handleOnMarkerA() {
+        console.log("Marker A Set");
     }
 
-    /**
-     * Handles when the next track button is pressed.
-     */
-    handleOnNext() {
-        console.log("Play next track");
+    handleOnMarkerB() {
+        console.log("Marker B set");
     }
 
-    
+    handleOnLoop() {
+        console.log("Looping enabled");
+    }
+
+    handleOnSkipToBeginning() {
+        AudioPlayback.skipToBeginning();
+    }
 
     /**
      * Renders the session component.
@@ -88,8 +83,11 @@ export default class Session extends React.Component {
 
                     <View style={StyleService.session.cameraContainer}>
                         <GestureCamera
-                            onPlay={this.handleOnPlay}
-                            onPause={this.handleOnPause} />
+                            onTogglePlay={this.handleOnTogglePlay}
+                            onMarkerA={this.handleOnMarkerA}
+                            onMarkerB={this.handleOnMarkerB}
+                            onLoop={this.handleOnLoop}
+                            onSkipToBeginning={this.handleOnSkipToBeginning} />
                     </View>
                     <View style={StyleService.session.cameraOutline} />
 

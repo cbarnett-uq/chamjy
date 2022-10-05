@@ -94,6 +94,29 @@ export default class AudioPlayback {
         }
     }
 
+    /**
+     * Skips the playback to the beginning of the song.
+     */
+    static async skipToBeginning() {
+        await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, 0);
+    }
+
+    /**
+     * Sets the playback state including rate and position.
+     */
+    static async _setPlaybackState(rate, position) {
+        if (!AudioPlayback._isReady) return;
+        if (!AudioPlayback.audioPlayer._loaded) return;
+
+        const status = {
+            rate: rate,
+            positionMillis: position,
+            shouldCorrectPitch: true
+        };
+        await AudioPlayback.audioPlayer
+            .setStatusAsync(status);
+    }
+
     // This function runs every 100 milliseconds when the audio is playing.
     static audioPlaybackUpdate(status) {
         console.log("test")
