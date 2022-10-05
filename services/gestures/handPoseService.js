@@ -10,7 +10,6 @@ export default class HandPoseService {
     static _detector;
     static _frames = [];
     static _lastFrame = {};
-
     /**
      * Handles the onResults call from Hands.
      * @param { any } results Result structure returned by Hands.
@@ -41,7 +40,7 @@ export default class HandPoseService {
             for (let i = 0; i < 30; i++) {
                 HandPoseService._frames.push(frame);
             }
-
+            HandPoseService._time = new Date();
             HandPoseService._ready = true;
         } catch (err) {
             console.error(err);
@@ -81,7 +80,6 @@ export default class HandPoseService {
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
             HandPoseService._frames.shift();
             HandPoseService._lastFrame = result;
-
             return true;
         } catch (err) {
             console.error(err);
@@ -110,14 +108,13 @@ export default class HandPoseService {
     static _buildFrameFromResult(data) {
         let result = [];
         
-        for (let i = 0; i < data.length; i++) {
-            let hand = HandPoseService._buildHand(data[i]).flat();
+        if (0 < data.length) {
+            let hand = HandPoseService._buildHand(data[0]).flat();
             for (let j = 0; j < hand.length; j++) {
                 result.push(hand[j]);
             }
         }
-
-        for (let i = data.length; i < 2; i++) {
+        for (let i = data.length; i < 1; i++) {
             let hand = HandPoseService._buildEmptyHand().flat();
             for (let j = 0; j < hand.length; j++) {
                 result.push(hand[j]);
@@ -133,12 +130,12 @@ export default class HandPoseService {
     static _buildEmptyFrame() {
         let result = [];
 
-        for (let i = 0; i < 2; i++) {
-            let hand = HandPoseService._buildEmptyHand().flat();
-            for (let j = 0; j < hand.length; j++) {
-                result.push(hand[j]);
-            }
+
+        let hand = HandPoseService._buildEmptyHand().flat();
+        for (let j = 0; j < hand.length; j++) {
+            result.push(hand[j]);
         }
+        
 
         return result;
     }

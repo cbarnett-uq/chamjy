@@ -23,7 +23,7 @@ export default class FileSelection extends React.Component {
                         style={StyleService.fileSelect.musicButtonImage}/>
                     <Text numberOfLines={StyleService.fileSelect.musicButtonText.numberOfLines}
                         style={StyleService.fileSelect.musicButtonText}>
-                        {this.state.musicAsset.filename}
+                        {this.state.musicAsset.name}
                     </Text>
                 </View>
             </TouchableHighlight>
