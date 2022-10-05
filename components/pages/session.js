@@ -46,15 +46,18 @@ export default class Session extends React.Component {
      * Handles when the previous track button is pressed.
      */
     handleOnMarkerA() {
+        AudioPlayback.setMarkerA();
         console.log("Marker A Set");
     }
 
     handleOnMarkerB() {
+        AudioPlayback.setMarkerB();
         console.log("Marker B set");
     }
 
     handleOnLoop() {
-        console.log("Looping enabled");
+        AudioPlayback.toggleLoop();
+        console.log("Looping toggled");
     }
 
     handleOnSkipToBeginning() {
