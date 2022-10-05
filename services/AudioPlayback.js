@@ -79,7 +79,7 @@ export default class AudioPlayback {
         if (!AudioPlayback._isReady) return;
 
         if (AudioPlayback.audioPlayer._loaded) {
-            if (!AudioPlayback.playbackStatus.isPlaying) {
+            if (AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
             }
         }
@@ -119,6 +119,7 @@ export default class AudioPlayback {
      * Sets the position of marker B.
      */
     static async setMarkerB() {
+       
         if (!AudioPlayback._isReady) return;
         if (!AudioPlayback.audioPlayer._loaded) return;
 
@@ -133,7 +134,8 @@ export default class AudioPlayback {
         if (!AudioPlayback.audioPlayer._loaded) return;
         if (AudioPlayback.markerAPosition < 0 || AudioPlayback.markerBPosition < 0) return;
 
-        AudioPlayback.shouldLoop != AudioPlayback.shouldLoop;
+        if (AudioPlayback.shouldLoop) AudioPlayback.shouldLoop = false;
+        else AudioPlayback.shouldLoop = true;
     }
 
     /**
@@ -155,6 +157,7 @@ export default class AudioPlayback {
     // This function runs every 100 milliseconds when the audio is playing.
     static audioPlaybackUpdate(status) {
         if (status.isLoaded) {
+            AudioPlayback.playbackStatus = status;
             var totalSeconds = status.positionMillis / 1000
             var currentSeconds = ("0" + Math.floor(totalSeconds) % 60).slice(-2)
             var currentMinutes = Math.floor(Math.floor(totalSeconds) / 60)
