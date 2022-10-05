@@ -57,8 +57,8 @@ export class GestureDefinition {
 GestureDefinition.pausePlay = new GestureDescription("pausePlay");
 for (var finger in [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
     GestureDefinition.pausePlay.addCurl(finger, FingerCurl.FullCurl, 1);
-    /*GestureDefinition.pausePlay.addDirection(finger,FingerDirection.VerticalUp,1);        
-    GestureDefinition.pausePlay.addDirection(finger,FingerDirection.DiagonalUpLeft,1);*/
+    GestureDefinition.pausePlay.addDirection(finger,FingerDirection.VerticalUp,1);        
+    GestureDefinition.pausePlay.addDirection(finger,FingerDirection.DiagonalUpLeft,1);
 }
 GestureDefinition.pausePlay.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.9);
 GestureDefinition.pausePlay.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1);
