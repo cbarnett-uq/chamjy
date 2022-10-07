@@ -4,6 +4,8 @@ import {
     InterruptionModeIOS
 } from 'expo-av';
 
+import MusicInfo from './expo-music-info/MusicInfo';
+
 /**
  * Service that controls audio playback.
  */
@@ -11,6 +13,7 @@ export default class AudioPlayback {
     static audioFile = {
         filename: '',
         uri: '',
+        albumCover: '',
     };
 
     static _isReady = false;
@@ -118,7 +121,7 @@ export default class AudioPlayback {
      * Loads an audio file.
      */
     static async loadAudio(musicFile) {
-
+        console.log(musicFile);
         if (!AudioPlayback._isReady) return;
         let status;
         
@@ -142,6 +145,17 @@ export default class AudioPlayback {
                 state,
                 AudioPlayback.audioPlaybackUpdate
             );
+
+            let metadata = await MusicInfo.getMusicInfoAsync(AudioPlayback.audioFile.uri,{
+                
+                title: true,
+                artist: true,
+                album: true,
+                genre: true,
+                picture: true  
+            })  
+            console.log(metadata);
+            AudioPlayback.audioFile.albumCover = metadata.picture.picureData;
         } catch (e) {
             console.error(e);
         }
@@ -187,4 +201,5 @@ export default class AudioPlayback {
             }
         }
     }
+
 }
