@@ -21,6 +21,10 @@ export default class AudioPlayback {
     static playbackStatus = null;
     static playbackRate = 1;
     static playbackTime = "0:00";
+    static playbackPosition = 0;
+    static markerAPosition = -1;
+    static markerBPosition = -1;
+    static shouldLoop = false;
 
     /**
      * Initialises the service.
@@ -78,7 +82,7 @@ export default class AudioPlayback {
         if (!AudioPlayback._isReady) return;
 
         if (AudioPlayback.audioPlayer._loaded) {
-            if (!AudioPlayback.playbackStatus.isPlaying) {
+            if (AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
             }
         }
@@ -97,14 +101,79 @@ export default class AudioPlayback {
         }
     }
 
+    /**
+     * Skips the playback to the beginning of the song.
+     */
+    static async skipToBeginning() {
+        await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, 0);
+    }
+
+    /**
+     * Sets the position of marker A.
+     */
+    static async setMarkerA() {
+        if (!AudioPlayback._isReady) return;
+        if (!AudioPlayback.audioPlayer._loaded) return;
+
+        AudioPlayback.markerAPosition = AudioPlayback.playbackPosition;
+    }
+
+    /**
+     * Sets the position of marker B.
+     */
+    static async setMarkerB() {
+       
+        if (!AudioPlayback._isReady) return;
+        if (!AudioPlayback.audioPlayer._loaded) return;
+
+        AudioPlayback.markerBPosition = AudioPlayback.playbackPosition;
+    }
+
+    /**
+     * Toggles looping of the audio track.
+     */
+    static async toggleLoop() {
+        if (!AudioPlayback._isReady) return;
+        if (!AudioPlayback.audioPlayer._loaded) return;
+        if (AudioPlayback.markerAPosition < 0 || AudioPlayback.markerBPosition < 0) return;
+
+        if (AudioPlayback.shouldLoop) AudioPlayback.shouldLoop = false;
+        else AudioPlayback.shouldLoop = true;
+    }
+
+    /**
+     * Sets the playback state including rate and position.
+     */
+    static async _setPlaybackState(rate, position) {
+        if (!AudioPlayback._isReady) return;
+        if (!AudioPlayback.audioPlayer._loaded) return;
+
+        const status = {
+            rate: rate,
+            positionMillis: position,
+            shouldCorrectPitch: true
+        };
+        await AudioPlayback.audioPlayer
+            .setStatusAsync(status);
+    }
+
     // This function runs every 100 milliseconds when the audio is playing.
     static audioPlaybackUpdate(status) {
-        console.log("test")
         if (status.isLoaded) {
+            AudioPlayback.playbackStatus = status;
             var totalSeconds = status.positionMillis / 1000
             var currentSeconds = ("0" + Math.floor(totalSeconds) % 60).slice(-2)
             var currentMinutes = Math.floor(Math.floor(totalSeconds) / 60)
+            AudioPlayback.playbackPosition = status.positionMillis;
             AudioPlayback.playbackTime = currentMinutes + ":" + currentSeconds
+
+            if (AudioPlayback.shouldLoop) {
+                if (AudioPlayback.playbackPosition >= AudioPlayback.markerBPosition) {
+                    AudioPlayback._setPlaybackState(
+                        AudioPlayback.playbackRate,
+                        AudioPlayback.markerAPosition);
+                }
+            }
         }
 
     }
@@ -159,7 +228,6 @@ export default class AudioPlayback {
         } catch (e) {
             console.error(e);
         }
-        AudioPlayback.audioPlayer.set
         AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
         AudioPlayback.playbackStatus = status
         AudioPlayback.playbackTime = "0:00"
@@ -172,6 +240,9 @@ export default class AudioPlayback {
     static async unloadAudio() {
         await AudioPlayback.audioPlayer
             .unloadAsync();
+        AudioPlayback.markerAPosition = -1;
+        AudioPlayback.markerBPosition = -1;
+        AudioPlayback.shouldLoop = false;
     }
 
     /**
