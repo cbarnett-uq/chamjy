@@ -66,7 +66,6 @@ GestureDefinition.pausePlay.addCurl(Finger.Thumb,FingerCurl.HalfCurl,1);
 GestureDefinition.markerA = new GestureDescription('markerA');
 for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
     GestureDefinition.markerA.addCurl(finger, FingerCurl.FullCurl,1);
-    GestureDefinition.markerA.addCurl(finger, FingerCurl.HalfCurl,1);
     GestureDefinition.markerA.addDirection(finger,FingerDirection.VerticalUp,1);
     GestureDefinition.markerA.addDirection(finger,FingerDirection.DiagonalUpLeft,0.7);
 }
@@ -81,7 +80,6 @@ GestureDefinition.markerA.addCurl(Finger.Index,FingerCurl.HalfCurl,1);
 GestureDefinition.markerB = new GestureDescription("markerB");
 for (var finger in [Finger.Middle, Finger.Ring, Finger.Pinky]) {
     GestureDefinition.markerB.addCurl(finger, FingerCurl.FullCurl,1);
-    GestureDefinition.markerB.addCurl(finger, FingerCurl.HalfCurl,1);
     GestureDefinition.markerB.addDirection(finger,FingerDirection.HorizontalLeft,1);
     GestureDefinition.markerB.addDirection(finger,FingerDirection.DiagonalUpLeft,0.8);
 }
@@ -107,6 +105,7 @@ GestureDefinition.skipTB.addDirection(Finger.pinky,FingerDirection.DiagonalDownL
 GestureDefinition.loop = new GestureDescription("loop");
 for (var finger in [Finger.Thumb,Finger.Middle,Finger.Ring,Finger.Pinky]) {
     GestureDefinition.loop.addCurl(finger,FingerCurl.NoCurl,1);
+    GestureDefinition.loop.addCurl(finger,FingerCurl.HalfCurl,1);
     GestureDefinition.loop.addDirection(finger,FingerDirection.DiagonalUpLeft,1);
 }
 GestureDefinition.loop.addCurl(Finger.Index.NoCurl,0.9);
