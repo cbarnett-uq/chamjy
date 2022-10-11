@@ -249,7 +249,7 @@ export default class Session extends React.Component {
 
                         <View style={StyleService.session.currentSongSliderContainer}>
                             <View style={{}}>
-                                <Slider value={AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis9} minimumValue={0} maximumValue={1} />
+                                <Slider value={AudioPlayback.totalTimeMillis === 0 ? 0 : AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis} minimumValue={0} maximumValue={1} />
                                 { this.renderMarkerA() }
                                 { this.renderMarkerB() }
                                 
