@@ -99,6 +99,7 @@ export default class PredictionService{
     static _mapResultToGesture(result) {
         var name = "nothing";
         var max = 0;
+
         for (var i = 0; i < result.gestures.length; i++) {
             if (result.gestures[i].score > max) {
                 name = result.gestures[i].name;
@@ -112,7 +113,7 @@ export default class PredictionService{
             PredictionService._sameCount++;
         }
         
-        if (PredictionService._sameCount >=5){
+        if (PredictionService._sameCount >=3){
             console.log(name);
             return Gestures[name];
         }
