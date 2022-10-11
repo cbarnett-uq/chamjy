@@ -70,6 +70,8 @@ export default class PredictionService{
         
         if (result !== Gestures["nothing"]) return result;
         //result = await GesturesService.predictDynamic();
+        if (result !== 2){
+            console.log(result);}
         return result;
     }
     

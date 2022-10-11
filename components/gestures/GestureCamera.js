@@ -47,23 +47,15 @@ export default class GestureCamera extends React.Component {
                 break;
 
             case Gestures["pausePlay"]:
-                this.onTogglePlay();
+                this.onPlay();
                 break;
             
-            case Gestures["markerA"]:
-                this.onMarkerA();
+            case Gestures["makerA"]:
+                this.onPause();
                 break;
-
             case Gestures["markerB"]:
-                this.onMarkerB();
                 break;
-
             case Gestures["loop"]:
-                this.onLoop();
-                break;
-
-            case Gestures["skipTB"]:
-                this.onSkipToBeginning();
                 break;
         }
     }
@@ -143,11 +135,8 @@ export default class GestureCamera extends React.Component {
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}
-                        onTogglePlay={this.props.onTogglePlay}
-                        onMarkerA={this.props.onMarkerA}
-                        onMarkerB={this.props.onMarkerB}
-                        onLoop={this.props.onLoop}
-                        onSkipToBeginning={this.props.onSkipToBeginning}
+                        onPlay={this.props.onPlay}
+                        onPause={this.props.onPause}
                         autorender={true}/>
                 </View>
             );
