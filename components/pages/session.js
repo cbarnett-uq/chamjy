@@ -70,17 +70,19 @@ export default class Session extends React.Component {
     render() {
         return (
             <View style={StyleService.session.container}>
-                
+                <Image source={AudioPlayback.audioFile.albumCover}
+                    style={{ position: 'absolute', width: "100%", height: "100%", opacity:0.8}} blurRadius={7} />
+
                 <View style={StyleService.session.topHalfContainer}>
 
                     <TouchableHighlight
                         underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                        onPress={() => { }}
+                        onPress={() => { NavigationService.navigate("library") }}
                         style={StyleService.session.homeButton}>
                         <View style={StyleService.session.rowContainerCenter}>
                             <Text numberOfLines={1}
-                                style={StyleService.fileSelect.fileSelctionLeftMenuText}
-                            > -- Back</Text>
+                                style={StyleService.session.mainText}
+                            >Back</Text>
                         </View>
                     </TouchableHighlight>
 
@@ -95,18 +97,21 @@ export default class Session extends React.Component {
                     <View style={StyleService.session.cameraOutline} />
 
                     <View style={ StyleService.session.currentSongContainer }>
-                        <Image source={require("../../assets/default-album.png")} style={StyleService.session.currentSongImage} />
+                        <Image source={AudioPlayback.audioFile.albumCover} style={StyleService.session.currentSongImage} />
 
                         <Text numberOfLines={1}
                             style={StyleService.session.currentSongNameText}
-                        >{AudioPlayback.audioFile.filename === "" ? "No Song Selected" : AudioPlayback.audioFile.filename}</Text>
+                        >{AudioPlayback.audioFile.title}</Text>
+                        <Text numberOfLines={1}
+                            style={StyleService.session.currentSongArtistText}
+                        >{AudioPlayback.audioFile.artist}</Text>
 
                         <View style={StyleService.session.currentSongSliderContainer}>
                             <Slider value={0} minimumValue={0} maximumValue={1}/>
                             <View style={StyleService.session.rowContainerMargin}>
-                                <Text>{AudioPlayback.playbackTime}</Text>
+                                <Text style={StyleService.session.mainText}>{AudioPlayback.playbackTime}</Text>
                                 <View style={StyleService.session.endContainer}>
-                                    <Text>3:32</Text>
+                                    <Text style={StyleService.session.mainText}>3:32</Text>
                                 </View>
                             </View>
                         </View>
@@ -118,64 +123,64 @@ export default class Session extends React.Component {
 
                 <View style={StyleService.session.footerContainer}>
                     <View style={StyleService.session.footerPlayButtonContainer}>
-                        <TouchableHighlight underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                            onPress={() => { this.handleOnPlay() }}
+                        <TouchableHighlight
+                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                            onPress={() => { this.handleOnTogglePlay() }}
                             style={StyleService.session.footerPlayButton}>
                             <View style={StyleService.session.footerPlayButtonImageContainer}>
-                                <Image source={require("../../assets/play.png")}
+                                <Image source={AudioPlayback.getIsPlaying() == false ? require("../../assets/play.png") : require("../../assets/pause.png")}
                                     style={StyleService.session.footerPlayButtonImage}/>
                             </View>
                         </TouchableHighlight>
                     </View>
                     
                     <View style={StyleService.session.footerBar}>
-                      
-                        <View style={StyleService.session.footerBarButtonContainer}>
-                            
-                            <TouchableHighlight
-                                underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                                onPress={() => { this.handleOnPlay() }}
-                                style={StyleService.session.footerBarButton}>
-                                <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                    <Image source={require("../../assets/music-note.png")}
-                                        style={StyleService.session.footerBarButtonImage} />
-                                    <Text numberOfLines={1} style={StyleService.session.footerBarButtonText}>Sheet Music</Text>
-                                </View>
-                            </TouchableHighlight>
+                        <TouchableHighlight
+                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                            onPress={() => { }}
+                            style={StyleService.session.footerBarButton}>
+                            <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                <Image source={require("../../assets/hand.png")}
+                                    style={StyleService.session.footerBarButtonImage} />
+                                <Text numberOfLines={1} style={StyleService.session.footerBarButtonText}>Preferred Hand</Text>
+                            </View>
+                        </TouchableHighlight>
+                        
+                        <TouchableHighlight
+                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                            onPress={() => { }}
+                            style={StyleService.session.footerBarButton}>
+                            <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                <Image source={require("../../assets/rewind.png")}
+                                    style={StyleService.session.footerBarButtonImage} />
+                                <Text numberOfLines={1}
+                                    style={StyleService.session.footerBarButtonText}>Rewind</Text>
+                            </View>
+                        </TouchableHighlight>
 
-                            <TouchableHighlight
-                                underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                                onPress={() => { }}
-                                style={StyleService.session.footerBarButton}>
-                                <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                    <Text numberOfLines={1}
-                                        style={StyleService.session.footerBarButtonText}>Rewind</Text>
-                                </View>
-                            </TouchableHighlight>
+                        <TouchableHighlight
+                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                            onPress={() => { }}
+                            style={StyleService.session.footerBarButton}>
+                            <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                <Image source={require("../../assets/tempo.png")}
+                                    style={StyleService.session.footerBarButtonImage} />
+                                <Text numberOfLines={1}
+                                    style={StyleService.session.footerBarButtonText}>Temp: 100%</Text>
+                            </View>
+                        </TouchableHighlight>
 
-                        </View>
-
-                        <View style={StyleService.session.footerBarButtonContainer}>
-                            <TouchableHighlight
-                                underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                                onPress={() => { }}
-                                style={StyleService.session.footerBarButton}>
-                                <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                    <Text numberOfLines={1}
-                                        style={StyleService.session.footerBarButtonText}>Temp: 100%</Text>
-                                </View>
-                            </TouchableHighlight>
-
-                            <TouchableHighlight
-                                underlayColor={StyleService.fileSelect.fileSelctionLeftMenuTouchable.underlayColor}
-                                onPress={() => { NavigationService.navigate("library") }}
-                                style={StyleService.session.footerBarButton}>
-                                <View style={ StyleService.session.footerBarButtonInsideContainer}>
-                                    <Text numberOfLines={1}
-                                        style={StyleService.session.footerBarButtonText}>Marker</Text>
-                                </View>
-                            </TouchableHighlight>
-                        </View> 
+                        <TouchableHighlight
+                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                            onPress={() => { }}
+                            style={StyleService.session.footerBarButton}>
+                            <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                <Image source={require("../../assets/marker.png")}
+                                    style={StyleService.session.footerBarButtonImage} />
+                                <Text numberOfLines={1}
+                                    style={StyleService.session.footerBarButtonText}>Marker</Text>
+                            </View>
+                        </TouchableHighlight>
                     </View>
                 </View>
 

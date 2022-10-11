@@ -66,7 +66,11 @@ export class Colors {
     };
 
     static session = {
-        greyText: "#3E3E3E"
+        greyText: "#BFBFBF",
+        footerMain: "#292929",
+        footerMainLight: "#292929",
+        footerPlay: "#404040",
+        textColor: "#fff"
     }
 }
 
@@ -174,13 +178,14 @@ export class StyleService {
      */
     static camera = StyleSheet.create({
         container: {
-            zIndex: 10,
+            zIndex: 15,
             flex: 1,
             flexDirection: 'row',
             width: '100%',
             height: '100%',
             alignContent: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            backgroundColor: "#000",
         },
 
         camera: {
@@ -232,12 +237,13 @@ export class StyleService {
             left: '0%',
             top: '0%',
             width: '100%',
-            height: '100%'
+            height: '100%',
+            backgroundColor: "#000"
         },
 
         topHalfContainer: {
             flex: 1,
-            margin: "2%"
+            margin: "2%",
         },
 
         homeButton: {
@@ -263,7 +269,7 @@ export class StyleService {
             position: 'absolute',
             zIndex: 10,
             width: DimensionService.getMaxDimension() * 0.2,
-            top: 30,
+            top: 40,
             aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
@@ -274,11 +280,12 @@ export class StyleService {
             position: 'absolute',
             zIndex: 20,
             width: DimensionService.getMaxDimension() * 0.2,
-            top: 30,
+            top: 40,
             aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
-            borderRadius: 22
+            borderRadius: 22,
+            
         },
 
         currentSongContainer: {
@@ -290,17 +297,26 @@ export class StyleService {
             height: DimensionService.getMinDimension() * 0.40,
             resizeMode: "contain",
             aspectRatio: 1,
-            alignSelf: 'center'
+            alignSelf: 'center',
+            borderRadius:7
         },
 
         currentSongNameText: {
             alignSelf: 'center',
             marginTop: "1%",
-            fontSize: 17
+            fontSize: 17,
+            color: Colors.session.textColor,
+            fontWeight: "bold"
+        },
+
+        currentSongArtistText: {
+            alignSelf: 'center',
+            fontSize: 12,
+            color: Colors.session.textColor
         },
 
         currentSongSliderContainer: {
-            marginTop: "2%"
+            marginTop: "0%"
         },
 
         footerContainer: {
@@ -317,7 +333,7 @@ export class StyleService {
         },
 
         footerPlayButton: {
-            backgroundColor: Colors.tertiary.light,
+            backgroundColor: Colors.session.footerPlay,
             justifyContent: "center",
             alignItems: "center",
             height: DimensionService.getMinDimension() * 0.18,
@@ -342,41 +358,38 @@ export class StyleService {
         footerBar: {
             width: "100%",
             flex: 1,
-            backgroundColor: Colors.secondary.light,
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 20,
+            backgroundColor: Colors.session.footerMain,
+            //borderTopLeftRadius: 20,
+            //borderTopRightRadius: 20,
             flexDirection: 'row'
         },
 
-        footerBarButtonContainer: {
-            flex: 1,
-            flexDirection: 'row',
-            alignContent: 'space-around',
-            alignItems: 'center',
-            justifyContent: 'space-evenly'
-        },
-
         footerBarButtonInsideContainer: {
-            flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
         },
 
         footerBarButton: {
-            margin: 10,
             borderRadius: 10,
             height: "100%",
-            justifyContent: 'center'
+            justifyContent: 'center',
+            flex: 1,
+            onTouchColor: Colors.session.footerPlay
         },
 
         footerBarButtonImage: {
             width: 15,
-            height: 15,
-            marginRight: 3
+            resizeMode:'contain',
+            marginRight: 3,
+            tintColor: Colors.session.greyText
         },
 
         footerBarButtonText: {
             fontWeight: "bold",
             color: Colors.session.greyText
         },
+
+        mainText: {
+            color: Colors.session.textColor
+        }
     });
 }

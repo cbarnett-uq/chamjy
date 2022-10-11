@@ -13,7 +13,9 @@ export default class AudioPlayback {
     static audioFile = {
         filename: '',
         uri: '',
-        albumCover: '',
+        albumCover: require("../assets/default-album2.png"),
+        title: "No Song Selected",
+        artist: ""
     };
 
     static _isReady = false;
@@ -25,6 +27,7 @@ export default class AudioPlayback {
     static markerAPosition = -1;
     static markerBPosition = -1;
     static shouldLoop = false;
+    static isPlaying = false;
 
     /**
      * Initialises the service.
@@ -85,6 +88,7 @@ export default class AudioPlayback {
             if (AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
             }
+            AudioPlayback.isPlaying = false;
         }
     }
 
@@ -98,6 +102,7 @@ export default class AudioPlayback {
             if (!AudioPlayback.playbackStatus.isPlaying) {
                 AudioPlayback.status = await AudioPlayback.audioPlayer.playAsync()
             }
+            AudioPlayback.isPlaying = true;
         }
     }
 
@@ -186,11 +191,37 @@ export default class AudioPlayback {
         return fileName;
     }
 
+    static setMetaData(metadata) {
+        if (metadata) {
+            if (metadata.picture != undefined) {
+                AudioPlayback.audioFile.albumCover = { uri: metadata.picture.pictureData };
+            } else {
+                AudioPlayback.audioFile.albumCover = require("../assets/default-album2.png");
+            }
+
+            if (metadata.title != undefined) {
+                AudioPlayback.audioFile.title = metadata.title;
+            } else {
+                AudioPlayback.audioFile.title = AudioPlayback.audioFile.filename;
+            }
+
+            if (metadata.artist != undefined) {
+                AudioPlayback.audioFile.artist = metadata.artist;
+            } else {
+                AudioPlayback.audioFile.artist = "";
+            }
+
+        } else {
+            AudioPlayback.audioFile.albumCover = require("../assets/default-album2.png");
+            AudioPlayback.audioFile.title = AudioPlayback.audioFile.filename;
+            AudioPlayback.audioFile.artist = "";
+        }
+    }
+
     /**
      * Loads an audio file.
      */
     static async loadAudio(musicFile) {
-        console.log(musicFile);
         if (!AudioPlayback._isReady) return;
         let status;
         
@@ -214,24 +245,29 @@ export default class AudioPlayback {
                 state,
                 AudioPlayback.audioPlaybackUpdate
             );
+            AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
 
-            let metadata = await MusicInfo.getMusicInfoAsync(AudioPlayback.audioFile.uri,{
-                
+            let metadata = await MusicInfo.getMusicInfoAsync(AudioPlayback.audioFile.uri, {
                 title: true,
                 artist: true,
                 album: true,
                 genre: true,
                 picture: true  
-            })  
-            console.log(metadata);
-            AudioPlayback.audioFile.albumCover = metadata.picture.picureData;
+            })
+            AudioPlayback.setMetaData(metadata);
+
         } catch (e) {
             console.error(e);
         }
-        AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
+        
         AudioPlayback.playbackStatus = status
         AudioPlayback.playbackTime = "0:00"
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
+        AudioPlayback.isPlaying = false;
+    }
+
+    static getIsPlaying() {
+        return AudioPlayback.isPlaying;
     }
 
     /**
@@ -272,5 +308,6 @@ export default class AudioPlayback {
             }
         }
     }
+
 
 }
