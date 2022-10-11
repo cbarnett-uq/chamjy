@@ -23,11 +23,12 @@ export default class AudioPlayback {
     static playbackStatus = null;
     static playbackRate = 1;
     static playbackTime = "0:00";
-    static playbackPosition = 0;
     static markerAPosition = -1;
     static markerBPosition = -1;
     static shouldLoop = false;
     static isPlaying = false;
+    static totalTimeMillis = 0;
+    static playbackPosition = 0;
 
     /**
      * Initialises the service.
@@ -162,15 +163,20 @@ export default class AudioPlayback {
             .setStatusAsync(status);
     }
 
+    static millisToTime(millis) {
+        var totalSeconds = millis / 1000
+        var currentSeconds = ("0" + Math.floor(totalSeconds) % 60).slice(-2)
+        var currentMinutes = Math.floor(Math.floor(totalSeconds) / 60)
+        return currentMinutes + ":" + currentSeconds;
+    }
+
     // This function runs every 100 milliseconds when the audio is playing.
     static audioPlaybackUpdate(status) {
         if (status.isLoaded) {
             AudioPlayback.playbackStatus = status;
-            var totalSeconds = status.positionMillis / 1000
-            var currentSeconds = ("0" + Math.floor(totalSeconds) % 60).slice(-2)
-            var currentMinutes = Math.floor(Math.floor(totalSeconds) / 60)
+            
             AudioPlayback.playbackPosition = status.positionMillis;
-            AudioPlayback.playbackTime = currentMinutes + ":" + currentSeconds
+            AudioPlayback.playbackTime = AudioPlayback.millisToTime(status.positionMillis);
 
             if (AudioPlayback.shouldLoop) {
                 if (AudioPlayback.playbackPosition >= AudioPlayback.markerBPosition) {
@@ -264,6 +270,7 @@ export default class AudioPlayback {
         AudioPlayback.playbackTime = "0:00"
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
         AudioPlayback.isPlaying = false;
+        AudioPlayback.totalTimeMillis = status.durationMillis
     }
 
     static getIsPlaying() {

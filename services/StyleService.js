@@ -68,6 +68,7 @@ export class Colors {
     static session = {
         greyText: "#BFBFBF",
         footerMain: "#292929",
+        footerMainTrans: "#292929ee",
         footerMainLight: "#292929",
         footerPlay: "#404040",
         textColor: "#fff"
@@ -390,6 +391,61 @@ export class StyleService {
 
         mainText: {
             color: Colors.session.textColor
-        }
+        },
+
+        popUpText: {
+            paddingLeft: "15%",
+            margin: 5,
+            color: Colors.session.textColor,
+            fontWeight: "bold",
+        },
+
+        popUpTouchableTop: {
+            width: "100%",
+            flex: 1,
+            backgroundColor: Colors.session.footerMainTrans,
+            borderTopRightRadius: 10,
+            borderTopLeftRadius: 10,
+            paddingHorizontal: "1%",
+            paddingVertical:"3%",
+            borderBottomColor: "#333333",
+            borderBottomWidth: 1
+        },
+
+        popUpTouchableMiddle: {
+            width: "100%",
+            flex: 1,
+            backgroundColor: Colors.session.footerMainTrans,
+            paddingHorizontal: "1%",
+            paddingVertical: "3%",
+            borderBottomColor: "#333333",
+            borderBottomWidth:1
+        },
+
+        popUpTouchableBottom: {
+            width: "100%",
+            flex: 1,
+            backgroundColor: Colors.session.footerMainTrans,
+            borderBottomRightRadius: 10,
+            borderBottomLeftRadius: 10,
+            paddingHorizontal: "1%",
+            paddingVertical: "3%",
+        },
+
+        popUpTouchableInnerContainer: {
+            flexDirection: "row",
+            alignItems:"center"
+        },
+
+        triangle: {
+            borderTopWidth: 11,
+            borderRightWidth: 11,
+            borderBottomWidth: 0,
+            borderLeftWidth: 11,
+            borderTopColor: "#292929ee",
+            borderRightColor: 'transparent',
+            borderBottomColor: 'transparent',
+            borderLeftColor: 'transparent',
+        },
     });
 }

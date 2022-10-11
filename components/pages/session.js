@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, TouchableHighlight, Text, Dimensions, Image } from 'react-native';
+import { Button, View, TouchableHighlight, Text, Dimensions, Image, Switch } from 'react-native';
 import GestureCamera from '../gestures/GestureCamera.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import { StyleService } from '../../services/StyleService.js';
@@ -32,6 +32,11 @@ export default class Session extends React.Component {
             const max = Math.max(height, width);
             return max;
         }
+
+        this.state = {
+            currentPopup: ""
+        }
+
     }
 
     /**
@@ -62,6 +67,142 @@ export default class Session extends React.Component {
 
     handleOnSkipToBeginning() {
         AudioPlayback.skipToBeginning();
+    }
+
+    closePopups() {
+        this.setState({currentPopup: ""});
+    }
+
+    renderMarkerPopup() {
+        return (
+            <View style={{
+                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: -100,
+                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
+            }}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableTop} onPress={() => { this.handleOnMarkerA(); this.closePopups()} }>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Marker A</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle} onPress={() => { this.handleOnMarkerB(); this.closePopups() }}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Marker B</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Loop</Text>
+                        <View style={{flex:1, flexDirection:'row-reverse'}}>
+                            <Switch value={AudioPlayback.shouldLoop} />
+                        </View>
+                    </View>
+                </TouchableHighlight>
+                <View style={StyleService.session.triangle} />
+            </View>
+            )
+    }
+
+    renderTempoPopup() {
+        return (
+            <View style={{
+                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: -100,
+                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
+            }}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>25%</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>50%</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>75%</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Normal</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>125%</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>150%</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>175%</Text>
+                    </View>
+                </TouchableHighlight>
+                <View style={StyleService.session.triangle} />
+            </View>
+            )
+    }
+
+    renderHandPopup() {
+        return (
+            <View style={{
+                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: 100,
+                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
+            }}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Right Hand</Text>
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                    <View style={StyleService.session.popUpTouchableInnerContainer}>
+                        <Text style={StyleService.session.popUpText}>Left Hand</Text>
+                    </View>
+                </TouchableHighlight>
+                <View style={StyleService.session.triangle} />
+            </View>
+            )
+    }
+
+    renderMarkerA() {
+        if (AudioPlayback.markerAPosition != -1) {
+            var percent = AudioPlayback.markerAPosition / AudioPlayback.totalTimeMillis * 100 + "%";
+            return (
+                <View style={{ width: "100%", position: 'absolute', alignSelf: 'center', flexDirection: "row", paddingHorizontal: 16 }}>
+                    <View style={{ width: percent, alignItems: 'flex-end' }}/>
+                    <View>
+                        <Text style={{ right: "50%", color: "#fff", fontWeight: "bold" }}>A</Text>
+                    </View>
+                </View>
+            )
+        } else {
+            return null;
+        }
+    }
+
+    renderMarkerB() {
+        if (AudioPlayback.markerBPosition != -1) {
+            var percent = AudioPlayback.markerBPosition / AudioPlayback.totalTimeMillis * 100 + "%";
+            return (
+                <View style={{ width: "100%", position: 'absolute', alignSelf: 'center', flexDirection: "row", paddingHorizontal: 16 }}>
+                    <View style={{ width: percent, alignItems: 'flex-end' }}>
+                        <View style={{ backgroundColor: "blue" }}>
+
+                        </View>
+                    </View>
+                    <View>
+                        <Text style={{ right: "50%", color: "#fff", fontWeight: "bold" }}>B</Text>
+                    </View>
+                </View>
+            )
+        } else {
+            return null
+        }
     }
 
     /**
@@ -107,11 +248,19 @@ export default class Session extends React.Component {
                         >{AudioPlayback.audioFile.artist}</Text>
 
                         <View style={StyleService.session.currentSongSliderContainer}>
-                            <Slider value={0} minimumValue={0} maximumValue={1}/>
+                            <View style={{}}>
+                                <Slider value={AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis9} minimumValue={0} maximumValue={1} />
+                                { this.renderMarkerA() }
+                                { this.renderMarkerB() }
+                                
+
+                            </View>
+
                             <View style={StyleService.session.rowContainerMargin}>
+                                
                                 <Text style={StyleService.session.mainText}>{AudioPlayback.playbackTime}</Text>
                                 <View style={StyleService.session.endContainer}>
-                                    <Text style={StyleService.session.mainText}>3:32</Text>
+                                    <Text style={StyleService.session.mainText}>{ AudioPlayback.millisToTime(AudioPlayback.totalTimeMillis) }</Text>
                                 </View>
                             </View>
                         </View>
@@ -135,16 +284,23 @@ export default class Session extends React.Component {
                     </View>
                     
                     <View style={StyleService.session.footerBar}>
-                        <TouchableHighlight
-                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { }}
-                            style={StyleService.session.footerBarButton}>
-                            <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                <Image source={require("../../assets/hand.png")}
-                                    style={StyleService.session.footerBarButtonImage} />
-                                <Text numberOfLines={1} style={StyleService.session.footerBarButtonText}>Preferred Hand</Text>
-                            </View>
-                        </TouchableHighlight>
+
+                        <View style={StyleService.session.footerBarButton}>
+                            <TouchableHighlight
+                                underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                onPress={() => { this.state.currentPopup === "hand" ? this.setState({ currentPopup: "" }) : this.setState({ currentPopup: "hand" }) }}
+                                style={StyleService.session.footerBarButton}>
+                                <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                    <Image source={require("../../assets/hand.png")}
+                                        style={StyleService.session.footerBarButtonImage} />
+                                    <Text numberOfLines={1} style={StyleService.session.footerBarButtonText}>Preferred Hand</Text>
+                                </View>
+                            </TouchableHighlight>
+
+
+                            {this.state.currentPopup === "hand" ? this.renderHandPopup() : null}
+                            
+                        </View>
                         
                         <TouchableHighlight
                             underlayColor={StyleService.session.footerBarButton.onTouchColor}
@@ -158,29 +314,41 @@ export default class Session extends React.Component {
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight
-                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { }}
-                            style={StyleService.session.footerBarButton}>
-                            <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                <Image source={require("../../assets/tempo.png")}
-                                    style={StyleService.session.footerBarButtonImage} />
-                                <Text numberOfLines={1}
-                                    style={StyleService.session.footerBarButtonText}>Temp: 100%</Text>
-                            </View>
-                        </TouchableHighlight>
 
-                        <TouchableHighlight
-                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { }}
-                            style={StyleService.session.footerBarButton}>
-                            <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                <Image source={require("../../assets/marker.png")}
-                                    style={StyleService.session.footerBarButtonImage} />
-                                <Text numberOfLines={1}
-                                    style={StyleService.session.footerBarButtonText}>Marker</Text>
-                            </View>
-                        </TouchableHighlight>
+                        <View style={StyleService.session.footerBarButton}>
+                            <TouchableHighlight
+                                underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                onPress={() => { this.state.currentPopup === "tempo" ? this.setState({ currentPopup: "" }) : this.setState({ currentPopup: "tempo" }) }}
+                                style={StyleService.session.footerBarButton}>
+                                <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                    <Image source={require("../../assets/tempo.png")}
+                                        style={StyleService.session.footerBarButtonImage} />
+                                    <Text numberOfLines={1}
+                                        style={StyleService.session.footerBarButtonText}>Tempo: 100%</Text>
+                                </View>
+                            </TouchableHighlight>
+
+                            {this.state.currentPopup === "tempo" ? this.renderTempoPopup() : null}
+
+                        </View>
+
+                        
+                        <View style={StyleService.session.footerBarButton}>
+                            <TouchableHighlight
+                                underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                onPress={() => { this.state.currentPopup === "marker" ? this.setState({currentPopup: ""}) : this.setState({currentPopup: "marker"})}}
+                                style={StyleService.session.footerBarButton}>
+                                <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                    <Image source={require("../../assets/marker.png")}
+                                        style={StyleService.session.footerBarButtonImage} />
+                                    <Text numberOfLines={1}
+                                        style={StyleService.session.footerBarButtonText}>Marker</Text>
+                                </View>
+                            </TouchableHighlight>
+
+                            { this.state.currentPopup === "marker" ? this.renderMarkerPopup() : null}
+                            
+                        </View>
                     </View>
                 </View>
 
