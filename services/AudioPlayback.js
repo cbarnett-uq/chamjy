@@ -196,10 +196,8 @@ export default class AudioPlayback {
             }
 
             if (AudioPlayback.shouldLoop) {
-                if (AudioPlayback.playbackPosition >= AudioPlayback.markerBPosition) {
-                    AudioPlayback._setPlaybackState(
-                        AudioPlayback.playbackRate,
-                        AudioPlayback.markerAPosition);
+                if (AudioPlayback.playbackPosition >= Math.max(AudioPlayback.markerBPosition, AudioPlayback.markerAPosition)) {
+                    AudioPlayback.skipToTime(Math.min(AudioPlayback.markerBPosition, AudioPlayback.markerAPosition))
                 }
             }
         }
