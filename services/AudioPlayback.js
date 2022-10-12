@@ -115,8 +115,16 @@ export default class AudioPlayback {
     /**
      * Skips the playback to the beginning of the song.
      */
-    static async skipToBeginning() {
-        await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, 0);
+    //static async skipToBeginning() {
+    //    await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, 0);
+    //}
+
+    static async skipToTime(millis) {
+        await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, millis);
+    }
+
+    static percentToTime(percent) {
+        return Math.round(percent * AudioPlayback.totalTimeMillis);
     }
 
     /**

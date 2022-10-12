@@ -3,11 +3,7 @@ import { Button, View, TouchableHighlight, Text, Dimensions, Image, Switch } fro
 import GestureCamera from '../gestures/GestureCamera.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
 import { StyleService } from '../../services/StyleService.js';
-import { Colors } from '../../services/StyleService.js';
-import { AlbumCover } from '../playback/albumCover.js';
-import { TrackSelectNext, TrackSelectPrevious } from '../playback/trackSelect.js';
 import Slider from '@react-native-community/slider';
-import { hexToLong } from '@tensorflow/tfjs-core/dist/hash_util';
 import NavigationService from "../../services/navigationService.js"
 
 /**
@@ -37,6 +33,9 @@ export default class Session extends React.Component {
             currentPopup: ""
         }
 
+        this.playImage = require("../../assets/play.png");
+        this.pauseImage = require("../../assets/pause.png");
+
     }
 
     componentDidMount() {
@@ -48,8 +47,8 @@ export default class Session extends React.Component {
      */
     handleOnTogglePlay() {
         console.log("Play");
-        AudioPlayback.toggleAudio();
-        this.forceUpdate();
+        AudioPlayback.toggleAudio()
+            .then(this.forceUpdate());
     }
 
     /**
@@ -71,7 +70,7 @@ export default class Session extends React.Component {
     }
 
     handleOnSkipToBeginning() {
-        AudioPlayback.skipToBeginning();
+        AudioPlayback.skipToTime(0);
     }
 
     handleOnUpdate() {
@@ -80,6 +79,10 @@ export default class Session extends React.Component {
 
     closePopups() {
         this.setState({currentPopup: ""});
+    }
+
+    async scrub(value) {
+        await AudioPlayback.skipToTime(AudioPlayback.percentToTime(value));
     }
 
     renderMarkerPopup() {
@@ -252,7 +255,9 @@ export default class Session extends React.Component {
                                 <Slider
                                     value={AudioPlayback.totalTimeMillis === 0 ? 0 : AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis}
                                     minimumValue={0}
-                                    maximumValue={1} />
+                                    maximumValue={1}
+                                    onSlidingComplete={this.scrub}
+                                />
                                 { this.renderMarkerA() }
                                 { this.renderMarkerB() }
                                 
@@ -280,7 +285,7 @@ export default class Session extends React.Component {
                             onPress={() => { this.handleOnTogglePlay() }}
                             style={StyleService.session.footerPlayButton}>
                             <View style={StyleService.session.footerPlayButtonImageContainer}>
-                                <Image source={AudioPlayback.getIsPlaying() == false ? require("../../assets/play.png") : require("../../assets/pause.png")}
+                                <Image source={AudioPlayback.getIsPlaying() == false ? this.playImage : this.pauseImage}
                                     style={StyleService.session.footerPlayButtonImage}/>
                             </View>
                         </TouchableHighlight>
