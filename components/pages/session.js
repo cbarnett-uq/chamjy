@@ -39,12 +39,17 @@ export default class Session extends React.Component {
 
     }
 
+    componentDidMount() {
+        AudioPlayback.register(() => this.handleOnUpdate());
+    }
+
     /**
      * Handles when the play gesture is detected.
      */
     handleOnTogglePlay() {
         console.log("Play");
         AudioPlayback.toggleAudio();
+        this.forceUpdate();
     }
 
     /**
@@ -69,16 +74,17 @@ export default class Session extends React.Component {
         AudioPlayback.skipToBeginning();
     }
 
+    handleOnUpdate() {
+        this.forceUpdate();
+    }
+
     closePopups() {
         this.setState({currentPopup: ""});
     }
 
     renderMarkerPopup() {
         return (
-            <View style={{
-                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: -100,
-                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
-            }}>
+            <View style={StyleService.session.popUpContainer}>
                 <TouchableHighlight style={StyleService.session.popUpTouchableTop} onPress={() => { this.handleOnMarkerA(); this.closePopups()} }>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Marker A</Text>
@@ -104,10 +110,7 @@ export default class Session extends React.Component {
 
     renderTempoPopup() {
         return (
-            <View style={{
-                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: -100,
-                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
-            }}>
+            <View style={StyleService.session.popUpContainer}>
                 <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>25%</Text>
@@ -150,10 +153,7 @@ export default class Session extends React.Component {
 
     renderHandPopup() {
         return (
-            <View style={{
-                position: "absolute", alignSelf: 'center', flex: 1, width: "100%", bottom: "100%", zIndex: 100,
-                alignContent: 'center', justifyContent: 'center', alignItems: 'center',
-            }}>
+            <View style={StyleService.session.popUpContainer}>
                 <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Right Hand</Text>
@@ -249,7 +249,10 @@ export default class Session extends React.Component {
 
                         <View style={StyleService.session.currentSongSliderContainer}>
                             <View style={{}}>
-                                <Slider value={AudioPlayback.totalTimeMillis === 0 ? 0 : AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis} minimumValue={0} maximumValue={1} />
+                                <Slider
+                                    value={AudioPlayback.totalTimeMillis === 0 ? 0 : AudioPlayback.playbackPosition / AudioPlayback.totalTimeMillis}
+                                    minimumValue={0}
+                                    maximumValue={1} />
                                 { this.renderMarkerA() }
                                 { this.renderMarkerB() }
                                 

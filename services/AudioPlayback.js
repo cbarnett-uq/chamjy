@@ -29,6 +29,7 @@ export default class AudioPlayback {
     static isPlaying = false;
     static totalTimeMillis = 0;
     static playbackPosition = 0;
+    static _onUpdateCallback = null;
 
     /**
      * Initialises the service.
@@ -55,6 +56,10 @@ export default class AudioPlayback {
         AudioPlayback.audioPlayer = new Audio.Sound();
         AudioPlayback._isReady = true;
         AudioPlayback.audioPlayer.setOnPlaybackStatusUpdate(AudioPlayback.audioPlaybackUpdate)
+    }
+
+    static register(callback) {
+        AudioPlayback._onUpdateCallback = callback;
     }
 
     /**
@@ -177,6 +182,10 @@ export default class AudioPlayback {
             
             AudioPlayback.playbackPosition = status.positionMillis;
             AudioPlayback.playbackTime = AudioPlayback.millisToTime(status.positionMillis);
+
+            if (AudioPlayback._onUpdateCallback !== null) {
+                AudioPlayback._onUpdateCallback();
+            }
 
             if (AudioPlayback.shouldLoop) {
                 if (AudioPlayback.playbackPosition >= AudioPlayback.markerBPosition) {

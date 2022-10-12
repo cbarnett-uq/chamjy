@@ -393,6 +393,17 @@ export class StyleService {
             color: Colors.session.textColor
         },
 
+        popUpContainer: {
+            position: "absolute",
+            alignSelf: 'center',
+            flex: 1, width: "100%",
+            bottom: "100%",
+            zIndex: -100,
+            alignContent: 'center',
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+
         popUpText: {
             paddingLeft: "15%",
             margin: 5,
