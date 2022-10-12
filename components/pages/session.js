@@ -77,6 +77,15 @@ export default class Session extends React.Component {
         this.forceUpdate();
     }
 
+    handleStepBack() {
+        AudioPlayback.skipToTime(AudioPlayback.playbackPosition - 5 * 1000);
+    }
+
+    handlePlaybackRate(rate) {
+        AudioPlayback.setPlaybackRate(rate);
+        this.closePopups();
+    }
+
     closePopups() {
         this.setState({currentPopup: ""});
     }
@@ -114,37 +123,45 @@ export default class Session extends React.Component {
     renderTempoPopup() {
         return (
             <View style={StyleService.session.popUpContainer}>
-                <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
+                <TouchableHighlight
+                    style={StyleService.session.popUpTouchableTop}
+                    onPress={() => this.handlePlaybackRate(0.25) }>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>25%</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}
+                    onPress={() => this.handlePlaybackRate(0.5)}>                
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>50%</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}
+                    onPress={() => this.handlePlaybackRate(0.75)}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>75%</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}
+                    onPress={() => this.handlePlaybackRate(1)}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Normal</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}
+                    onPress={() => this.handlePlaybackRate(1.25)}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>125%</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableMiddle}
+                    onPress={() => this.handlePlaybackRate(1.5)}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>150%</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}
+                    onPress={() => this.handlePlaybackRate(1.75)}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>175%</Text>
                     </View>
@@ -312,7 +329,7 @@ export default class Session extends React.Component {
                         
                         <TouchableHighlight
                             underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { }}
+                            onPress={() => { this.handleStepBack() }}
                             style={StyleService.session.footerBarButton}>
                             <View style={StyleService.session.footerBarButtonInsideContainer}>
                                 <Image source={require("../../assets/rewind.png")}
@@ -332,7 +349,7 @@ export default class Session extends React.Component {
                                     <Image source={require("../../assets/tempo.png")}
                                         style={StyleService.session.footerBarButtonImage} />
                                     <Text numberOfLines={1}
-                                        style={StyleService.session.footerBarButtonText}>Tempo: 100%</Text>
+                                        style={StyleService.session.footerBarButtonText}>Tempo: {AudioPlayback.playbackRate * 100 + "%" }</Text>
                                 </View>
                             </TouchableHighlight>
 
