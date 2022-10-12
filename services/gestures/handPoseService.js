@@ -72,18 +72,22 @@ export default class HandPoseService {
      * @param { any } tensor Image tensor from the camera.
      */
     static async update(tensor) {
-        if (!HandPoseService._ready) throw "Hand pose service is not ready.";
+        if (!HandPoseService._ready) {
+            tensor.dispose();
+            throw "Hand pose service is not ready.";
+        }
 
         try {
-
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
             HandPoseService._frames.shift();
             HandPoseService._lastFrame = result;
+            tensor.dispose();
             return true;
         } catch (err) {
             console.error(err);
+            tensor.dispose();
             return false;
         }
     }
