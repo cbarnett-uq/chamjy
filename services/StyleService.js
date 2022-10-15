@@ -69,7 +69,7 @@ export class Colors {
         greyText: "#BFBFBF",
         footerMain: "#292929",
         footerMainTrans: "#292929ee",
-        footerMainLight: "#292929",
+        footerMainLight: "#505050",
         footerPlay: "#404040",
         textColor: "#fff"
     }
@@ -258,11 +258,11 @@ export class StyleService {
 
         rowContainerMargin: {
             flexDirection: 'row',
-            marginHorizontal: "2%"
+            marginHorizontal: "2%",
         },
 
         endContainer: {
-            flex: 1,
+            
             alignItems: 'flex-end'
         },
 
@@ -291,7 +291,7 @@ export class StyleService {
 
         currentSongContainer: {
             flex: 1,
-            justifyContent: 'center'
+            justifyContent: 'center',
         },
 
         currentSongImage: {
@@ -334,25 +334,27 @@ export class StyleService {
         },
 
         footerPlayButton: {
-            backgroundColor: Colors.session.footerPlay,
             justifyContent: "center",
             alignItems: "center",
-            height: DimensionService.getMinDimension() * 0.18,
+            height: DimensionService.getMinDimension() * 0.15,
             borderRadius: 100,
-            bottom: DimensionService.getMinDimension() * 0.09,
             alignSelf: 'center',
             alignContent: "center",
-            aspectRatio: 1
+            aspectRatio: 1,
+            
         },
 
         footerPlayButtonImageContainer: {
             flex: 1,
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
+            alignSelf: 'center',
+            alignContent: 'center',
+            justifyContent:'center'
         },
 
         footerPlayButtonImage: {
-            width: "30%",
+            width: "50%",
             aspectRatio: 1, alignSelf: 'center'
         },
 
@@ -374,7 +376,7 @@ export class StyleService {
             height: "100%",
             justifyContent: 'center',
             flex: 1,
-            onTouchColor: Colors.session.footerPlay
+            onTouchColor: "#ffffff22"
         },
 
         footerBarButtonImage: {
@@ -398,7 +400,7 @@ export class StyleService {
             alignSelf: 'center',
             flex: 1, width: "100%",
             bottom: "100%",
-            zIndex: -100,
+            zIndex: 100,
             alignContent: 'center',
             justifyContent: 'center',
             alignItems: 'center',

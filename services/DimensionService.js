@@ -12,4 +12,13 @@ export default class DimensionService {
         const max = Math.max(height, width);
         return max;
     }
+
+    static getOrientaetion = () => {
+        const { height, width } = Dimensions.get('screen');
+        if (height > width) {
+            return "verticle"
+        } else {
+            return "horizontal"
+        }
+    }
 }
