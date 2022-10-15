@@ -41,7 +41,7 @@ export default class GestureCamera extends React.Component {
     handleGesture(gesture) {
         if (gesture === GestureCamera._lastGesture) return;
         GestureCamera._lastGesture = gesture;
-
+        
         switch (gesture) {
             case Gestures["nothing"]:
                 break;

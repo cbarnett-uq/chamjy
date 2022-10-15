@@ -68,8 +68,14 @@ export default class PredictionService{
         if (!PredictionService._ready) throw "PredictionService is not ready.";
         var result = await PredictionService._predictStatic();
         
-        if (result !== Gestures["nothing"]) return result;
-        //result = await GesturesService.predictDynamic();
+        //if (result !== Gestures["nothing"]) return result;
+        if(result !== Gestures["nothing"] && result !== null){
+            result = await GesturesService.predictDynamic();
+
+            console.log(result);
+            console.log(result == Gestures["pausePlay"]);
+        }
+        
         return result;
     }
     
@@ -98,14 +104,15 @@ export default class PredictionService{
      */
     static _mapResultToGesture(result) {
         var name = "nothing";
-        var max = 0;
+        var max = 8.5;
+        //console.log(result.poseData);
         for (var i = 0; i < result.gestures.length; i++) {
             if (result.gestures[i].score > max) {
                 name = result.gestures[i].name;
                 max = result.gestures[i].score;
             }
         }
-        if (Gestures[name] != PredictionService._lastGesture){
+        if (Gestures[name] !== PredictionService._lastGesture){
             PredictionService._lastGesture = Gestures[name];
             PredictionService._sameCount = 0;
         }else{
