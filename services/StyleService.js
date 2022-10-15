@@ -247,8 +247,13 @@ export class StyleService {
             margin: "2%",
         },
 
-        homeButton: {
-            padding: "1%"
+        libraryButton: {
+            borderRadius: 10,
+            padding: 5
+        },
+
+        libraryButtonText: {
+            color: "#fff"
         },
 
         rowContainerCenter: {
@@ -327,10 +332,9 @@ export class StyleService {
         },
 
         footerPlayButtonContainer: {
+            justifyContent: 'center',
             flex: 1,
-            position: "absolute",
-            zIndex: 10,
-            height: "100%"
+            flexDirection: 'row'
         },
 
         footerPlayButton: {
@@ -460,5 +464,26 @@ export class StyleService {
             borderBottomColor: 'transparent',
             borderLeftColor: 'transparent',
         },
+
+        markerContainer: {
+            width: "100%",
+            position: 'absolute',
+            alignSelf: 'center',
+            flexDirection: "row",
+            paddingHorizontal: 16
+        },
+
+        markerText: {
+            right: "50%",
+            color: "#fff",
+            fontWeight: "bold"
+        },
+
+        blurImageBackground: {
+            position: 'absolute',
+            width: "100%",
+            height: "100%",
+            opacity: 0.8
+        }
     });
 }
