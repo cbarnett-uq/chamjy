@@ -1,3 +1,4 @@
+import * as Font from "expo-font";
 import { StyleSheet } from 'react-native';
 import DimensionService from './DimensionService.js';
 
@@ -71,13 +72,109 @@ export class Colors {
 }
 
 /**
+ * Defines the fonts used by the app.
+ */
+export class Fonts {
+    static _isReady = false;
+
+    static async init() {
+        if (Fonts._isReady) return;
+
+        await Font.loadAsync("futura", require("../assets/fonts/futura.ttf"));
+        if (!Font.isLoaded("futura")) return;
+        
+        await Font.loadAsync("SegoeUI", require("../assets/fonts/segoeui.TTF"));
+        if (!Font.isLoaded("SegoeUI")) return;
+
+        Fonts._isReady = true;
+        return;
+    }
+
+    static async ready() {
+        if (Fonts._isReady) return true;
+
+        await Fonts.init();
+        return Fonts._isReady;
+    }
+
+    static logo = {
+        family: "Noteworthy-Bold",
+        size: 19
+    };
+
+    static h1 = {
+        family: "futura",
+        size: 20,
+        weight: "bold"
+    };
+
+    static h2 = {
+        family: "futura",
+        size: 18,
+        weight: "bold"
+    };
+
+    static h3 = {
+        family: "futura",
+        size: 16,
+        weight: "bold"
+    };
+
+    static h4 = {
+        family: "futura",
+        size: 14,
+        weight: "bold"
+    };
+
+    static h5 = {
+        family: "futura",
+        size: 12,
+        weight: "bold"
+    };
+
+    static h6 = {
+        family: "futura",
+        size: 10,
+        weight: "bold"
+    };
+
+    static body1 = {
+        family: "futura",
+        size: 12,
+        weight: "normal"
+    };
+
+    static body2 = {
+        family: "futura",
+        size: 15,
+        weight: "normal"
+    };
+}
+
+/**
  * Service for accessing the stylesheet.
  */
 export class StyleService {
-     /**
-      * Layout style sheet.
-      */
-     static layout = StyleSheet.create({
+    static _isReady = false;
+
+    static async init() {
+        if (StyleService._isReady) return;
+        const success = await Fonts.ready();
+
+        if (success) StyleService._isReady = true;
+    }
+
+    static async ready() {
+        if (StyleService._isReady) return true;
+
+        await StyleService.init();
+        return StyleService._isReady;
+    }
+    
+    /**
+     * Layout style sheet.
+     */
+    static layout = StyleSheet.create({
         outerContainer: {
             flex: 1,
             alignContext: 'center',
@@ -112,7 +209,8 @@ export class StyleService {
         },
         sideBarCollapsed: {
             flexDirecton: 'row',
-            backgroundColor: Colors.dark.mid
+            backgroundColor: Colors.dark.mid,
+            flexBasis: 84
         },
         sideBarExpanded: {
             flexDirecton: 'row',
@@ -121,15 +219,21 @@ export class StyleService {
         },
         sideBarLogo: {
             tintColor: Colors.primary.mid,
-            marginRight: 10,
-            width: 24,
-            height: 24,
+            marginRight: 10
         },
         sideBarMenu: {
             marginTop: 30,
             marginLeft: 15,
             marginRight: 15,
             zIndex: 1
+        },
+        sideBarMenuCategoryLabel: {
+            marginTop: 15,
+            marginBottom: 15,
+            fontFamily: Fonts.h6.family,
+            fontWeight: Fonts.h6.weight,
+            fontSize: Fonts.h6.size,
+            color: Colors.dark.contrast
         },
         sideBarMenuItem: {
             borderRadius: 5,
@@ -148,6 +252,9 @@ export class StyleService {
             zIndex: 3
         },
         sideBarMenuItemLabel: {
+            fontFamily: Fonts.body2.family,
+            fontWeight: Fonts.body2.weight,
+            fontSize: Fonts.body2.size,
             color: Colors.dark.contrast,
             zIndex: 3
         },

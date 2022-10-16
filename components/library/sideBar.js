@@ -1,7 +1,8 @@
 import React from "react";
 import { Image, ScrollView, View, Text } from "react-native";
-import { StyleService } from "../../services/StyleService";
+import { Colors, StyleService } from "../../services/StyleService";
 import { HorizontalDivider } from "../shared/horizontalDivider";
+import { Logo } from "../shared/logo";
 import { SideBarMenuItem } from "./sideBarMenuItem";
 
 /**
@@ -92,11 +93,12 @@ export class SideBar extends React.Component {
                     StyleService.library.sideBarCollapsed}>
                 <ScrollView>
                     <View style={StyleService.library.sideBarMenu}>
-                        <Image
-                            source={require("../../assets/home.png")}
-                            style={StyleService.library.sideBarLogo}/>
+                        <Logo/>
 
-                        <Text>HOME</Text>
+                        <Text style={StyleService.library.sideBarMenuCategoryLabel}>
+                            MENU
+                        </Text>
+
                         <SideBarMenuItem
                             onPress={
                                 () => {
@@ -106,8 +108,6 @@ export class SideBar extends React.Component {
                             label={"Home"}
                             showLabel={this.state.isExpanded}/>
 
-                        <HorizontalDivider/>
-
                         <SideBarMenuItem
                             onPress={
                                 () => {
@@ -116,6 +116,14 @@ export class SideBar extends React.Component {
                             icon={require("../../assets/search.png")}
                             label={"Search"}
                             showLabel={this.state.isExpanded}/>
+
+                        <View style={{marginTop: 15}}/>
+                        <HorizontalDivider color={Colors.dark.contrast}/>
+
+                        <Text style={StyleService.library.sideBarMenuCategoryLabel}>
+                            LIBRARY
+                        </Text>
+
                         <SideBarMenuItem
                             onPress={
                                 () => {
@@ -125,7 +133,13 @@ export class SideBar extends React.Component {
                             label={"Favourites"}
                             showLabel={this.state.isExpanded}/>
 
-                        <HorizontalDivider/>
+                        <View style={{marginTop: 15}}/>
+                        <HorizontalDivider color={Colors.dark.contrast}/>
+
+                        <Text style={StyleService.library.sideBarMenuCategoryLabel}>
+                            GENERAL
+                        </Text>
+
                         <SideBarMenuItem
                             onPress={
                                 () => {

@@ -17,6 +17,12 @@ export class HorizontalDivider extends React.Component {
             color: '#000000',
             height: 1
         };
+    }
+
+    /**
+     * Sets the component state from props.
+     */
+    componentDidMount() {
         this._setStateFromProps();
     }
 
