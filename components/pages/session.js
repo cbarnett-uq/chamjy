@@ -5,7 +5,7 @@ import AudioPlayback from '../../services/AudioPlayback.js';
 import { Colors, StyleService } from '../../services/StyleService.js';
 import Slider from '@react-native-community/slider';
 import NavigationService from "../../services/navigationService.js"
-
+import DimensionService from "../../services/DimensionService.js"
 /**
  * Component that renders the session page.
  */
@@ -16,6 +16,10 @@ export default class Session extends React.Component {
      */
     constructor(props) {
         super(props);
+        DimensionService.initEventListener();
+        DimensionService.addListener(() => {
+            this.setState({ orientation: DimensionService.getOrientaetion() })
+        })
 
         this.getMinDimension = () => {
             const { height, width } = Dimensions.get('screen');
@@ -36,6 +40,7 @@ export default class Session extends React.Component {
             shouldLoop: AudioPlayback.shouldLoop,
             playbackPosition: AudioPlayback.playbackPosition,
             isScrubbing: false,
+            orientation: DimensionService.getOrientaetion(),
         }
 
         this.playImage = require("../../assets/play.png");
@@ -274,7 +279,7 @@ export default class Session extends React.Component {
                         </View>
                     </TouchableHighlight>
 
-                    <View style={StyleService.session.cameraContainer}>
+                    <View style={this.state.orientation === "verticle" ? StyleService.session.cameraContainerVerticle : StyleService.session.cameraContainerHorizontal}>
                         <GestureCamera
                             onTogglePlay={() => this.handleOnTogglePlay()}
                             onMarkerA={this.handleOnMarkerA}
@@ -284,7 +289,7 @@ export default class Session extends React.Component {
                         />
 
                     </View>
-                    <View style={StyleService.session.cameraOutline} />
+                    <View style={this.state.orientation === "verticle" ? StyleService.session.cameraOutlineVerticle : StyleService.session.cameraOutlineHorizontal} />
 
                     <View style={StyleService.session.currentSongContainer}>
                         <Image source={AudioPlayback.audioFile.albumCover}

@@ -271,7 +271,18 @@ export class StyleService {
             alignItems: 'flex-end'
         },
 
-        cameraContainer: {
+        cameraContainerVerticle: {
+            position: 'absolute',
+            zIndex: 10,
+            height: DimensionService.getMaxDimension() * 0.2,
+            top: 40,
+            aspectRatio: 0.77,
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22
+        },
+
+        cameraContainerHorizontal: {
             position: 'absolute',
             zIndex: 10,
             width: DimensionService.getMaxDimension() * 0.2,
@@ -282,7 +293,19 @@ export class StyleService {
             borderRadius: 22
         },
 
-        cameraOutline: {
+        cameraOutlineVerticle: {
+            position: 'absolute',
+            zIndex: 20,
+            height: DimensionService.getMaxDimension() * 0.2,
+            top: 40,
+            aspectRatio: 0.77,
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22,
+
+        },
+
+        cameraOutlineHorizontal: {
             position: 'absolute',
             zIndex: 20,
             width: DimensionService.getMaxDimension() * 0.2,
