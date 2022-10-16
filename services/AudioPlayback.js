@@ -4,6 +4,7 @@ import {
     InterruptionModeIOS
 } from 'expo-av';
 
+import MusicInfo from './expo-music-info/MusicInfo';
 /**
  * Service that controls audio playback.
  */
@@ -183,43 +184,56 @@ export default class AudioPlayback {
         return fileName;
     }
 
+
     /**
-     * Loads an audio file.
-     */
+    * Loads an audio file.
+    */
     static async loadAudio(musicFile) {
-
-        if (!AudioPlayback._isReady) return;
-        let status;
-        
-        if (AudioPlayback.audioPlayer._loaded) {
-            await AudioPlayback.unloadAudio()
-        }
-
-        AudioPlayback.audioFile.uri = musicFile.uri;
-
-        try {
-            const source = { uri: AudioPlayback.audioFile.uri };
-            const state = {
-                shouldPlay: false,
-                rate: AudioPlayback.playbackRate,
-                isMuted: false
-            };
-
-            status = await AudioPlayback.audioPlayer
-                .loadAsync(
-                source,
-                state,
-                AudioPlayback.audioPlaybackUpdate
-            );
-        } catch (e) {
-            console.error(e);
-        }
-        AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
-        AudioPlayback.playbackStatus = status
-        AudioPlayback.playbackTime = "0:00"
-        AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
+    console.log(musicFile);
+    if (!AudioPlayback._isReady) return;
+    let status;
+    
+    if (AudioPlayback.audioPlayer._loaded) {
+        await AudioPlayback.unloadAudio()
     }
 
+    AudioPlayback.audioFile.uri = musicFile.uri;
+
+    try {
+        const source = { uri: AudioPlayback.audioFile.uri };
+        const state = {
+            shouldPlay: false,
+            rate: AudioPlayback.playbackRate,
+            isMuted: false
+        };
+
+        status = await AudioPlayback.audioPlayer
+            .loadAsync(
+            source,
+            state,
+            AudioPlayback.audioPlaybackUpdate
+        );
+
+        let metadata = await MusicInfo.getMusicInfoAsync(AudioPlayback.audioFile.uri,{
+            
+            title: true,
+            artist: true,
+            album: true,
+            genre: true,
+            picture: true  
+        })  
+        console.log(metadata);
+        AudioPlayback.audioFile.albumCover = metadata.picture.picureData;
+    } catch (e) {
+        console.error(e);
+    }
+    AudioPlayback.audioPlayer.set
+    AudioPlayback.audioFile.filename = AudioPlayback.getFileName(musicFile)
+    AudioPlayback.playbackStatus = status
+    AudioPlayback.playbackTime = "0:00"
+    AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
+    }
+    
     /**
      * Unloads the current audio file.
      */

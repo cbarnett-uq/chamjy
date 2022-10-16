@@ -75,6 +75,7 @@ export default class HandPoseService {
         if (!HandPoseService._ready) throw "Hand pose service is not ready.";
 
         try {
+
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
