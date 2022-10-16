@@ -27,6 +27,7 @@
     "expo-document-picker": "~10.3.0",
     "expo-file-system": "^14.1.0",
     "expo-gl": "~11.4.0",
+    "expo-linear-gradient": "^11.4.0",
     "expo-media-library": "~14.2.0",
     "expo-music-info": "^1.0.1",
     "expo-status-bar": "~1.4.0",

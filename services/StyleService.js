@@ -9,9 +9,9 @@ export class Colors {
      * Primary colour tones
      */
     static primary = {
-        'light': '#BDE0FE',
-        'mid': '#BDE0FE',
-        'dark': '#BDE0FE',
+        'light': '#54FBDA',
+        'mid': '#1ABC9C',
+        'dark': '#0A4136',
         'contrast': '#454545'
     };
 
@@ -59,9 +59,9 @@ export class Colors {
      * Dark shades
      */
     static dark = {
-        'light': '#707070',
-        'mid': '#454545',
-        'dark': '#202020',
+        'light': '#6C6E73',
+        'mid': '#41444D',
+        'dark': '#24262E',
         'contrast': '#FFFFFF'
     };
 
@@ -81,13 +81,81 @@ export class StyleService {
         outerContainer: {
             flex: 1,
             alignContext: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            backgroundColor: 'transparent'
         },
 
         flexContainer: {
             flex: 1,
             alignContext: 'center',
             justifyContent: 'center'
+        },
+
+        rowFlexContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center'
+        }
+    });
+
+    /**
+     * Stylesheet for the library UI.
+     */
+    static library = StyleSheet.create({
+        background: {
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 0
+        },
+        sideBarCollapsed: {
+            flexDirecton: 'row',
+            backgroundColor: Colors.dark.mid
+        },
+        sideBarExpanded: {
+            flexDirecton: 'row',
+            backgroundColor: Colors.dark.mid,
+            flexBasis: 310
+        },
+        sideBarLogo: {
+            tintColor: Colors.primary.mid,
+            marginRight: 10,
+            width: 24,
+            height: 24,
+        },
+        sideBarMenu: {
+            marginTop: 30,
+            marginLeft: 15,
+            marginRight: 15,
+            zIndex: 1
+        },
+        sideBarMenuItem: {
+            borderRadius: 5,
+            backgroundColor: Colors.dark.mid,
+            underlayColor: Colors.dark.light,
+            paddingLeft: 10,
+            paddingTop: 15,
+            paddingBottom: 20,
+            zIndex: 2
+        },
+        sideBarMenuItemIcon: {
+            tintColor: Colors.primary.mid,
+            marginRight: 10,
+            width: 24,
+            height: 24,
+            zIndex: 3
+        },
+        sideBarMenuItemLabel: {
+            color: Colors.dark.contrast,
+            zIndex: 3
+        },
+        contentContainer: {
+            flex: 2,
+            elevation: 1,
+            zIndex: 1,
+            backgroundColor: 'transparent'
         }
     });
 
