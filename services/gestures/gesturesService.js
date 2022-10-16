@@ -7,8 +7,8 @@ import { Gestures,FingerCurls,FingerDirections} from './types';
 
 // Model data, must use require statement not import or will not
 // load as assets.
-const gesturesModel = require('../../model/model.json');
-const gesturesWeights = require('../../model/weights2.bin');
+const gesturesModel = require('../../model/model1.json');
+const gesturesWeights = require('../../model/weights1.bin');
 
 /**
  * Singleton service for predicting current gesture based on
