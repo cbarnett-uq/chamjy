@@ -1,7 +1,9 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import { View } from "react-native";
+import AudioPlayback from "../../services/AudioPlayback";
 import FileSystemService from "../../services/fileSystemService";
+import NavigationService from "../../services/navigationService";
 import { Colors, StyleService } from "../../services/StyleService";
 import { Home } from "../library/home";
 import { SideBar } from "../library/sideBar";
@@ -46,15 +48,36 @@ export default class Library extends React.Component {
      * @param {int} index Index of the selected menu item.
      */
     handleSelectionChanged(index) {
-        console.log(`TEST ${index}`);
         this.setState({ selectionIndex: index });
+    }
+
+    /**
+     * Handles when the user selects to upload a file.
+     */
+    async handleUploadTouched() {
+        if (await FileSystemService.addAssetViaDocumentPicker()) {
+            await this.getLibrary();
+        }
+    }
+
+    /**
+     * Selects a song for play back from the provided URI.
+     * @param {string} uri Music resource uri
+     */
+     async onMusicSelect(musicFile) {
+        await AudioPlayback.loadAudio(musicFile);
+        NavigationService.navigate("session");
     }
 
     _getComponentForSelection() {
         switch (this.state.selectionIndex) {
             case 0:
                 return (
-                    <Home items={this.state.libraryAssets}/>
+                    <Home
+                        items={this.state.libraryAssets}
+                        onTrackSelect={async (uri) => {
+                            await this.onMusicSelect(uri);
+                        }}/>
                 );
 
             case 1:
@@ -101,6 +124,9 @@ export default class Library extends React.Component {
                         selectionIndex={this.state.selectionIndex}
                         onSelectionChange={(e) => {
                             this.handleSelectionChanged(e);
+                        }}
+                        onUpload={() => {
+                            this.handleUploadTouched();
                         }}/>
                     <View style={StyleService.library.contentContainer}>
                         {this._getComponentForSelection()}

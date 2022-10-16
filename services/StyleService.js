@@ -215,7 +215,7 @@ export class StyleService {
         sideBarExpanded: {
             flexDirecton: 'row',
             backgroundColor: Colors.dark.mid,
-            flexBasis: 310
+            flexBasis: 200
         },
         sideBarLogo: {
             tintColor: Colors.primary.mid,

@@ -67,21 +67,26 @@ export class HorizontalDivider extends React.Component {
                     height: this.state.height,
                     backgroundColor: this.state.color
                 }}/>
-                {() => {
+                <View>
+                    {() => {
                         if (this.state.label !== '') {
+                            return (
+                                <View>
+                                    <Text style={{
+                                        marginLeft: 16,
+                                        marginRight: 16,
+                                        textAlign: 'center'
+                                    }}>
+                                        {this.state.label}
+                                    </Text>
+                                </View>
+                            );
+                        }
                         return (
-                            <View>
-                                <Text style={{
-                                    marginLeft: 16,
-                                    marginRight: 16,
-                                    textAlign: 'center'
-                                }}>
-                                    {this.state.label}
-                                </Text>
-                            </View>
+                            <View/>
                         );
-                    }
-                }}
+                    }}
+                </View>
                 <View style={{
                     flex: 1,
                     height: this.state.height,

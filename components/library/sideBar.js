@@ -143,6 +143,16 @@ export class SideBar extends React.Component {
                         <SideBarMenuItem
                             onPress={
                                 () => {
+                                    this.props.onUpload();
+                                }
+                            }
+                            icon={require("../../assets/upload.png")}
+                            label={"Add to library"}
+                            showLabel={this.state.isExpanded}/>
+
+                        <SideBarMenuItem
+                            onPress={
+                                () => {
                                     this.toggleSideBarCollapse();
                                 }}
                             icon={require("../../assets/expand-nav.png")}
