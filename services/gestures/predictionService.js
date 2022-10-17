@@ -2,17 +2,12 @@ import { GestureEstimator} from 'fingerpose';
 import HandPoseService from './handPoseService';
 import { Gestures, GestureDefinition } from './types';
 import GesturesService from './gesturesService';
-import {
-    GestureDescription,
-    Finger,
-    FingerCurl,
-    FingerDirection
-} from 'fingerpose';
+
 /**
  * Defines the minimum prediction confidence used by fingerpose
  * to detect a static gesture. Range [0, 10].
  */
-const StaticPredictionConfidenceThreshold = 8;
+const StaticPredictionConfidenceThreshold = 7;
 
 /**
  * Singleton service for predicting current gesture based on
@@ -23,7 +18,6 @@ export default class PredictionService{
     static _ready = false;
     static _lastGesture;
     static _sameCount;
-    static _preferredHand;
 
     /**
      * Initialises the gesture service by loading the model.
@@ -126,7 +120,7 @@ export default class PredictionService{
             PredictionService._sameCount++;
         }
         
-        if (PredictionService._sameCount >=5){
+        if (PredictionService._sameCount >=3){
             console.log(name);
             return Gestures[name];
         }

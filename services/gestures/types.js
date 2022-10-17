@@ -125,14 +125,14 @@ _addGestureDefinition(GestureDefinition.loop2,[1, 5, 1, 5, 1, 2, 1, 5, 1, 2]);
 GestureDefinition.tempoUp = new GestureDescription("tempoUp");
 GestureDefinition.tempoUp1 = new GestureDescription("tempoUp1");
 GestureDefinition.tempoUp2 = new GestureDescription("tempoUp2");
-_addGestureDefinition(GestureDefinition.tempoUp,[0, 5, 1, 2, 1, 2, 1, 2, 1, 2],);
-_addGestureDefinition(GestureDefinition.tempoUp1,[0, 5, 1, 5, 1, 5, 1, 2, 0, 2],);
-_addGestureDefinition(GestureDefinition.tempoUp2,[0, 5, 2, 5, 2, 2, 2, 2, 2, 2],);
+_addGestureDefinition(GestureDefinition.tempoUp,[0, 4, 2, 3, 2, 3, 2, 3, 2, 6],);
+_addGestureDefinition(GestureDefinition.tempoUp1,[0, 4, 2, 3, 2, 3, 2, 3, 2, 3],);
+_addGestureDefinition(GestureDefinition.tempoUp2,[0, 4, 2, 3, 2, 3, 2, 3, 2, 3],);
 //Define tempoDown
 GestureDefinition.tempoDown = new GestureDescription("tempoDown");
 GestureDefinition.tempoDown1 = new GestureDescription("tempoDown1");
-_addGestureDefinition(GestureDefinition.tempoDown,[0, 7, 2, 2, 2, 2, 2, 2, 2, 2]);
-_addGestureDefinition(GestureDefinition.tempoDown1,[0, 7, 2, 7, 2, 7, 2, 2, 2, 2]);
+_addGestureDefinition(GestureDefinition.tempoDown,[0, 3, 2, 3, 2, 3, 2, 3, 0, 3]);
+_addGestureDefinition(GestureDefinition.tempoDown1,[0, 4, 2, 4, 2, 3, 2, 3, 0, 3]);
 
 /**
  * adds gesture definition 
