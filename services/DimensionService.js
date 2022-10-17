@@ -2,6 +2,13 @@ import { Dimensions } from 'react-native';
 
 export default class DimensionService {
     callbackFunc = null;
+
+
+    static getWidthHeight = () => {
+        const { height, width } = Dimensions.get('screen');
+        return { height, width };
+    }
+
     static getMinDimension = () => {
         const { height, width } = Dimensions.get('screen');
         const min = Math.min(height, width);

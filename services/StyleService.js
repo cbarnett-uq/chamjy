@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { PixelRatio, StyleSheet } from 'react-native';
 import DimensionService from './DimensionService.js';
 
 /**
@@ -333,14 +333,14 @@ export class StyleService {
         currentSongNameText: {
             alignSelf: 'center',
             marginTop: "1%",
-            fontSize: 17,
+            fontSize: DimensionService.getWidthHeight().width * 0.023 > 17 ? DimensionService.getWidthHeight().width * 0.023 : 17,
             color: Colors.session.textColor,
             fontWeight: "bold"
         },
 
         currentSongArtistText: {
             alignSelf: 'center',
-            fontSize: 12,
+            fontSize: DimensionService.getWidthHeight().width * 0.017 > 12 ? DimensionService.getWidthHeight().width * 0.017 : 12,
             color: Colors.session.textColor
         },
 
@@ -351,7 +351,7 @@ export class StyleService {
         footerContainer: {
             flex: 0.25,
             alignItems: 'center',
-            maxHeight: DimensionService.getMinDimension() * 0.25
+            maxHeight: DimensionService.getMinDimension() * 0.25 < 150 ? DimensionService.getMinDimension() * 0.25 : 150,
         },
 
         footerPlayButtonContainer: {
@@ -381,13 +381,13 @@ export class StyleService {
         },
 
         footerPlayButtonImage: {
-            width: "50%",
-            aspectRatio: 1, alignSelf: 'center'
+            width: "30%",
+            aspectRatio: 1,
+            alignSelf: 'center'
         },
 
         footerBar: {
             width: "100%",
-            flex: 1,
             backgroundColor: Colors.session.footerMain,
             //borderTopLeftRadius: 20,
             //borderTopRightRadius: 20,
@@ -396,30 +396,39 @@ export class StyleService {
 
         footerBarButtonInsideContainer: {
             alignItems: 'center',
+            alignContent:'center',
+            justifyContent:'center',
+            height:"100%",
+            width:"100%",
         },
 
         footerBarButton: {
             borderRadius: 10,
-            height: "100%",
             justifyContent: 'center',
+            alignItems: 'center',
+            alignContent: 'center',
             flex: 1,
-            onTouchColor: "#ffffff22"
+            onTouchColor: "#ffffff22",
+            width:"100%"
         },
 
         footerBarButtonImage: {
-            width: 15,
-            resizeMode:'contain',
+            height:"25%",
+            resizeMode:'stretch',
             marginRight: 3,
+            aspectRatio:1,
             tintColor: Colors.session.greyText
         },
 
         footerBarButtonText: {
             fontWeight: "bold",
-            color: Colors.session.greyText
+            color: Colors.session.greyText,
+            fontSize: DimensionService.getMaxDimension() * 0.02 > 13 ? DimensionService.getMaxDimension() * 0.02 : 13
         },
 
         mainText: {
-            color: Colors.session.textColor
+            color: Colors.session.textColor,
+            fontSize: DimensionService.getMaxDimension() * 0.015 > 13 ? DimensionService.getMaxDimension() * 0.015 : 13
         },
 
         popUpContainer: {
@@ -437,7 +446,7 @@ export class StyleService {
             paddingLeft: "15%",
             margin: 5,
             color: Colors.session.textColor,
-            fontWeight: "bold",
+            fontSize: DimensionService.getWidthHeight().width * 0.02 > 13 ? DimensionService.getWidthHeight().width * 0.02 : 13,
         },
 
         popUpTouchableTop: {

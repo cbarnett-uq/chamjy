@@ -18,7 +18,7 @@ export default class Session extends React.Component {
         super(props);
         DimensionService.initEventListener();
         DimensionService.addListener(() => {
-            this.setState({ orientation: DimensionService.getOrientaetion() })
+            this.setState({ orientation: DimensionService.getOrientaetion() });
         })
 
         this.getMinDimension = () => {
@@ -138,7 +138,7 @@ export default class Session extends React.Component {
                     </View>
                 </TouchableHighlight>
                 <TouchableHighlight
-                    style={StyleService.session.popUpTouchableMiddle}
+                    style={StyleService.session.popUpTouchableBottom}
                     onPress={() => { this.handleOnMarkerB(); this.closePopups() }}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Marker B</Text>
@@ -332,7 +332,7 @@ export default class Session extends React.Component {
                                                 style={StyleService.session.footerPlayButtonImage} />
                                         </View>
                                     </TouchableHighlight>
-                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} />
+                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }}/>
                                 </View>
 
 
