@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "chamjy",
-    "slug": "chamjy",
+    "name": "Conductify",
+    "slug": "Conductify",
     "version": "1.0.0",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -31,7 +31,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.chamjy.conductify"
     },
     "web": {
       "favicon": "./assets/favicon.png"
