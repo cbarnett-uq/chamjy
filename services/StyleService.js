@@ -69,7 +69,7 @@ export class Colors {
         greyText: "#BFBFBF",
         footerMain: "#292929",
         footerMainTrans: "#292929ee",
-        footerMainLight: "#292929",
+        footerMainLight: "#505050",
         footerPlay: "#404040",
         textColor: "#fff"
     }
@@ -247,8 +247,13 @@ export class StyleService {
             margin: "2%",
         },
 
-        homeButton: {
-            padding: "1%"
+        libraryButton: {
+            borderRadius: 10,
+            padding: 5
+        },
+
+        libraryButtonText: {
+            color: "#fff"
         },
 
         rowContainerCenter: {
@@ -258,15 +263,26 @@ export class StyleService {
 
         rowContainerMargin: {
             flexDirection: 'row',
-            marginHorizontal: "2%"
+            marginHorizontal: "2%",
         },
 
         endContainer: {
-            flex: 1,
+            
             alignItems: 'flex-end'
         },
 
-        cameraContainer: {
+        cameraContainerVerticle: {
+            position: 'absolute',
+            zIndex: 10,
+            height: DimensionService.getMaxDimension() * 0.2,
+            top: 40,
+            aspectRatio: 0.77,
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22
+        },
+
+        cameraContainerHorizontal: {
             position: 'absolute',
             zIndex: 10,
             width: DimensionService.getMaxDimension() * 0.2,
@@ -277,7 +293,19 @@ export class StyleService {
             borderRadius: 22
         },
 
-        cameraOutline: {
+        cameraOutlineVerticle: {
+            position: 'absolute',
+            zIndex: 20,
+            height: DimensionService.getMaxDimension() * 0.2,
+            top: 40,
+            aspectRatio: 0.77,
+            borderColor: Colors.dark.mid,
+            borderWidth: 8,
+            borderRadius: 22,
+
+        },
+
+        cameraOutlineHorizontal: {
             position: 'absolute',
             zIndex: 20,
             width: DimensionService.getMaxDimension() * 0.2,
@@ -291,7 +319,7 @@ export class StyleService {
 
         currentSongContainer: {
             flex: 1,
-            justifyContent: 'center'
+            justifyContent: 'center',
         },
 
         currentSongImage: {
@@ -327,32 +355,33 @@ export class StyleService {
         },
 
         footerPlayButtonContainer: {
+            justifyContent: 'center',
             flex: 1,
-            position: "absolute",
-            zIndex: 10,
-            height: "100%"
+            flexDirection: 'row'
         },
 
         footerPlayButton: {
-            backgroundColor: Colors.session.footerPlay,
             justifyContent: "center",
             alignItems: "center",
-            height: DimensionService.getMinDimension() * 0.18,
+            height: DimensionService.getMinDimension() * 0.15,
             borderRadius: 100,
-            bottom: DimensionService.getMinDimension() * 0.09,
             alignSelf: 'center',
             alignContent: "center",
-            aspectRatio: 1
+            aspectRatio: 1,
+            
         },
 
         footerPlayButtonImageContainer: {
             flex: 1,
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
+            alignSelf: 'center',
+            alignContent: 'center',
+            justifyContent:'center'
         },
 
         footerPlayButtonImage: {
-            width: "30%",
+            width: "50%",
             aspectRatio: 1, alignSelf: 'center'
         },
 
@@ -374,7 +403,7 @@ export class StyleService {
             height: "100%",
             justifyContent: 'center',
             flex: 1,
-            onTouchColor: Colors.session.footerPlay
+            onTouchColor: "#ffffff22"
         },
 
         footerBarButtonImage: {
@@ -398,7 +427,7 @@ export class StyleService {
             alignSelf: 'center',
             flex: 1, width: "100%",
             bottom: "100%",
-            zIndex: -100,
+            zIndex: 100,
             alignContent: 'center',
             justifyContent: 'center',
             alignItems: 'center',
@@ -458,5 +487,26 @@ export class StyleService {
             borderBottomColor: 'transparent',
             borderLeftColor: 'transparent',
         },
+
+        markerContainer: {
+            width: "100%",
+            position: 'absolute',
+            alignSelf: 'center',
+            flexDirection: "row",
+            paddingHorizontal: 16
+        },
+
+        markerText: {
+            right: "50%",
+            color: "#fff",
+            fontWeight: "bold"
+        },
+
+        blurImageBackground: {
+            position: 'absolute',
+            width: "100%",
+            height: "100%",
+            opacity: 0.8
+        }
     });
 }

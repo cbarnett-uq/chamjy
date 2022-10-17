@@ -8,6 +8,8 @@ import HandPoseService from '../../services/gestures/handPoseService';
 import GesturesService from '../../services/gestures/gesturesService';
 import { Gestures } from '../../services/gestures/types';
 import PredictionService from '../../services/gestures/predictionService';
+import DimensionService from '../../services/DimensionService';
+import { detectGLCapabilities } from '@tensorflow/tfjs-react-native';
 
 // Decorator for cameraWithTensors class
 const TensorCamera = cameraWithTensors(Camera);
@@ -72,7 +74,7 @@ export default class GestureCamera extends React.Component {
      * Handles the tensor output from the camera render cycle.
      * @param {any} images Collection of image tensors
      */
-    handleCameraStream(images, _1, _2) {
+    handleCameraStream(images, updatePreview, gl) {
         const loop = async () => {
             const nextImageTensor = images.next().value
 
@@ -88,7 +90,7 @@ export default class GestureCamera extends React.Component {
             
             requestAnimationFrame(loop);
         }
-
+        detectGLCapabilities(gl);
         loop();
     }
 
@@ -121,6 +123,22 @@ export default class GestureCamera extends React.Component {
         });
     }
 
+    getCameraDimensions() {
+        var textureDims;
+        if (Platform.OS === 'ios') {
+            textureDims = {
+                height: 1920,
+                width: 1080,
+            };
+        } else {
+            textureDims = {
+                height: 1200,
+                width: 1600,
+            };
+        }
+        return textureDims;
+    }
+
     /**
      * Determines how to render the component depending on the current state
      * and returns the relevant components.
@@ -128,7 +146,6 @@ export default class GestureCamera extends React.Component {
      */
     render() {
         // Get texture dimensions
-        let dim = Dimensions.get("window");
 
         if (this.state.ready) {
             return (
@@ -136,10 +153,17 @@ export default class GestureCamera extends React.Component {
                     <TensorCamera
                         type={Camera.Constants.Type.front}
                         style={StyleService.camera.camera}
+<<<<<<< HEAD
                         cameraTextureHeight={dim.height}
                         cameraTextureWidth={dim.width}
                         resizeHeight={800}
                         resizeWidth={608}
+=======
+                        cameraTextureHeight={this.getCameraDimensions.height}
+                        cameraTextureWidth={this.getCameraDimensions.width}
+                        resizeHeight={1200}
+                        resizeWidth={912}
+>>>>>>> session
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}

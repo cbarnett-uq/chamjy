@@ -77,11 +77,12 @@ export default class AudioPlayback {
     static async toggleAudio() {
         if (!AudioPlayback._isReady) return;
 
-        if (AudioPlayback.playbackStatus.isPlaying) {
+        if (AudioPlayback.isPlaying) {
             AudioPlayback.pause()
         } else {
             AudioPlayback.play()
         }
+        AudioPlayback._onUpdateCallback();
     };
 
     /**
@@ -121,6 +122,7 @@ export default class AudioPlayback {
 
     static async skipToTime(millis) {
         await AudioPlayback._setPlaybackState(AudioPlayback.playbackRate, millis);
+        AudioPlayback._onUpdateCallback();
     }
 
     static percentToTime(percent) {
@@ -196,8 +198,12 @@ export default class AudioPlayback {
             }
 
             if (AudioPlayback.shouldLoop) {
-                if (AudioPlayback.playbackPosition >= Math.max(AudioPlayback.markerBPosition, AudioPlayback.markerAPosition)) {
-                    AudioPlayback.skipToTime(Math.min(AudioPlayback.markerBPosition, AudioPlayback.markerAPosition))
+                if (AudioPlayback.playbackPosition >= Math.max(
+                    AudioPlayback.markerBPosition, AudioPlayback.markerAPosition)
+                ) {
+                    AudioPlayback.skipToTime(
+                        Math.min(AudioPlayback.markerBPosition, AudioPlayback.markerAPosition)
+                    )
                 }
             }
         }
@@ -286,10 +292,6 @@ export default class AudioPlayback {
         AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate)
         AudioPlayback.isPlaying = false;
         AudioPlayback.totalTimeMillis = status.durationMillis
-    }
-
-    static getIsPlaying() {
-        return AudioPlayback.isPlaying;
     }
 
     /**

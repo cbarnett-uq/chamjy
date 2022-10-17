@@ -10,6 +10,7 @@ export default class HandPoseService {
     static _detector;
     static _frames = [];
     static _lastFrame = {};
+
     /**
      * Handles the onResults call from Hands.
      * @param { any } results Result structure returned by Hands.
@@ -31,7 +32,8 @@ export default class HandPoseService {
             const _config = {
                 runtime: 'tfjs',
                 modelType: 'full',
-                solutionPath: 'node_modules/@mediapipe/hands'
+                solutionPath: 'node_modules/@mediapipe/hands',
+                maxHands: 1,
             };
 
             HandPoseService._detector = await handPoseDetection.createDetector(_model, _config);
@@ -72,18 +74,23 @@ export default class HandPoseService {
      * @param { any } tensor Image tensor from the camera.
      */
     static async update(tensor) {
-        if (!HandPoseService._ready) throw "Hand pose service is not ready.";
+        if (!HandPoseService._ready) {
+            if (tensor != undefined) tensor.dispose()
+            throw "Hand pose service is not ready.";
+        }
 
         try {
-
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
+
             HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
             HandPoseService._frames.shift();
             HandPoseService._lastFrame = result;
+            if (tensor != undefined) tensor.dispose()
             return true;
         } catch (err) {
             console.error(err);
+            if (tensor != undefined) tensor.dispose()
             return false;
         }
     }
