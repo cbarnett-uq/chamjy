@@ -40,10 +40,10 @@ export default class GestureCamera extends React.Component {
      * Handles the current gesture input as predicted by the trained models.
      * @param { Gestures } gesture 
      */
-    handleGesture(gesture) {
+    handleGesture(gesture) {        
         if (gesture === GestureCamera._lastGesture) return;
         GestureCamera._lastGesture = gesture;
-        
+
         switch (gesture) {
             case Gestures["nothing"]:
                 break;
@@ -66,6 +66,12 @@ export default class GestureCamera extends React.Component {
 
             case Gestures["skipTB"]:
                 this.onSkipToBeginning();
+                break;
+            case Gestures["tempoUp"]:
+                this.onTempoUp();
+                break;
+            case Gestures["tempoDown"]:
+                this.onTempoDown();
                 break;
         }
     }
@@ -153,17 +159,10 @@ export default class GestureCamera extends React.Component {
                     <TensorCamera
                         type={Camera.Constants.Type.front}
                         style={StyleService.camera.camera}
-<<<<<<< HEAD
-                        cameraTextureHeight={dim.height}
-                        cameraTextureWidth={dim.width}
-                        resizeHeight={800}
-                        resizeWidth={608}
-=======
                         cameraTextureHeight={this.getCameraDimensions.height}
                         cameraTextureWidth={this.getCameraDimensions.width}
                         resizeHeight={1200}
                         resizeWidth={912}
->>>>>>> session
                         resizeDepth={3}
                         onReady={this.handleCameraStream}
                         onGesture={this.handleGesture}
@@ -172,6 +171,8 @@ export default class GestureCamera extends React.Component {
                         onMarkerB={this.props.onMarkerB}
                         onLoop={this.props.onLoop}
                         onSkipToBeginning={this.props.onSkipToBeginning}
+                        onTempoUp={this.props.onTempoUp}
+                        onTempoDown={this.props.onTempoDown}
                         autorender={true}/>
                 </View>
             );

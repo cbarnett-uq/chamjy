@@ -85,6 +85,20 @@ export default class Session extends React.Component {
     handleOnSkipToBeginning() {
         AudioPlayback.skipToTime(0);
     }
+    handleOnTempoUp(){
+        console.log("Tempo Up");
+        if (AudioPlayback.playbackRate < 1.75){
+            AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate + 0.25);
+            console.log("Tempo Up");
+        }
+    }
+    handleOnTempoDown(){
+        if (AudioPlayback.playbackRate > 0.25){
+            AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate - 0.25);
+            console.log("Tempo Down");
+        }
+    }
+
 
     handleOnUpdate() {
         var tempState = {
@@ -286,6 +300,8 @@ export default class Session extends React.Component {
                             onMarkerB={this.handleOnMarkerB}
                             onLoop={this.handleOnLoop}
                             onSkipToBeginning={this.handleOnSkipToBeginning}
+                            onTempoUp={this.handleOnTempoUp}
+                            onTempoDown={this.handleOnTempoDown}
                         />
 
                     </View>

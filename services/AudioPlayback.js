@@ -30,7 +30,6 @@ export default class AudioPlayback {
     static totalTimeMillis = 0;
     static playbackPosition = 0;
     static _onUpdateCallback = null;
-
     /**
      * Initialises the service.
      */
