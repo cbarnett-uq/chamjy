@@ -446,6 +446,30 @@ export class StyleService {
      * Style sheet for the session UI.
      */
     static session = StyleSheet.create({
+        overlay: {
+            zIndex: 10,
+            position: "absolute",
+            left: 0,
+            top: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "transparent",
+            flexDirection: "column",
+            justifyContent: "flex-start"
+        },
+
+        overlayTextContainer: {
+            flexDirection: "row",
+            justifyContent: "center"
+        },
+
+        overlayText: {
+            fontFamily: Fonts.h1.family,
+            fontSize: Fonts.h1.size,
+            fontWeight: Fonts.h1.weight,
+            color: Colors.dark.contrast
+        },
+
         container: {
             zIndex: 0,
             backgroundColor: "#000",

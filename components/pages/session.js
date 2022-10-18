@@ -6,6 +6,7 @@ import { Colors, StyleService } from '../../services/StyleService.js';
 import Slider from '@react-native-community/slider';
 import NavigationService from "../../services/navigationService.js"
 import DimensionService from "../../services/DimensionService.js"
+import { GestureFeedbackOverlay } from '../playback/gestureFeedbackOverlay.js';
 
 /**
  * Component that renders the session page.
@@ -42,6 +43,7 @@ export default class Session extends React.Component {
             playbackPosition: AudioPlayback.playbackPosition,
             isScrubbing: false,
             orientation: DimensionService.getOrientaetion(),
+            lastMessage: ""
         }
 
         this.playImage = require("../../assets/play.png");
@@ -60,7 +62,8 @@ export default class Session extends React.Component {
         AudioPlayback.toggleAudio().then(
             () => {
                 this.setState({
-                    isPlaying: AudioPlayback.isPlaying
+                    isPlaying: AudioPlayback.isPlaying,
+                    lastMessage: AudioPlayback.isPlaying ? "Paused" : "Playing"
                 })
             }
         );
@@ -72,11 +75,17 @@ export default class Session extends React.Component {
     handleOnMarkerA() {
         AudioPlayback.setMarkerA();
         console.log("Marker A Set");
+        this.setState({
+            lastMessage: "Set Marker A"
+        });
     }
 
     handleOnMarkerB() {
         AudioPlayback.setMarkerB();
         console.log("Marker B set");
+        this.setState({
+            lastMessage: "Set Marker B"
+        });
     }
 
     handleOnLoop() {
@@ -84,8 +93,9 @@ export default class Session extends React.Component {
         AudioPlayback.toggleLoop().then(
             () => {
                 that.setState({
-                    shouldLoop: AudioPlayback.shouldLoop
-                })
+                    shouldLoop: AudioPlayback.shouldLoop,
+                    lastMessage: AudioPlayback.shouldLoop ? "Looping on" : "Looping off"
+                });
             }
         );
         console.log("Looping toggled");
@@ -93,21 +103,38 @@ export default class Session extends React.Component {
 
     handleOnSkipToBeginning() {
         AudioPlayback.skipToTime(0);
+        this.setState({
+            lastMessage: "Skip to beginning"
+        });
     }
-    handleOnTempoUp(){
-        console.log("Tempo Up");
+
+    handleOnTempoUp() {
         if (AudioPlayback.playbackRate < 1.75){
             AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate + 0.25);
             console.log("Tempo Up");
-        }
-    }
-    handleOnTempoDown(){
-        if (AudioPlayback.playbackRate > 0.25){
-            AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate - 0.25);
-            console.log("Tempo Down");
+            this.setState({
+                lastMessage: "Tempo increased"
+            });
+        } else {
+            this.setState({
+                lastMessage: "Tempo at maximum"
+            });
         }
     }
 
+    handleOnTempoDown() {
+        if (AudioPlayback.playbackRate > 0.25){
+            AudioPlayback.setPlaybackRate(AudioPlayback.playbackRate - 0.25);
+            console.log("Tempo Down");
+            this.setState({
+                lastMessage: "Tempo decreased"
+            });
+        } else {
+            this.setState({
+                lastMessage: "Tempo at minimum"
+            });
+        }
+    }
 
     handleOnUpdate() {
         var tempState = {
@@ -285,6 +312,9 @@ export default class Session extends React.Component {
     render() {
         return (
             <View style={StyleService.session.container}>
+                <GestureFeedbackOverlay
+                    message={this.state.lastMessage}/>
+
                 <Image source={AudioPlayback.audioFile.albumCover}
                     style={StyleService.session.blurImageBackground}
                     blurRadius={7} />
@@ -304,15 +334,15 @@ export default class Session extends React.Component {
                     <View style={this.state.orientation === "verticle" ? StyleService.session.cameraContainerVerticle : StyleService.session.cameraContainerHorizontal}>
                         <GestureCamera
                             onTogglePlay={() => this.handleOnTogglePlay()}
-                            onMarkerA={this.handleOnMarkerA}
-                            onMarkerB={this.handleOnMarkerB}
+                            onMarkerA={() => this.handleOnMarkerA()}
+                            onMarkerB={() => this.handleOnMarkerB()}
                             onLoop={() => this.handleOnLoop()}
-                            onSkipToBeginning={this.handleOnSkipToBeginning}
-                            onTempoUp={this.handleOnTempoUp}
-                            onTempoDown={this.handleOnTempoDown}
+                            onSkipToBeginning={() => this.handleOnSkipToBeginning()}
+                            onTempoUp={() => this.handleOnTempoUp()}
+                            onTempoDown={() => this.handleOnTempoDown()}
                         />
-
                     </View>
+
                     <View style={this.state.orientation === "verticle" ? StyleService.session.cameraOutlineVerticle : StyleService.session.cameraOutlineHorizontal} />
 
                     <View style={StyleService.session.currentSongContainer}>
