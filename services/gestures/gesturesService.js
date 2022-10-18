@@ -1,12 +1,14 @@
 import * as tfjs from '@tensorflow/tfjs';
 import { bundleResourceIO } from "@tensorflow/tfjs-react-native";
 import HandPoseService from './handPoseService';
-import { FingerCurls,FingerDirections} from './types';
+import { Gestures,FingerCurls,FingerDirections} from './types';
+
+
 
 // Model data, must use require statement not import or will not
 // load as assets.
-const gesturesModel = require('../../model/model.json');
-const gesturesWeights = require('../../model/weights.bin');
+const gesturesModel = require('../../model/model1.json');
+const gesturesWeights = require('../../model/weights1.bin');
 
 /**
  * Singleton service for predicting current gesture based on
@@ -15,8 +17,9 @@ const gesturesWeights = require('../../model/weights.bin');
 export default class GesturesService {
     static _model;
     static _ready = false;
-    static _frames = [];
-
+    static _poseData = [];
+    static _lastGesture;
+    static _sameCount;
     /**
      * Initialises the gesture service by loading the model.
      */
@@ -27,10 +30,9 @@ export default class GesturesService {
             GesturesService._model = await tfjs.loadLayersModel(
                 bundleResourceIO(gesturesModel, gesturesWeights));
             GesturesService._ready = true;
-            let frame = [0,0,0,0,0,0,0,0,0,0];
-            for (let i = 0; i < 30; i++) {
-                GesturesService._frames.push(frame);
-            }
+            GesturesService.poseData = [0,0,0,0,0,0,0,0,0,0];
+            GesturesService._lastGesture = Gestures['nothing'];
+            GesturesService._sameCount = 0;
         } catch (err) {
             console.error(err);
         }
@@ -84,29 +86,37 @@ export default class GesturesService {
                 max = data[i];
             }
         }
-        return gesture;
+        if (gesture !== GesturesService._lastGesture){
+            GesturesService._lastGesture = gesture;
+            GesturesService._sameCount = 0;
+        }else{
+            GesturesService._sameCount++;
+        }
+        
+        if (GesturesService._sameCount >=3){
+            return gesture
+        }
+        
+        return Gestures['nothing'];
     }
     /**
      * Updates frames with latest pose data from fingerpose model.
      * @param { any } poseData from fingerpose estimator 
      */
     static async _update(poseData) {        
-        let frame = []
+        let frame = [];
         for (let i = 0; i < 5; i++){
             frame.push(FingerCurls[poseData[i][1]]);
             frame.push(FingerDirections[poseData[i][2]]);
         }
-
-        GesturesService._frames.push(frame);
-        GesturesService._frames.shift();
-        GesturesService._framecount++;
-
+        GesturesService._poseData = frame;
+        console.log(GesturesService._poseData);
     }
     /**
      * Returns the last thirty predictions as a tensor.
      */
     static getTensor() {
-        return tfjs.tensor([GesturesService._frames]);
+        return tfjs.tensor([GesturesService._poseData]);
     }
 
 }

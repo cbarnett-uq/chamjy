@@ -53,7 +53,7 @@ export default class GestureCamera extends React.Component {
      * Handles the current gesture input as predicted by the trained models.
      * @param { Gestures } gesture 
      */
-    handleGesture(gesture) {
+    handleGesture(gesture) {        
         if (gesture === GestureCamera._lastGesture) return;
         GestureCamera._lastGesture = gesture;
 
@@ -79,6 +79,12 @@ export default class GestureCamera extends React.Component {
 
             case Gestures["skipTB"]:
                 this.onSkipToBeginning();
+                break;
+            case Gestures["tempoUp"]:
+                this.onTempoUp();
+                break;
+            case Gestures["tempoDown"]:
+                this.onTempoDown();
                 break;
         }
     }
@@ -180,7 +186,8 @@ export default class GestureCamera extends React.Component {
                         onSkipToBeginning={this.props.onSkipToBeginning}
                         autorender={true}
                         rotation={this.state.rotation}
-                    />
+                        onTempoUp={this.props.onTempoUp}
+                        onTempoDown={this.props.onTempoDown}/>
                 </View>
             );
         } else {

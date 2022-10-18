@@ -4,6 +4,7 @@ import AudioPlayback from '../../services/AudioPlayback';
 import NavigationService from '../../services/navigationService';
 import FileSystemService from '../../services/fileSystemService';
 import DimensionService from "../../services/DimensionService.js"
+import { StyleService } from '../../services/StyleService';
 
 /**
  * Component that initialises services for the app.
@@ -43,6 +44,14 @@ export default class InitPage extends React.Component {
             return;
         }
         DimensionService.initEventListener();
+
+        if (!await StyleService.ready()) {
+            this.setState({
+                isFailed: true,
+                error: "Stye system failed to load."
+            });
+            return;
+        }
 
         NavigationService.navigate("library");
     }
