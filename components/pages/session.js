@@ -312,8 +312,7 @@ export default class Session extends React.Component {
     render() {
         return (
             <View style={StyleService.session.container}>
-                <GestureFeedbackOverlay
-                    message={this.state.lastMessage}/>
+                
 
                 <Image source={AudioPlayback.audioFile.albumCover}
                     style={StyleService.session.blurImageBackground}
@@ -321,15 +320,20 @@ export default class Session extends React.Component {
 
                 <View style={StyleService.session.topHalfContainer}>
 
-                    <TouchableHighlight
-                        underlayColor={"#29292977"}
-                        onPress={() => { NavigationService.navigate("library") }}
-                        style={StyleService.session.libraryButton}>
-                        <View>
-                            <Image source={require("../../assets/back.png")}
-                                style={{ height: "100%", aspectRatio: 1.36, resizeMode: 'cover'}} />
-                        </View>
-                    </TouchableHighlight>
+                    <View>
+                        <TouchableHighlight
+                            underlayColor={"#29292977"}
+                            onPress={() => { NavigationService.navigate("library") }}
+                            style={StyleService.session.libraryButton}>
+                            <View>
+                                <Image source={require("../../assets/back.png")}
+                                    style={{ height: "100%", aspectRatio: 1.36, resizeMode: 'cover'}} />
+                            </View>
+                        </TouchableHighlight>
+
+                        <GestureFeedbackOverlay
+                            message={this.state.lastMessage}/>
+                    </View>
 
                     <View style={this.state.orientation === "verticle" ? StyleService.session.cameraContainerVerticle : StyleService.session.cameraContainerHorizontal}>
                         <GestureCamera

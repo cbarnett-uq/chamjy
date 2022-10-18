@@ -452,7 +452,6 @@ export class StyleService {
             left: 0,
             top: 0,
             width: "100%",
-            height: "100%",
             backgroundColor: "transparent",
             flexDirection: "column",
             justifyContent: "flex-start"
@@ -482,6 +481,7 @@ export class StyleService {
         },
 
         libraryButton: {
+            zIndex: 11,
             borderRadius: 10,
             height: DimensionService.getMinDimension() * 0.05,
         },
