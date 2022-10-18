@@ -1,6 +1,6 @@
 import React from "react";
 import { ActivityIndicator, Image, Text, TouchableHighlight, View } from "react-native";
-import { MusicInfo } from "../../services/expo-music-info/MusicInfo";
+import MusicInfo from "../../services/expo-music-info/MusicInfo";
 import { StyleService } from "../../services/StyleService";
 
 export class SongEntry extends React.Component {
@@ -37,11 +37,16 @@ export class SongEntry extends React.Component {
                 picture: true
             });
 
+            let picture = null;
+            if (metadata.picture?.pictureData !== null) picture = {
+                uri: metadata.picture.pictureData
+            };
+
             this.setState({
                 assetIsLoaded: true,
-                albumCover: metadata.picture,
+                albumCover: picture,
                 songTitle: metadata.title,
-                artistName: metadata.artistName,
+                artistName: metadata.artist,
                 asset: this.props.asset
             });
         } catch(e) {
@@ -59,23 +64,22 @@ export class SongEntry extends React.Component {
         if (this.state.assetIsLoaded && this.state.albumCover !== null) {
             return (
                 <TouchableHighlight
-                    underlayColor={StyleService.fileSelect.musicButtonTouchable.underlayColor}
+                    style={StyleService.library.songEntryContainer}
                     onPress={() => {
                         this.props.onTouch?.(this.state.asset);
-                    }}
-                    style={StyleService.fileSelect.musicButtonTouchable}>
-                    <View style={{alignItems:"center"}}>
+                    }}>
+                    <View>
                         <Image
                             source={this.state.albumCover}
-                            style={StyleService.fileSelect.musicButtonImage}/>
+                            style={StyleService.library.songEntryAlbumCover}/>
                         <Text
-                            numberOfLines={StyleService.fileSelect.musicButtonText.numberOfLines}
-                            style={StyleService.fileSelect.musicButtonText}>
+                            numberOfLines={1}
+                            style={StyleService.library.songEntryLabel}>
                             {this.state.songTitle}
                         </Text>
                         <Text
-                            numberOfLines={StyleService.fileSelect.musicButtonText.numberOfLines}
-                            style={StyleService.fileSelect.musicButtonText}>
+                            numberOfLines={1}
+                            style={StyleService.library.songEntryLabel}>
                             {this.state.artistName}
                         </Text>
                     </View>
@@ -84,23 +88,22 @@ export class SongEntry extends React.Component {
         } else if (this.state.assetIsLoaded) {
             return (
                 <TouchableHighlight
-                    underlayColor={StyleService.fileSelect.musicButtonTouchable.underlayColor}
+                    style={StyleService.library.songEntryContainer}
                     onPress={() => {
                         this.props.onTouch?.(this.state.asset);
-                    }}
-                    style={StyleService.fileSelect.musicButtonTouchable}>
-                    <View style={{alignItems:"center"}}>
+                    }}>
+                    <View>
                         <Image
                             source={require("../../assets/default-album.png")}
-                            style={StyleService.fileSelect.musicButtonImage}/>
+                            style={StyleService.library.songEntryAlbumCover}/>
                         <Text
-                            numberOfLines={StyleService.fileSelect.musicButtonText.numberOfLines}
-                            style={StyleService.fileSelect.musicButtonText}>
+                            numberOfLines={1}
+                            style={StyleService.library.songEntryLabel}>
                             {this.state.songTitle}
                         </Text>
                         <Text
-                            numberOfLines={StyleService.fileSelect.musicButtonText.numberOfLines}
-                            style={StyleService.fileSelect.musicButtonText}>
+                            numberOfLines={1}
+                            style={StyleService.library.songEntryLabel}>
                             {this.state.artistName}
                         </Text>
                     </View>
@@ -109,11 +112,10 @@ export class SongEntry extends React.Component {
         } else {
             return (
                 <TouchableHighlight
-                    underlayColor={StyleService.fileSelect.musicButtonTouchable.underlayColor}
+                    style={StyleService.library.songEntryContainer}
                     onPress={() => {
                         this.props.onTouch?.(this.state.asset);
-                    }}
-                    style={StyleService.fileSelect.musicButtonTouchable}>
+                    }}>
                     <View style={{alignItems:"center"}}>
                         <ActivityIndicator />
                     </View>

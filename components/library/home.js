@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { SongEntry } from "./songEntry";
 
 export class Home extends React.Component {
@@ -13,11 +13,7 @@ export class Home extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props !== prevProps) {
-            let sortedItems = this.props.items.sort((x, y) => {
-                if (x.name < y.name) return 1;
-                if (x.name > y.name) return -1;
-                return 0;
-            });
+            let sortedItems = this.props.items.sort((x, y) => x.name.localeCompare(y.name));
 
             this.setState({
                 items: sortedItems
@@ -29,17 +25,25 @@ export class Home extends React.Component {
         console.log(this.state.items.length);
         return (
             <ScrollView>
-                {
-                    this.state.items.map((x) => {
-                        return (
-                            <SongEntry
-                                asset={x}
-                                onTouch={(uri) => {
-                                    this.props.onTrackSelect?.(uri);
-                                }}/>
-                        );
-                    })
-                }
+                <View style={{
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    marginLeft: 30,
+                    marginTOp: 50
+                }}>
+                    {
+                        this.state.items.map((x, index) => {
+                            return (
+                                <SongEntry
+                                    key={`SongEntry_Home_${index}`}
+                                    asset={x}
+                                    onTouch={(uri) => {
+                                        this.props.onTrackSelect?.(uri);
+                                    }}/>
+                            );
+                        })
+                    }
+                </View>
             </ScrollView>
         );
     }

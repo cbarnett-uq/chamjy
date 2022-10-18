@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 
 /**
  * Component that renders a horizontal divider with optional label.
@@ -13,7 +13,6 @@ export class HorizontalDivider extends React.Component {
         super(props);
 
         this.state = {
-            label: '',
             color: '#000000',
             height: 1
         };
@@ -38,10 +37,6 @@ export class HorizontalDivider extends React.Component {
      * Updates the state from the current properties.
      */
     _setStateFromProps() {
-        if (typeof(this.props.label) !== 'undefined') {
-            this.setState({label: this.props.label});
-        }
-
         if (typeof(this.props.color) !== 'undefined') {
             this.setState({color: this.props.color});
         }
@@ -62,31 +57,6 @@ export class HorizontalDivider extends React.Component {
                 marginLeft: 4,
                 marginRight: 4
             }}>
-                <View style={{
-                    flex: 1,
-                    height: this.state.height,
-                    backgroundColor: this.state.color
-                }}/>
-                <View>
-                    {() => {
-                        if (this.state.label !== '') {
-                            return (
-                                <View>
-                                    <Text style={{
-                                        marginLeft: 16,
-                                        marginRight: 16,
-                                        textAlign: 'center'
-                                    }}>
-                                        {this.state.label}
-                                    </Text>
-                                </View>
-                            );
-                        }
-                        return (
-                            <View/>
-                        );
-                    }}
-                </View>
                 <View style={{
                     flex: 1,
                     height: this.state.height,

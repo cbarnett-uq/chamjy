@@ -258,6 +258,27 @@ export class StyleService {
             color: Colors.dark.contrast,
             zIndex: 3
         },
+        songEntryContainer: {
+            width: 150,
+            height: 191,
+            justifyContent: "flex-start",
+            underlayColor: Colors.dark.dark,
+            marginTop: 10,
+            marginRight: 10
+        },
+        songEntryAlbumCover: {
+            width: 150,
+            height: 150,
+            borderRadius: 21,
+            marginBottom: 5
+        },
+        songEntryLabel: {
+            fontFamily: Fonts.body1.family,
+            fontSize: Fonts.body1.size,
+            fontWeight: Fonts.body1.weight,
+            color: Colors.dark.contrast,
+            justifyContent: "flex-start"
+        },
         contentContainer: {
             flex: 2,
             elevation: 1,
