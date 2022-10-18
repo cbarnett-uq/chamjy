@@ -93,7 +93,7 @@ export default class AudioPlayback {
 
         if (AudioPlayback.audioPlayer._loaded) {
             if (AudioPlayback.playbackStatus.isPlaying) {
-                AudioPlayback.status = await AudioPlayback.audioPlayer.pauseAsync();
+                AudioPlayback.playbackStatus = await AudioPlayback.audioPlayer.pauseAsync();
             }
             AudioPlayback.isPlaying = false;
         }
@@ -107,7 +107,7 @@ export default class AudioPlayback {
 
         if (AudioPlayback.audioPlayer._loaded) {
             if (!AudioPlayback.playbackStatus.isPlaying) {
-                AudioPlayback.status = await AudioPlayback.audioPlayer.playAsync()
+                AudioPlayback.playbackStatus = await AudioPlayback.audioPlayer.playAsync()
             }
             AudioPlayback.isPlaying = true;
         }
@@ -192,6 +192,7 @@ export default class AudioPlayback {
             
             AudioPlayback.playbackPosition = status.positionMillis;
             AudioPlayback.playbackTime = AudioPlayback.millisToTime(status.positionMillis);
+            AudioPlayback.isPlaying = status.isPlaying;
 
             if (AudioPlayback._onUpdateCallback !== null) {
                 AudioPlayback._onUpdateCallback();

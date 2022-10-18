@@ -33,12 +33,13 @@ export default class DimensionService {
     static initEventListener() {
         Dimensions.addEventListener('change', ({ window: { width, height } }) => {
             if (width < height) {
-                DimensionService.callbackFunc();
-                console.log("CHANGE")
+                if (DimensionService.callbackFunc) {
+                    DimensionService.callbackFunc();
+                }
             } else {
-                DimensionService.callbackFunc();
-                console.log("CHANGE")
-
+                if (DimensionService.callbackFunc) {
+                    DimensionService.callbackFunc();
+                }
             }
         })
     }

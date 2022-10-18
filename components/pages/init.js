@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import AudioPlayback from '../../services/AudioPlayback';
 import NavigationService from '../../services/navigationService';
 import FileSystemService from '../../services/fileSystemService';
+import DimensionService from "../../services/DimensionService.js"
 
 /**
  * Component that initialises services for the app.
@@ -41,6 +42,7 @@ export default class InitPage extends React.Component {
             });
             return;
         }
+        DimensionService.initEventListener();
 
         NavigationService.navigate("library");
     }

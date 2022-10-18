@@ -6,6 +6,7 @@ import { Colors, StyleService } from '../../services/StyleService.js';
 import Slider from '@react-native-community/slider';
 import NavigationService from "../../services/navigationService.js"
 import DimensionService from "../../services/DimensionService.js"
+
 /**
  * Component that renders the session page.
  */
@@ -16,7 +17,7 @@ export default class Session extends React.Component {
      */
     constructor(props) {
         super(props);
-        DimensionService.initEventListener();
+        
         DimensionService.addListener(() => {
             this.setState({ orientation: DimensionService.getOrientaetion() });
         })
@@ -56,12 +57,13 @@ export default class Session extends React.Component {
      */
     handleOnTogglePlay() {
         console.log("Play");
-        AudioPlayback.toggleAudio();
-        if (this.state.isPlaying === true) {
-            this.setState({ isPlaying: false });
-        } else {
-            this.setState({ isPlaying: true });
-        }
+        AudioPlayback.toggleAudio().then(
+            () => {
+                this.setState({
+                    isPlaying: AudioPlayback.isPlaying
+                })
+            }
+        );
     }
 
     /**
@@ -272,10 +274,9 @@ export default class Session extends React.Component {
                         underlayColor={"#29292977"}
                         onPress={() => { NavigationService.navigate("library") }}
                         style={StyleService.session.libraryButton}>
-                        <View style={{}}>
-                            <Text numberOfLines={1}
-                                style={StyleService.session.libraryButtonText}
-                            >Back</Text>
+                        <View>
+                            <Image source={require("../../assets/back.png")}
+                                style={{ height: "100%", aspectRatio: 1.36, resizeMode: 'cover'}} />
                         </View>
                     </TouchableHighlight>
 
@@ -366,6 +367,7 @@ export default class Session extends React.Component {
                                 <View style={StyleService.session.footerBarButtonInsideContainer}>
                                     <Image source={require("../../assets/hand.png")}
                                         style={StyleService.session.footerBarButtonImage} />
+ 
                                     <Text
                                         numberOfLines={1}
                                         style={StyleService.session.footerBarButtonText}>Preferred Hand

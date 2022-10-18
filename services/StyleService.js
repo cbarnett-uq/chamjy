@@ -249,7 +249,7 @@ export class StyleService {
 
         libraryButton: {
             borderRadius: 10,
-            padding: 5
+            height: DimensionService.getMinDimension() * 0.05,
         },
 
         libraryButtonText: {
@@ -275,7 +275,7 @@ export class StyleService {
             position: 'absolute',
             zIndex: 10,
             height: DimensionService.getMaxDimension() * 0.2,
-            top: 40,
+            top: DimensionService.getMinDimension() * 0.08,
             aspectRatio: 0.77,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
@@ -286,7 +286,7 @@ export class StyleService {
             position: 'absolute',
             zIndex: 10,
             width: DimensionService.getMaxDimension() * 0.2,
-            top: 40,
+            top: DimensionService.getMinDimension() * 0.08,
             aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
@@ -297,7 +297,7 @@ export class StyleService {
             position: 'absolute',
             zIndex: 20,
             height: DimensionService.getMaxDimension() * 0.2,
-            top: 40,
+            top: DimensionService.getMinDimension() * 0.08,
             aspectRatio: 0.77,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
@@ -309,7 +309,7 @@ export class StyleService {
             position: 'absolute',
             zIndex: 20,
             width: DimensionService.getMaxDimension() * 0.2,
-            top: 40,
+            top: DimensionService.getMinDimension() * 0.08,
             aspectRatio: 1.33,
             borderColor: Colors.dark.mid,
             borderWidth: 8,
@@ -363,7 +363,7 @@ export class StyleService {
         footerPlayButton: {
             justifyContent: "center",
             alignItems: "center",
-            height: DimensionService.getMinDimension() * 0.15,
+            width: DimensionService.getMinDimension() * 0.15,
             borderRadius: 100,
             alignSelf: 'center',
             alignContent: "center",
@@ -381,7 +381,7 @@ export class StyleService {
         },
 
         footerPlayButtonImage: {
-            width: "30%",
+            width: "60%",
             aspectRatio: 1,
             alignSelf: 'center'
         },
@@ -423,7 +423,7 @@ export class StyleService {
         footerBarButtonText: {
             fontWeight: "bold",
             color: Colors.session.greyText,
-            fontSize: DimensionService.getMaxDimension() * 0.02 > 13 ? DimensionService.getMaxDimension() * 0.02 : 13
+            fontSize: DimensionService.getMaxDimension() * 0.017 > 13 ? DimensionService.getMaxDimension() * 0.017 : 13
         },
 
         mainText: {
