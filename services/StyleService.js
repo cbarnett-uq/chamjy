@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 import * as Font from "expo-font";
-import { StyleSheet } from 'react-native';
 import DimensionService from './DimensionService.js';
 
 /**

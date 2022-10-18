@@ -80,13 +80,14 @@ export default class Session extends React.Component {
     }
 
     handleOnLoop() {
+        let that = this;
         AudioPlayback.toggleLoop().then(
             () => {
-                this.setState({
+                that.setState({
                     shouldLoop: AudioPlayback.shouldLoop
                 })
             }
-        );;
+        );
         console.log("Looping toggled");
     }
 
@@ -305,7 +306,7 @@ export default class Session extends React.Component {
                             onTogglePlay={() => this.handleOnTogglePlay()}
                             onMarkerA={this.handleOnMarkerA}
                             onMarkerB={this.handleOnMarkerB}
-                            onLoop={this.handleOnLoop}
+                            onLoop={() => this.handleOnLoop()}
                             onSkipToBeginning={this.handleOnSkipToBeginning}
                             onTempoUp={this.handleOnTempoUp}
                             onTempoDown={this.handleOnTempoDown}
