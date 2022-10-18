@@ -356,7 +356,6 @@ export default class Session extends React.Component {
                                                 style={StyleService.session.footerPlayButtonImage} />
                                         </View>
                                     </TouchableHighlight>
-                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }}/>
                                 </View>
 
 
@@ -460,6 +459,18 @@ export default class Session extends React.Component {
                             {this.state.currentPopup === "marker" ? this.renderMarkerPopup() : null}
 
                         </View>
+                        <View style={StyleService.session.footerBarButton}>
+                            <TouchableHighlight
+                                underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                style={StyleService.session.footerBarButton}>
+                                <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} style={{marginVertical: -16 }} />
+                                    <Text numberOfLines={1}
+                                        style={StyleService.session.footerBarButtonText}>Loop</Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                        
                     </View>
                 </View>
 
