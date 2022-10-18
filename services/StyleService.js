@@ -232,14 +232,9 @@ export class StyleService {
      */
     static session = StyleSheet.create({
         container: {
-            position: 'absolute',
             zIndex: 0,
-            backgroundColor: Colors.light.light,
-            left: '0%',
-            top: '0%',
-            width: '100%',
-            height: '100%',
-            backgroundColor: "#000"
+            backgroundColor: "#000",
+            flex:1
         },
 
         topHalfContainer: {
