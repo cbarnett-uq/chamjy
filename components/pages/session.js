@@ -126,6 +126,10 @@ export default class Session extends React.Component {
         AudioPlayback.skipToTime(AudioPlayback.playbackPosition - 5 * 1000);
     }
 
+    handleStepForward() {
+        AudioPlayback.skipToTime(AudioPlayback.playbackPosition + 5 * 1000);
+    }
+
     handlePlaybackRate(rate) {
         AudioPlayback.setPlaybackRate(rate);
         this.closePopups();
@@ -349,11 +353,29 @@ export default class Session extends React.Component {
                                 <View style={StyleService.session.footerPlayButtonContainer}>
                                     <TouchableHighlight
                                         underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                        onPress={() => { this.handleStepBack() }}
+                                        style={StyleService.session.footerPlayButton}>
+                                        <View style={StyleService.session.footerPlayButtonImageContainer}>
+                                            <Image source={require("../../assets/rewind.png")}
+                                                style={StyleService.session.footerPlayStepBackImage} />
+                                        </View>
+                                    </TouchableHighlight>
+                                    <TouchableHighlight
+                                        underlayColor={StyleService.session.footerBarButton.onTouchColor}
                                         onPress={() => { this.handleOnTogglePlay() }}
                                         style={StyleService.session.footerPlayButton}>
                                         <View style={StyleService.session.footerPlayButtonImageContainer}>
                                             <Image source={this.state.isPlaying === false ? this.playImage : this.pauseImage}
                                                 style={StyleService.session.footerPlayButtonImage} />
+                                        </View>
+                                    </TouchableHighlight>
+                                    <TouchableHighlight
+                                        underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                        onPress={() => { this.handleStepForward() }}
+                                        style={StyleService.session.footerPlayButton}>
+                                        <View style={StyleService.session.footerPlayButtonImageContainer}>
+                                            <Image source={require("../../assets/rewind.png")}
+                                                style={StyleService.session.footerPlayStepForwardImage} />
                                         </View>
                                     </TouchableHighlight>
                                 </View>
@@ -401,19 +423,6 @@ export default class Session extends React.Component {
                             {this.state.currentPopup === "hand" ? this.renderHandPopup() : null}
 
                         </View>
-
-                        <TouchableHighlight
-                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { this.handleStepBack() }}
-                            style={StyleService.session.footerBarButton}>
-                            <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                <Image source={require("../../assets/rewind.png")}
-                                    style={StyleService.session.footerBarButtonImage} />
-                                <Text numberOfLines={1}
-                                    style={StyleService.session.footerBarButtonText}>Rewind</Text>
-                            </View>
-                        </TouchableHighlight>
-
 
                         <View style={StyleService.session.footerBarButton}>
                             <TouchableHighlight
