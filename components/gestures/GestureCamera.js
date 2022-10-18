@@ -40,7 +40,7 @@ export default class GestureCamera extends React.Component {
     }
 
     onRotationEvent() {
-        if (Platform.OS === 'ios' && Platform.isPad === true) {
+        if (Platform.OS === 'ios') {
             if (DimensionService.getOrientaetion() === "horizontal") {
                 this.setState({ rotation: 90 })
             } else {
