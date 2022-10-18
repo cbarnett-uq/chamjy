@@ -465,7 +465,7 @@ export class StyleService {
 
         overlayText: {
             fontFamily: Fonts.h1.family,
-            fontSize: Fonts.h1.size,
+            fontSize: 24,
             fontWeight: Fonts.h1.weight,
             color: Colors.dark.contrast
         },
