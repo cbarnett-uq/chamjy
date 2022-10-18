@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ActivityIndicator, Dimensions } from 'react-native';
+import { View, ActivityIndicator, Dimensions, Platform } from 'react-native';
 import { cameraWithTensors } from './camera/camera_stream';
 import { Camera } from 'expo-camera';
 import { Colors, StyleService } from '../../services/StyleService';
@@ -32,8 +32,21 @@ export default class GestureCamera extends React.Component {
         // Initial state
         this.state = {
             ready: false,
-            hasPermissions: false
+            hasPermissions: false,
+            rotation: 0
         };
+
+        DimensionService.addListener(() => { this.onRotationEvent() })
+    }
+
+    onRotationEvent() {
+        if (Platform.OS === 'ios' && Platform.isPad === true) {
+            if (DimensionService.getOrientaetion() === "horizontal") {
+                this.setState({ rotation: 90 })
+            } else {
+                this.setState({ rotation: 0 })
+            }
+        }
     }
 
     /**
@@ -165,7 +178,9 @@ export default class GestureCamera extends React.Component {
                         onMarkerB={this.props.onMarkerB}
                         onLoop={this.props.onLoop}
                         onSkipToBeginning={this.props.onSkipToBeginning}
-                        autorender={true}/>
+                        autorender={true}
+                        rotation={this.state.rotation}
+                    />
                 </View>
             );
         } else {

@@ -1,7 +1,7 @@
 import { Dimensions } from 'react-native';
 
 export default class DimensionService {
-    callbackFunc = null;
+    static callbackFuncs = [];
 
 
     static getWidthHeight = () => {
@@ -32,19 +32,13 @@ export default class DimensionService {
 
     static initEventListener() {
         Dimensions.addEventListener('change', ({ window: { width, height } }) => {
-            if (width < height) {
-                if (DimensionService.callbackFunc) {
-                    DimensionService.callbackFunc();
-                }
-            } else {
-                if (DimensionService.callbackFunc) {
-                    DimensionService.callbackFunc();
-                }
+            if (DimensionService.callbackFuncs.length > 0) {
+                DimensionService.callbackFuncs.map((func) => { func(); })
             }
         })
     }
 
     static addListener(callbackFunc) {
-        DimensionService.callbackFunc = callbackFunc;
+        DimensionService.callbackFuncs.push(callbackFunc);
     }
 }
