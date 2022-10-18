@@ -6,6 +6,7 @@ import { Colors, StyleService } from '../../services/StyleService.js';
 import Slider from '@react-native-community/slider';
 import NavigationService from "../../services/navigationService.js"
 import DimensionService from "../../services/DimensionService.js"
+import PredictionService from '../../services/gestures/predictionService.js';
 
 /**
  * Component that renders the session page.
@@ -130,6 +131,9 @@ export default class Session extends React.Component {
         AudioPlayback.setPlaybackRate(rate);
         this.closePopups();
     }
+    handlePreferredHands(hand) {
+        PredictionService.setPreferredHand(hand);
+    }
 
     closePopups() {
         this.setState({ currentPopup: "" });
@@ -226,12 +230,14 @@ export default class Session extends React.Component {
     renderHandPopup() {
         return (
             <View style={StyleService.session.popUpContainer}>
-                <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableTop}
+                    onPress={() => this.handlePreferredHands("Right")}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Right Hand</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}
+                    onPress={() => this.handlePreferredHands("Left")}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Left Hand</Text>
                     </View>

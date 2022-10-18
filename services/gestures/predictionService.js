@@ -50,7 +50,7 @@ export default class PredictionService{
                 GestureDefinitionLeft.tempoUp,GestureDefinitionLeft.tempoUp1,GestureDefinitionLeft.tempoUp2,
                 GestureDefinitionLeft.tempoDown,GestureDefinitionLeft.tempoDown1,GestureDefinitionLeft.tempoDown2,
             ])
-            PredictionService._model = PredictionService._leftModel;
+            PredictionService._model = PredictionService._rightModel;
             PredictionService._ready = true;
             PredictionService._lastGesture = Gestures['nothing'];
             PredictionService._sameCount = 0;
@@ -125,7 +125,6 @@ export default class PredictionService{
         for (let i = 0; i < pose.length; i++){
             if (Hands[pose[i].handedness] === PredictionService._preferredHand){
                 hand = i;
-                console.log('test');
             }
         }
         if (hand == -1) return Gestures["nothing"];
