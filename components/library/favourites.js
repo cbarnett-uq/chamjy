@@ -3,7 +3,7 @@ import { View, Text, ScrollView } from "react-native";
 import { StyleService } from "../../services/StyleService";
 import { SongEntry } from "./songEntry";
 
-export class Home extends React.Component {
+export class Favourites extends React.Component {
     constructor(props) {
         super(props);
 
@@ -30,7 +30,7 @@ export class Home extends React.Component {
             }}>
                 <View>
                     <Text style={StyleService.library.libraryCategoryLabel}>
-                        2022
+                        FAVOURITES
                     </Text>
                     <View style={{
                         flexDirection: "row",
@@ -40,7 +40,7 @@ export class Home extends React.Component {
                             this.state.items.map((x, index) => {
                                 return (
                                     <SongEntry
-                                        key={`SongEntry_Home_${index}`}
+                                        key={`SongEntry_Favs_${index}`}
                                         asset={x}
                                         onTouch={(uri) => {
                                             this.props.onTrackSelect?.(uri);

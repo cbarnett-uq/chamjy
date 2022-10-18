@@ -207,6 +207,17 @@ export class StyleService {
             height: '100%',
             zIndex: 0
         },
+        searchTextInput: {
+            backgroundColor: Colors.light.light,
+            color: Colors.light.contrast,
+            fontFamily: Fonts.body1.family,
+            fontSize: Fonts.body1.size,
+            fontWeight: Fonts.body1.weight,
+            justifyContent: "flex-start",
+            alignContent: "center",
+            padding: 10,
+            borderRadius: 8
+        },
         sideBarCollapsed: {
             flexDirecton: 'row',
             backgroundColor: Colors.dark.mid,
@@ -257,6 +268,14 @@ export class StyleService {
             fontSize: Fonts.body2.size,
             color: Colors.dark.contrast,
             zIndex: 3
+        },
+        libraryCategoryLabel: {
+            fontFamily: Fonts.h1.family,
+            fontSize: Fonts.h1.size,
+            fontWeight: Fonts.h1.weight,
+            color: Colors.dark.contrast,
+            justifyContent: "flex-start",
+            marginBottom: 20
         },
         songEntryContainer: {
             width: 150,

@@ -1,15 +1,29 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TextInput } from "react-native";
 import { StyleService } from "../../services/StyleService";
 import { SongEntry } from "./songEntry";
 
-export class Home extends React.Component {
+export class Search extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            items: this.props.items
+            items: this.props.items,
+            results: this.props.items
         };
+    }
+
+    _searchItems(filter) {
+        let str = filter.toLowerCase();
+        let results = this.state
+            .items
+            .filter((x) => x.name
+                .toLowerCase()
+                .includes(str));
+        
+        this.setState({
+            results: results
+        });
     }
 
     componentDidUpdate(prevProps) {
@@ -19,7 +33,13 @@ export class Home extends React.Component {
             this.setState({
                 items: sortedItems
             });
+
+            this._searchItems();
         }
+    }
+
+    handleNewSearchString(filter) {
+        this._searchItems(filter);
     }
 
     render() {
@@ -30,14 +50,23 @@ export class Home extends React.Component {
             }}>
                 <View>
                     <Text style={StyleService.library.libraryCategoryLabel}>
-                        2022
+                        SEARCH
                     </Text>
+
+                    <TextInput
+                        autoFocus={true}
+                        autoCorrect={true}
+                        onChangeText={(x) => {
+                            this.handleNewSearchString(x);
+                        }}
+                        style={StyleService.library.searchTextInput}/>
+
                     <View style={{
                         flexDirection: "row",
                         flexWrap: "wrap"
                     }}>
                         {
-                            this.state.items.map((x, index) => {
+                            this.state.results.map((x, index) => {
                                 return (
                                     <SongEntry
                                         key={`SongEntry_Home_${index}`}

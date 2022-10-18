@@ -5,7 +5,9 @@ import AudioPlayback from "../../services/AudioPlayback";
 import FileSystemService from "../../services/fileSystemService";
 import NavigationService from "../../services/navigationService";
 import { Colors, StyleService } from "../../services/StyleService";
+import { Favourites } from "../library/favourites";
 import { Home } from "../library/home";
+import { Search } from "../library/search";
 import { SideBar } from "../library/sideBar";
 
 export default class Library extends React.Component {
@@ -82,12 +84,20 @@ export default class Library extends React.Component {
 
             case 1:
                 return (
-                    <View style={{ flex: 2, elevation: 1, backgroundColor: "#f00" }}/>
+                    <Search
+                        items={this.state.libraryAssets}
+                        onTrackSelect={async (uri) => {
+                            await this.onMusicSelect(uri);
+                        }}/>
                 );
 
             case 2:
                 return (
-                    <View style={{ flex: 2, elevation: 1, backgroundColor: "#0f0" }}/>
+                    <Favourites
+                        items={this.state.libraryAssets}
+                        onTrackSelect={async (uri) => {
+                            await this.onMusicSelect(uri);
+                        }}/>
                 );
 
             default:
