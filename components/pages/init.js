@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import AudioPlayback from '../../services/AudioPlayback';
 import NavigationService from '../../services/navigationService';
 import FileSystemService from '../../services/fileSystemService';
+import { StyleService } from '../../services/StyleService';
 
 /**
  * Component that initialises services for the app.
@@ -38,6 +39,14 @@ export default class InitPage extends React.Component {
             this.setState({
                 isFailed: true,
                 error: "File system failed to load."
+            });
+            return;
+        }
+
+        if (!await StyleService.ready()) {
+            this.setState({
+                isFailed: true,
+                error: "Stye system failed to load."
             });
             return;
         }

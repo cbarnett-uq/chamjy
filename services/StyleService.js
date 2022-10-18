@@ -1,3 +1,4 @@
+import * as Font from "expo-font";
 import { StyleSheet } from 'react-native';
 import DimensionService from './DimensionService.js';
 
@@ -9,9 +10,9 @@ export class Colors {
      * Primary colour tones
      */
     static primary = {
-        'light': '#BDE0FE',
-        'mid': '#BDE0FE',
-        'dark': '#BDE0FE',
+        'light': '#54FBDA',
+        'mid': '#1ABC9C',
+        'dark': '#0A4136',
         'contrast': '#454545'
     };
 
@@ -59,9 +60,9 @@ export class Colors {
      * Dark shades
      */
     static dark = {
-        'light': '#707070',
-        'mid': '#454545',
-        'dark': '#202020',
+        'light': '#6C6E73',
+        'mid': '#41444D',
+        'dark': '#24262E',
         'contrast': '#FFFFFF'
     };
 
@@ -76,23 +77,237 @@ export class Colors {
 }
 
 /**
+ * Defines the fonts used by the app.
+ */
+export class Fonts {
+    static _isReady = false;
+
+    static async init() {
+        if (Fonts._isReady) return;
+
+        await Font.loadAsync("futura", require("../assets/fonts/futura.ttf"));
+        if (!Font.isLoaded("futura")) return;
+        
+        await Font.loadAsync("SegoeUI", require("../assets/fonts/segoeui.TTF"));
+        if (!Font.isLoaded("SegoeUI")) return;
+
+        Fonts._isReady = true;
+        return;
+    }
+
+    static async ready() {
+        if (Fonts._isReady) return true;
+
+        await Fonts.init();
+        return Fonts._isReady;
+    }
+
+    static logo = {
+        family: "Noteworthy-Bold",
+        size: 19
+    };
+
+    static h1 = {
+        family: "futura",
+        size: 20,
+        weight: "bold"
+    };
+
+    static h2 = {
+        family: "futura",
+        size: 18,
+        weight: "bold"
+    };
+
+    static h3 = {
+        family: "futura",
+        size: 16,
+        weight: "bold"
+    };
+
+    static h4 = {
+        family: "futura",
+        size: 14,
+        weight: "bold"
+    };
+
+    static h5 = {
+        family: "futura",
+        size: 12,
+        weight: "bold"
+    };
+
+    static h6 = {
+        family: "futura",
+        size: 10,
+        weight: "bold"
+    };
+
+    static body1 = {
+        family: "futura",
+        size: 12,
+        weight: "normal"
+    };
+
+    static body2 = {
+        family: "futura",
+        size: 15,
+        weight: "normal"
+    };
+}
+
+/**
  * Service for accessing the stylesheet.
  */
 export class StyleService {
-     /**
-      * Layout style sheet.
-      */
-     static layout = StyleSheet.create({
+    static _isReady = false;
+
+    static async init() {
+        if (StyleService._isReady) return;
+        const success = await Fonts.ready();
+
+        if (success) StyleService._isReady = true;
+    }
+
+    static async ready() {
+        if (StyleService._isReady) return true;
+
+        await StyleService.init();
+        return StyleService._isReady;
+    }
+    
+    /**
+     * Layout style sheet.
+     */
+    static layout = StyleSheet.create({
         outerContainer: {
             flex: 1,
             alignContext: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            backgroundColor: 'transparent'
         },
 
         flexContainer: {
             flex: 1,
             alignContext: 'center',
             justifyContent: 'center'
+        },
+
+        rowFlexContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center'
+        }
+    });
+
+    /**
+     * Stylesheet for the library UI.
+     */
+    static library = StyleSheet.create({
+        background: {
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 0
+        },
+        searchTextInput: {
+            backgroundColor: Colors.light.light,
+            color: Colors.light.contrast,
+            fontFamily: Fonts.body1.family,
+            fontSize: Fonts.body1.size,
+            fontWeight: Fonts.body1.weight,
+            justifyContent: "flex-start",
+            alignContent: "center",
+            padding: 10,
+            borderRadius: 8
+        },
+        sideBarCollapsed: {
+            flexDirecton: 'row',
+            backgroundColor: Colors.dark.mid,
+            flexBasis: 84
+        },
+        sideBarExpanded: {
+            flexDirecton: 'row',
+            backgroundColor: Colors.dark.mid,
+            flexBasis: 200
+        },
+        sideBarLogo: {
+            tintColor: Colors.primary.mid,
+            marginRight: 10
+        },
+        sideBarMenu: {
+            marginTop: 30,
+            marginLeft: 15,
+            marginRight: 15,
+            zIndex: 1
+        },
+        sideBarMenuCategoryLabel: {
+            marginTop: 15,
+            marginBottom: 15,
+            fontFamily: Fonts.h6.family,
+            fontWeight: Fonts.h6.weight,
+            fontSize: Fonts.h6.size,
+            color: Colors.dark.contrast
+        },
+        sideBarMenuItem: {
+            borderRadius: 5,
+            backgroundColor: Colors.dark.mid,
+            underlayColor: Colors.dark.light,
+            paddingLeft: 10,
+            paddingTop: 15,
+            paddingBottom: 20,
+            zIndex: 2
+        },
+        sideBarMenuItemIcon: {
+            tintColor: Colors.primary.mid,
+            marginRight: 10,
+            width: 24,
+            height: 24,
+            zIndex: 3
+        },
+        sideBarMenuItemLabel: {
+            fontFamily: Fonts.body2.family,
+            fontWeight: Fonts.body2.weight,
+            fontSize: Fonts.body2.size,
+            color: Colors.dark.contrast,
+            zIndex: 3
+        },
+        libraryCategoryLabel: {
+            fontFamily: Fonts.h1.family,
+            fontSize: Fonts.h1.size,
+            fontWeight: Fonts.h1.weight,
+            color: Colors.dark.contrast,
+            justifyContent: "flex-start",
+            marginBottom: 20
+        },
+        songEntryContainer: {
+            width: 150,
+            height: 191,
+            justifyContent: "flex-start",
+            underlayColor: Colors.dark.dark,
+            marginTop: 10,
+            marginRight: 10
+        },
+        songEntryAlbumCover: {
+            width: 150,
+            height: 150,
+            borderRadius: 21,
+            marginBottom: 5
+        },
+        songEntryLabel: {
+            fontFamily: Fonts.body1.family,
+            fontSize: Fonts.body1.size,
+            fontWeight: Fonts.body1.weight,
+            color: Colors.dark.contrast,
+            justifyContent: "flex-start"
+        },
+        contentContainer: {
+            flex: 2,
+            elevation: 1,
+            zIndex: 1,
+            backgroundColor: 'transparent'
         }
     });
 

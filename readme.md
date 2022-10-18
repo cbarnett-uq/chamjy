@@ -1,31 +1,62 @@
 # Conductify
 
-## Project Structure
+## Compiling Project
 
-### Components
+### System requirements
 
-Components should be stored in packages and need to be exported, but not as a default so that many components can be created in a single source file. All components should extend React.Component. Components are located at:
-/components/{package}/{name}.js
+Conductify is uses Expo to build for iOS and Android mobile platforms. To compile the codebase, you will need to have Node and Expo Go installed on your mobile device.
 
-#### Pages
+Node: https://nodejs.org/en/
 
-A page (or screen) is a component that can be navigated to and rendered on its own. Pages are located at:
-/components/pages/{name}.js
+Install Expo Go on your Mobile Device via the App Store or Google Play. https://docs.expo.dev/get-started/installation/
 
-### Services
+### Install
 
-Services should be static singletons that include an async ready() function that will start initialisation and only return true once the service is ready. All functions in a Service should be static. Services are located at:
+1. Using a CLI, navigate to the root directory of the code base.
+2. Run the command:
+    ```
+    npm install --legacy-peer-deps
+    ```
 
-/services/{package}/{name}Service.js
+### Run
+1. Using a CLI, navigate to the root directory of the code base.
+2. Run the command:
+    ```
+    npx expo start
+    ```
+3. Once the expo has started the server, a QR code will appear.
+4. If you are using iOS, scan the QR code using the Camera app - then tap the notification to open in Expo Go. If you are using Android, scan the QR code using the Expo Go app.
 
-## Project Navigation
+## Code Sources
 
-The navigation component and service work together to provide navigation between pages within the app. The navigation component is only used in the MainLayout component, and it inserts an instance of the relevant page component that should be rendered.
+### React Native Libraries
 
-The navigation service is used to navigate between screens using:
-NavigationService.navigate(name);
+| Library | URL to Codebase |
+| ------- | --------------- |
+| React | https://github.com/facebook/react/ |
+| React-Native | https://github.com/facebook/react-native |
 
-All screens must first be registered, this is done in the App() method using:
-NavigationService.register(name, element);
+### Expo Libraries
 
-The first screen registered will be the default screen when the app is first started.
+| Library | URL to Codebase |
+| ------- | --------------- |
+| expo-av | https://github.com/expo/expo/tree/main/packages/expo-av |
+| expo-camera | https://github.com/expo/expo/tree/main/packages/expo-camera |
+| expo-device | https://github.com/expo/expo/tree/main/packages/expo-device |
+| expo-document-picker | https://github.com/expo/expo/tree/main/packages/expo-document-picker |
+| expo-file-system | https://github.com/expo/expo/tree/main/packages/expo-file-system |
+| expo-linear-gradient | https://github.com/expo/expo/tree/main/packages/expo-linear-gradient |
+| expo-media-library | https://github.com/expo/expo/tree/main/packages/expo-media-library |
+| @expo/vector-icons | https://github.com/expo/vector-icons |
+
+### Other Libraries
+
+Libraries not officially published by Expo or React-Native.
+
+| Library | URL to Codebase |
+| ------- | --------------- |
+| Mediapipe Hands | https://github.com/google/mediapipe |
+| Tensorflow.js | https://github.com/tensorflow/tfjs |
+| Fingerpose | https://github.com/andypotato/fingerpose |
+| expo-music-info | https://github.com/antoninastefanowska/expo-music-info |
+| react-native-community/slider | https://github.com/callstack/react-native-slider |
