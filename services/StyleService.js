@@ -11,8 +11,8 @@ export class Colors {
      */
     static primary = {
         'light': '#54FBDA',
-        'mid': '#1ABC9C',
-        'dark': '#0A4136',
+        'mid': '#C2CDBC',
+        'dark': '#84A07C',
         'contrast': '#454545'
     };
 
@@ -671,12 +671,12 @@ export class StyleService {
             resizeMode:'stretch',
             marginRight: 3,
             aspectRatio:1,
-            tintColor: Colors.session.greyText
+            tintColor: Colors.primary.mid
         },
 
         footerBarButtonText: {
             fontWeight: "bold",
-            color: Colors.session.greyText,
+            color: Colors.primary.mid,
             fontSize: DimensionService.getMaxDimension() * 0.017 > 13 ? DimensionService.getMaxDimension() * 0.017 : 13
         },
 
