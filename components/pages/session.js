@@ -513,7 +513,7 @@ export default class Session extends React.Component {
                                 underlayColor={StyleService.session.footerBarButton.onTouchColor}
                                 style={StyleService.session.footerBarButton}>
                                 <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} style={{marginVertical: -16 }} />
+                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} style={{marginVertical: 0 }} />
                                     <Text numberOfLines={1}
                                         style={StyleService.session.footerBarButtonText}>Loop</Text>
                                 </View>
