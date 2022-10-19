@@ -4,7 +4,7 @@
 
 ### System requirements
 
-Conductify is uses Expo to build for iOS and Android mobile platforms. To compile the codebase, you will need to have Node and Expo Go installed on your mobile device.
+Conductify uses Expo to build for iOS and Android mobile platforms. To compile the codebase you will need to have Node installed on your computer, and Expo Go installed on your mobile device.
 
 Node: https://nodejs.org/en/
 
