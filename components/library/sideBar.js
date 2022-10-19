@@ -133,6 +133,24 @@ export class SideBar extends React.Component {
                             label={"Favourites"}
                             showLabel={this.state.isExpanded}/>
 
+                        <SideBarMenuItem
+                            onPress={
+                                () => {
+                                    this.setSelectionIndex(3);
+                                }}
+                            icon={require("../../assets/recently-played.png")}
+                            label={"Recently Played"}
+                            showLabel={this.state.isExpanded}/>
+
+                        <SideBarMenuItem
+                            onPress={
+                                () => {
+                                    this.setSelectionIndex(4);
+                                }}
+                            icon={require("../../assets/recently-added.png")}
+                            label={"Recently Added"}
+                            showLabel={this.state.isExpanded}/>
+
                         <View style={{marginTop: 15}}/>
                         <HorizontalDivider color={Colors.dark.contrast}/>
 

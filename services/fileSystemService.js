@@ -27,7 +27,7 @@ export default class FileSystemService {
             if (!permission.granted) return;
         }
 
-        await FileSystemService._clearDocumentsAndCache();
+        //await FileSystemService._clearDocumentsAndCache();
         FileSystemService._isReady = true;
     }
 

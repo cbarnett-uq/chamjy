@@ -7,6 +7,8 @@ import NavigationService from "../../services/navigationService";
 import { Colors, StyleService } from "../../services/StyleService";
 import { Favourites } from "../library/favourites";
 import { Home } from "../library/home";
+import { RecentlyAdded } from "../library/recentlyAdded";
+import { RecentlyPlayed } from "../library/recentlyPlayed";
 import { Search } from "../library/search";
 import { SideBar } from "../library/sideBar";
 
@@ -94,6 +96,24 @@ export default class Library extends React.Component {
             case 2:
                 return (
                     <Favourites
+                        items={this.state.libraryAssets}
+                        onTrackSelect={async (uri) => {
+                            await this.onMusicSelect(uri);
+                        }}/>
+                );
+
+            case 3:
+                return (
+                    <RecentlyPlayed
+                        items={this.state.libraryAssets}
+                        onTrackSelect={async (uri) => {
+                            await this.onMusicSelect(uri);
+                        }}/>
+                );
+
+            case 4:
+                return (
+                    <RecentlyAdded
                         items={this.state.libraryAssets}
                         onTrackSelect={async (uri) => {
                             await this.onMusicSelect(uri);

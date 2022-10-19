@@ -8,6 +8,7 @@ import NavigationService from "../../services/navigationService.js"
 import DimensionService from "../../services/DimensionService.js"
 import { GestureFeedbackOverlay } from '../playback/gestureFeedbackOverlay.js';
 import PredictionService from '../../services/gestures/predictionService.js';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 /**
  * Component that renders the session page.
@@ -513,7 +514,9 @@ export default class Session extends React.Component {
                                 underlayColor={StyleService.session.footerBarButton.onTouchColor}
                                 style={StyleService.session.footerBarButton}>
                                 <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} style={{marginVertical: 0 }} />
+                                    <Switch
+                                        value={this.state.shouldLoop}
+                                        onValueChange={(value) => { this.handleOnLoop() }}/>
                                     <Text numberOfLines={1}
                                         style={StyleService.session.footerBarButtonText}>Loop</Text>
                                 </View>

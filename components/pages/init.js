@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 import AudioPlayback from '../../services/AudioPlayback';
 import NavigationService from '../../services/navigationService';
 import FileSystemService from '../../services/fileSystemService';
 import DimensionService from "../../services/DimensionService.js"
-import { StyleService } from '../../services/StyleService';
+import { Colors, StyleService } from '../../services/StyleService';
+import { Logo } from '../shared/logo';
 
 /**
  * Component that initialises services for the app.
@@ -70,7 +71,15 @@ export default class InitPage extends React.Component {
 
         return (
             <View>
-                <Text>Initialising...</Text>
+                <Logo/>
+                <View style={{
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+                }}>
+                    <ActivityIndicator
+                        size="large"
+                        color={Colors.primary.mid}/>
+                </View>
             </View>
         );
     }
