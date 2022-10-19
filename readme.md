@@ -73,3 +73,7 @@ Python librarys used for training machine learning models
 | numpy | https://github.com/numpy/numpy |
 | React-Native | https://github.com/tensorflow/tensorflow |
 | python-os | https://github.com/python/cpython/blob/3.10/Lib/os.py |
+
+# Link to binary
+
+https://github.com/cbarnett-uq/chamjy/releases/tag/Android
