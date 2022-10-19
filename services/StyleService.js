@@ -593,7 +593,25 @@ export class StyleService {
         footerPlayButtonImage: {
             width: "60%",
             aspectRatio: 1,
-            alignSelf: 'center'
+            alignSelf: 'center',
+            tintColor: "white"
+        },
+
+        footerPlayStepBackImage: {
+            width: "45%",
+            aspectRatio: 1,
+            alignSelf: 'center',
+            tintColor: "white"
+        },
+
+        footerPlayStepForwardImage: {
+            width: "45%",
+            aspectRatio: 1,
+            alignSelf: 'center',
+            tintColor: "white",
+            transform: [
+                { scaleX: -1 }
+            ]
         },
 
         footerBar: {
@@ -601,7 +619,8 @@ export class StyleService {
             backgroundColor: Colors.session.footerMain,
             //borderTopLeftRadius: 20,
             //borderTopRightRadius: 20,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            height: "100%"
         },
 
         footerBarButtonInsideContainer: {
@@ -619,7 +638,8 @@ export class StyleService {
             alignContent: 'center',
             flex: 1,
             onTouchColor: "#ffffff22",
-            width:"100%"
+            width: "100%",
+            height: "100%",
         },
 
         footerBarButtonImage: {
