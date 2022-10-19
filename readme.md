@@ -17,6 +17,8 @@ Install Expo Go on your Mobile Device via the App Store or Google Play. https://
     ```
     npm install --legacy-peer-deps
     ```
+### Android Camera Settings 
+Adjust Mirrored photo in camera settings 
 
 ### Run
 1. Using a CLI, navigate to the root directory of the code base.
@@ -60,3 +62,14 @@ Libraries not officially published by Expo or React-Native.
 | Fingerpose | https://github.com/andypotato/fingerpose |
 | expo-music-info | https://github.com/antoninastefanowska/expo-music-info |
 | react-native-community/slider | https://github.com/callstack/react-native-slider |
+| react-native-svg | https://github.com/software-mansion/react-native-svg |
+
+### Python Librarys 
+
+Python librarys used for training machine learning models
+
+| Library | URL to Codebase |
+| ------- | --------------- |
+| numpy | https://github.com/numpy/numpy |
+| React-Native | https://github.com/tensorflow/tensorflow |
+| python-os | https://github.com/python/cpython/blob/3.10/Lib/os.py |
