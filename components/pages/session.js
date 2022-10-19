@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button, View, TouchableHighlight, Text, Dimensions, Image, Switch } from 'react-native';
+import { View, TouchableHighlight, Text, Dimensions, Image, Switch } from 'react-native';
 import GestureCamera from '../gestures/GestureCamera.js';
 import AudioPlayback from '../../services/AudioPlayback.js';
-import { Colors, StyleService } from '../../services/StyleService.js';
+import { StyleService } from '../../services/StyleService.js';
 import Slider from '@react-native-community/slider';
 import NavigationService from "../../services/navigationService.js"
 import DimensionService from "../../services/DimensionService.js"
 import { GestureFeedbackOverlay } from '../playback/gestureFeedbackOverlay.js';
+import PredictionService from '../../services/gestures/predictionService.js';
 
 /**
  * Component that renders the session page.
@@ -153,9 +154,16 @@ export default class Session extends React.Component {
         AudioPlayback.skipToTime(AudioPlayback.playbackPosition - 5 * 1000);
     }
 
+    handleStepForward() {
+        AudioPlayback.skipToTime(AudioPlayback.playbackPosition + 5 * 1000);
+    }
+
     handlePlaybackRate(rate) {
         AudioPlayback.setPlaybackRate(rate);
         this.closePopups();
+    }
+    handlePreferredHands(hand) {
+        PredictionService.setPreferredHand(hand);
     }
 
     closePopups() {
@@ -253,12 +261,14 @@ export default class Session extends React.Component {
     renderHandPopup() {
         return (
             <View style={StyleService.session.popUpContainer}>
-                <TouchableHighlight style={StyleService.session.popUpTouchableTop}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableTop}
+                    onPress={() => this.handlePreferredHands("Right")}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Right Hand</Text>
                     </View>
                 </TouchableHighlight>
-                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}>
+                <TouchableHighlight style={StyleService.session.popUpTouchableBottom}
+                    onPress={() => this.handlePreferredHands("Left")}>
                     <View style={StyleService.session.popUpTouchableInnerContainer}>
                         <Text style={StyleService.session.popUpText}>Left Hand</Text>
                     </View>
@@ -383,6 +393,15 @@ export default class Session extends React.Component {
                                 <View style={StyleService.session.footerPlayButtonContainer}>
                                     <TouchableHighlight
                                         underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                        onPress={() => { this.handleStepBack() }}
+                                        style={StyleService.session.footerPlayButton}>
+                                        <View style={StyleService.session.footerPlayButtonImageContainer}>
+                                            <Image source={require("../../assets/rewind.png")}
+                                                style={StyleService.session.footerPlayStepBackImage} />
+                                        </View>
+                                    </TouchableHighlight>
+                                    <TouchableHighlight
+                                        underlayColor={StyleService.session.footerBarButton.onTouchColor}
                                         onPress={() => { this.handleOnTogglePlay() }}
                                         style={StyleService.session.footerPlayButton}>
                                         <View style={StyleService.session.footerPlayButtonImageContainer}>
@@ -390,7 +409,15 @@ export default class Session extends React.Component {
                                                 style={StyleService.session.footerPlayButtonImage} />
                                         </View>
                                     </TouchableHighlight>
-                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }}/>
+                                    <TouchableHighlight
+                                        underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                        onPress={() => { this.handleStepForward() }}
+                                        style={StyleService.session.footerPlayButton}>
+                                        <View style={StyleService.session.footerPlayButtonImageContainer}>
+                                            <Image source={require("../../assets/rewind.png")}
+                                                style={StyleService.session.footerPlayStepForwardImage} />
+                                        </View>
+                                    </TouchableHighlight>
                                 </View>
 
 
@@ -437,19 +464,6 @@ export default class Session extends React.Component {
 
                         </View>
 
-                        <TouchableHighlight
-                            underlayColor={StyleService.session.footerBarButton.onTouchColor}
-                            onPress={() => { this.handleStepBack() }}
-                            style={StyleService.session.footerBarButton}>
-                            <View style={StyleService.session.footerBarButtonInsideContainer}>
-                                <Image source={require("../../assets/rewind.png")}
-                                    style={StyleService.session.footerBarButtonImage} />
-                                <Text numberOfLines={1}
-                                    style={StyleService.session.footerBarButtonText}>Rewind</Text>
-                            </View>
-                        </TouchableHighlight>
-
-
                         <View style={StyleService.session.footerBarButton}>
                             <TouchableHighlight
                                 underlayColor={StyleService.session.footerBarButton.onTouchColor}
@@ -494,6 +508,18 @@ export default class Session extends React.Component {
                             {this.state.currentPopup === "marker" ? this.renderMarkerPopup() : null}
 
                         </View>
+                        <View style={StyleService.session.footerBarButton}>
+                            <TouchableHighlight
+                                underlayColor={StyleService.session.footerBarButton.onTouchColor}
+                                style={StyleService.session.footerBarButton}>
+                                <View style={StyleService.session.footerBarButtonInsideContainer}>
+                                    <Switch value={this.state.shouldLoop} onValueChange={(value) => { this.handleOnLoop() }} style={{marginVertical: -16 }} />
+                                    <Text numberOfLines={1}
+                                        style={StyleService.session.footerBarButtonText}>Loop</Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                        
                     </View>
                 </View>
 

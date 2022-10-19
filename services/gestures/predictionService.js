@@ -1,7 +1,8 @@
 import { GestureEstimator} from 'fingerpose';
 import HandPoseService from './handPoseService';
-import { Gestures, GestureDefinition } from './types';
+import { Gestures, GestureDefinition, GestureDefinitionLeft, Hands} from './types';
 import GesturesService from './gesturesService';
+import { model } from '@tensorflow/tfjs';
 
 /**
  * Defines the minimum prediction confidence used by fingerpose
@@ -18,7 +19,9 @@ export default class PredictionService{
     static _ready = false;
     static _lastGesture;
     static _sameCount;
-
+    static _preferredHand;
+    static _rightModel;
+    static _leftModel; 
     /**
      * Initialises the gesture service by loading the model.
      */
@@ -27,7 +30,9 @@ export default class PredictionService{
         if (PredictionService._ready) return;
 
         try {
-            PredictionService._model = new GestureEstimator([
+            PredictionService._preferredHand = Hands["Right"];
+
+            PredictionService._rightModel = new GestureEstimator([
                 GestureDefinition.pausePlay,GestureDefinition.pausePlay1,GestureDefinition.pausePlay2,
                 GestureDefinition.markerA,GestureDefinition.markerA1,GestureDefinition.markerA2,
                 GestureDefinition.markerB,GestureDefinition.markerB1,GestureDefinition.markerB2,
@@ -36,6 +41,16 @@ export default class PredictionService{
                 GestureDefinition.tempoUp,GestureDefinition.tempoUp1,GestureDefinition.tempoUp2,
                 GestureDefinition.tempoDown,GestureDefinition.tempoDown1,
             ]);
+            PredictionService._leftModel = new GestureEstimator([
+                GestureDefinitionLeft.pausePlay,GestureDefinitionLeft.pausePlay1,GestureDefinitionLeft.pausePlay2,
+                GestureDefinitionLeft.markerA,GestureDefinitionLeft.markerA1,GestureDefinitionLeft.markerA2,
+                GestureDefinitionLeft.markerB,GestureDefinitionLeft.markerB1,GestureDefinitionLeft.markerB2,
+                GestureDefinitionLeft.skipTB,GestureDefinitionLeft.skipTB1,GestureDefinitionLeft.skipTB2,
+                GestureDefinitionLeft.loop,GestureDefinitionLeft.loop1,GestureDefinitionLeft.loop2,
+                GestureDefinitionLeft.tempoUp,GestureDefinitionLeft.tempoUp1,GestureDefinitionLeft.tempoUp2,
+                GestureDefinitionLeft.tempoDown,GestureDefinitionLeft.tempoDown1,GestureDefinitionLeft.tempoDown2,
+            ])
+            PredictionService._model = PredictionService._rightModel;
             PredictionService._ready = true;
             PredictionService._lastGesture = Gestures['nothing'];
             PredictionService._sameCount = 0;
@@ -64,6 +79,21 @@ export default class PredictionService{
             await PredictionService._timeout(1);
         }
     }
+    /**
+     * set preferred hand
+     * @param {String} hand 
+     */
+    static setPreferredHand(hand){
+        PredictionService._preferredHand = Hands[hand];
+        switch(Hands[hand]){
+            case Hands["Right"]:
+                PredictionService._model = PredictionService._rightModel;
+                break;
+            case Hands["Left"]:
+                PredictionService._model = PredictionService._leftModel;
+                break;
+        }
+    }
 
     static async predict() {
         if (!PredictionService._ready) throw "PredictionService is not ready.";
@@ -90,7 +120,16 @@ export default class PredictionService{
         let pose = HandPoseService.getLastFrame();
         if (pose.length == 0) return Gestures["nothing"];
 
-        var landmarks = pose[0].keypoints3D
+        var hand = 0;
+
+        for (let i = 0; i < pose.length; i++){
+            if (Hands[pose[i].handedness] === PredictionService._preferredHand){
+                hand = i;
+            }
+        }
+        if (hand == -1) return Gestures["nothing"];
+        
+        var landmarks = pose[hand].keypoints3D
             .map((x) => { return [x.x, x.y, x.z]; });
         
         var result = PredictionService._model

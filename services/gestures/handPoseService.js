@@ -11,6 +11,7 @@ export default class HandPoseService {
     static _frames = [];
     static _lastFrame = {};
 
+
     /**
      * Handles the onResults call from Hands.
      * @param { any } results Result structure returned by Hands.
@@ -83,8 +84,9 @@ export default class HandPoseService {
             const result = await HandPoseService._detector
                 .estimateHands(tensor);
 
-            HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
-            HandPoseService._frames.shift();
+            //HandPoseService._frames.push(HandPoseService._buildFrameFromResult(result));
+            //HandPoseService._frames.shift();
+            
             HandPoseService._lastFrame = result;
             if (tensor != undefined) tensor.dispose()
             return true;
